@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "LDD-1500L"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2019-12-19-13:38:24)
+    (mountForm default
+        (footprintRef "LDD1500L")
+        (spec "System")
+    )
+)

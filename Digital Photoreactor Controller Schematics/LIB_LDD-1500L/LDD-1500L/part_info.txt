@@ -1,0 +1,9 @@
+Manufacturer=Mean Well
+PartNumber=LDD-1500L
+PartCategory=Connector
+PackageCategory=Other
+PinCount=9
+Version=1.4
+Released=2019-12-19 13:38:24
+Downloaded=2020-12-11 04:43:14
+3D=Y

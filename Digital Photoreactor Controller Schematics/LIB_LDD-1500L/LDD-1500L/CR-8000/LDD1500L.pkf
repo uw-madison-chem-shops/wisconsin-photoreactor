@@ -1,0 +1,10 @@
+(unit MM)
+
+(package "LDD1500L"
+    (type UNDEF)
+    (uver 2)
+    (mountForm default
+        (footprintRef "LDD1500L")
+        (spec "default")
+    )
+)

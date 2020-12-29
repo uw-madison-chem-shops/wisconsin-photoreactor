@@ -1,0 +1,503 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L AL8805W5-7:AL8805W5-7 U1
+U 1 1 5FB3F213
+P 2700 2800
+F 0 "U1" H 2850 2700 50  0000 C CNN
+F 1 "AL8805W5-7" H 2850 2600 50  0000 C CNN
+F 2 "AL8805W5-7:SOT95P280X130-5N" H 2700 2800 50  0001 L BNN
+F 3 "" H 2700 2800 50  0001 L BNN
+F 4 "AL8805W5-7" H 2700 2800 50  0001 L BNN "MPN"
+F 5 "1904023" H 2700 2800 50  0001 L BNN "OC_FARNELL"
+F 6 "55T1754" H 2700 2800 50  0001 L BNN "OC_NEWARK"
+F 7 "DIODES INC." H 2700 2800 50  0001 L BNN "SUPPLIER"
+F 8 "SOT-23-5" H 2700 2800 50  0001 L BNN "PACKAGE"
+	1    2700 2800
+	1    0    0    -1  
+$EndComp
+Text Notes 2900 1250 0    50   ~ 0
+Analog Control LED Driver
+$Comp
+L power:GND #PWR0101
+U 1 1 5FB43C29
+P 2100 3650
+F 0 "#PWR0101" H 2100 3400 50  0001 C CNN
+F 1 "GND" V 2105 3522 50  0000 R CNN
+F 2 "" H 2100 3650 50  0001 C CNN
+F 3 "" H 2100 3650 50  0001 C CNN
+	1    2100 3650
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+12V #PWR0102
+U 1 1 5FB443DA
+P 3450 1700
+F 0 "#PWR0102" H 3450 1550 50  0001 C CNN
+F 1 "+12V" H 3465 1873 50  0000 C CNN
+F 2 "" H 3450 1700 50  0001 C CNN
+F 3 "" H 3450 1700 50  0001 C CNN
+	1    3450 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR0103
+U 1 1 5FB44926
+P 2050 1900
+F 0 "#PWR0103" H 2050 1750 50  0001 C CNN
+F 1 "+12V" H 2065 2073 50  0000 C CNN
+F 2 "" H 2050 1900 50  0001 C CNN
+F 3 "" H 2050 1900 50  0001 C CNN
+	1    2050 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT_TRIM RV1
+U 1 1 5FB45B96
+P 2050 2200
+F 0 "RV1" V 1843 2200 50  0000 C CNN
+F 1 "100KOhm" V 1934 2200 50  0000 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_3296Y_Vertical" H 2050 2200 50  0001 C CNN
+F 3 "~" H 2050 2200 50  0001 C CNN
+	1    2050 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 2200 2300 2200
+Text Notes 2850 1350 0    50   ~ 0
+0.3R = max current of 333 mA
+$Comp
+L Device:R R1
+U 1 1 5FB42B17
+P 3550 2400
+F 0 "R1" V 3450 2400 50  0000 C CNN
+F 1 "0.3R" V 3650 2400 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 3480 2400 50  0001 C CNN
+F 3 "~" H 3550 2400 50  0001 C CNN
+	1    3550 2400
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5FB53D75
+P 3450 2950
+F 0 "C1" H 3565 2996 50  0000 L CNN
+F 1 "1uF" H 3565 2905 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 3488 2800 50  0001 C CNN
+F 3 "~" H 3450 2950 50  0001 C CNN
+	1    3450 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 2600 3450 2600
+$Comp
+L Device:L L1
+U 1 1 5FB579E7
+P 3450 3450
+F 0 "L1" H 3503 3496 50  0000 L CNN
+F 1 "33uH" H 3503 3405 50  0000 L CNN
+F 2 "Inductor_SMD:L_Bourns_SRR1260" H 3450 3450 50  0001 C CNN
+F 3 "~" H 3450 3450 50  0001 C CNN
+	1    3450 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 3600 3450 3650
+Wire Wire Line
+	3450 3650 3400 3650
+Wire Wire Line
+	3450 2600 3450 2700
+Wire Wire Line
+	3450 2700 3900 2700
+$Comp
+L Connector_Generic:Conn_01x02 J1
+U 1 1 5FB5EC11
+P 4100 2900
+F 0 "J1" H 4180 2892 50  0000 L CNN
+F 1 "Conn_01x02" H 4180 2801 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 4100 2900 50  0001 C CNN
+F 3 "~" H 4100 2900 50  0001 C CNN
+	1    4100 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 2700 3450 2800
+Connection ~ 3450 2700
+Wire Wire Line
+	3450 3100 3450 3200
+Wire Wire Line
+	3450 3200 3900 3200
+Connection ~ 3450 3200
+Wire Wire Line
+	3450 3200 3450 3300
+Text Notes 4050 3150 0    50   ~ 0
+LED -
+Text Notes 4050 2800 0    50   ~ 0
+LED +
+Wire Wire Line
+	3450 3650 4800 3650
+Connection ~ 3450 3650
+Wire Wire Line
+	4800 3650 4800 3000
+Wire Wire Line
+	4800 2800 4800 2200
+Wire Wire Line
+	3450 2600 3550 2600
+Wire Wire Line
+	3550 2600 3550 2550
+Connection ~ 3450 2600
+Wire Wire Line
+	3550 2200 3550 2250
+Wire Wire Line
+	3550 2200 4800 2200
+$Comp
+L Device:C C2
+U 1 1 5FB6BD2F
+P 4800 1950
+F 0 "C2" H 4915 1996 50  0000 L CNN
+F 1 "2.2uF" H 4915 1905 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 4838 1800 50  0001 C CNN
+F 3 "~" H 4800 1950 50  0001 C CNN
+	1    4800 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 2200 4800 2100
+Connection ~ 4800 2200
+Wire Wire Line
+	4800 1800 4800 1700
+$Comp
+L power:GND #PWR0104
+U 1 1 5FB6D89A
+P 4800 1700
+F 0 "#PWR0104" H 4800 1450 50  0001 C CNN
+F 1 "GND" H 4805 1527 50  0000 C CNN
+F 2 "" H 4800 1700 50  0001 C CNN
+F 3 "" H 4800 1700 50  0001 C CNN
+	1    4800 1700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2050 2050 2050 1900
+Wire Wire Line
+	2050 2350 2050 2500
+$Comp
+L power:GND #PWR0105
+U 1 1 5FB72AD9
+P 2050 2500
+F 0 "#PWR0105" H 2050 2250 50  0001 C CNN
+F 1 "GND" H 2055 2327 50  0000 C CNN
+F 2 "" H 2050 2500 50  0001 C CNN
+F 3 "" H 2050 2500 50  0001 C CNN
+	1    2050 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 2700 3900 2900
+Wire Wire Line
+	3900 3200 3900 3000
+$Comp
+L Connector:Barrel_Jack J3
+U 1 1 5FB7F0B4
+P 7750 4300
+F 0 "J3" H 7807 4625 50  0000 C CNN
+F 1 "Barrel_Jack" H 7807 4534 50  0000 C CNN
+F 2 "Connector_BarrelJack:BarrelJack_Horizontal" H 7800 4260 50  0001 C CNN
+F 3 "~" H 7800 4260 50  0001 C CNN
+	1    7750 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8050 4400 8550 4400
+Wire Wire Line
+	8050 4200 8550 4200
+$Comp
+L power:GND #PWR0106
+U 1 1 5FB7FF39
+P 8550 4400
+F 0 "#PWR0106" H 8550 4150 50  0001 C CNN
+F 1 "GND" V 8555 4272 50  0000 R CNN
+F 2 "" H 8550 4400 50  0001 C CNN
+F 3 "" H 8550 4400 50  0001 C CNN
+	1    8550 4400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+12V #PWR0107
+U 1 1 5FB803EA
+P 8550 4200
+F 0 "#PWR0107" H 8550 4050 50  0001 C CNN
+F 1 "+12V" V 8565 4328 50  0000 L CNN
+F 2 "" H 8550 4200 50  0001 C CNN
+F 3 "" H 8550 4200 50  0001 C CNN
+	1    8550 4200
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:Barrel_Jack J2
+U 1 1 5FB80D0D
+P 7700 3250
+F 0 "J2" H 7757 3575 50  0000 C CNN
+F 1 "Barrel_Jack" H 7757 3484 50  0000 C CNN
+F 2 "Connector_BarrelJack:BarrelJack_Horizontal" H 7750 3210 50  0001 C CNN
+F 3 "~" H 7750 3210 50  0001 C CNN
+	1    7700 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR0109
+U 1 1 5FB85C4F
+P 8400 3150
+F 0 "#PWR0109" H 8400 3000 50  0001 C CNN
+F 1 "+12V" V 8415 3278 50  0000 L CNN
+F 2 "" H 8400 3150 50  0001 C CNN
+F 3 "" H 8400 3150 50  0001 C CNN
+	1    8400 3150
+	0    1    1    0   
+$EndComp
+Text Notes 8200 3950 0    50   ~ 0
+Daisy Chain Power
+Text Notes 8200 2900 0    50   ~ 0
+Board Power
+Wire Wire Line
+	3200 5500 3500 5500
+Wire Wire Line
+	3500 5500 3500 5550
+$Comp
+L Device:R R2
+U 1 1 5FBDADF1
+P 3500 5700
+F 0 "R2" H 3570 5746 50  0000 L CNN
+F 1 "8KOhm" H 3570 5655 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 3430 5700 50  0001 C CNN
+F 3 "~" H 3500 5700 50  0001 C CNN
+	1    3500 5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 6400 3500 6400
+Connection ~ 3500 5500
+$Comp
+L LM2941S:LM2941S U2
+U 1 1 5FBD435C
+P 2500 5800
+F 0 "U2" H 2550 5950 50  0000 C CNN
+F 1 "LM2941S" H 2550 5800 50  0000 C CNN
+F 2 "LM2941S:VREG_TPS79625KTTR" H 2500 5800 50  0001 L BNN
+F 3 "" H 2500 5800 50  0001 L BNN
+	1    2500 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 5200 2500 5100
+Wire Wire Line
+	2500 5200 1200 5200
+Wire Wire Line
+	1200 5200 1200 5650
+Connection ~ 2500 5200
+Connection ~ 2500 6400
+$Comp
+L Device:C C3
+U 1 1 5FBE0110
+P 1200 5800
+F 0 "C3" H 1000 5850 50  0000 L CNN
+F 1 "0.47uF" H 850 5750 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 1238 5650 50  0001 C CNN
+F 3 "~" H 1200 5800 50  0001 C CNN
+	1    1200 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 5950 1200 6400
+$Comp
+L Device:C C4
+U 1 1 5FBE055B
+P 4100 5800
+F 0 "C4" H 4215 5846 50  0000 L CNN
+F 1 "22uF" H 4215 5755 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 4138 5650 50  0001 C CNN
+F 3 "~" H 4100 5800 50  0001 C CNN
+	1    4100 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 6400 4100 5950
+$Comp
+L power:+12V #PWR0110
+U 1 1 5FBE5E13
+P 2500 5100
+F 0 "#PWR0110" H 2500 4950 50  0001 C CNN
+F 1 "+12V" H 2515 5273 50  0000 C CNN
+F 2 "" H 2500 5100 50  0001 C CNN
+F 3 "" H 2500 5100 50  0001 C CNN
+	1    2500 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0111
+U 1 1 5FBE6F4D
+P 2500 6600
+F 0 "#PWR0111" H 2500 6350 50  0001 C CNN
+F 1 "GND" H 2505 6427 50  0000 C CNN
+F 2 "" H 2500 6600 50  0001 C CNN
+F 3 "" H 2500 6600 50  0001 C CNN
+	1    2500 6600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 5500 4900 5700
+Wire Wire Line
+	4900 6200 4900 6300
+$Comp
+L power:GND #PWR0112
+U 1 1 5FBEAC28
+P 4900 6300
+F 0 "#PWR0112" H 4900 6050 50  0001 C CNN
+F 1 "GND" H 4905 6127 50  0000 C CNN
+F 2 "" H 4900 6300 50  0001 C CNN
+F 3 "" H 4900 6300 50  0001 C CNN
+	1    4900 6300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT_TRIM RV2
+U 1 1 5FBEDC0F
+P 3500 6100
+F 0 "RV2" H 3430 6146 50  0000 R CNN
+F 1 "5kOhm1" H 3430 6055 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_3296Y_Vertical" H 3500 6100 50  0001 C CNN
+F 3 "~" H 3500 6100 50  0001 C CNN
+	1    3500 6100
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 5850 3500 5950
+Wire Wire Line
+	3500 6250 3500 6400
+Wire Wire Line
+	3350 6100 3200 6100
+Text Notes 2700 4800 0    50   ~ 0
+Analog Control Fan
+Connection ~ 4100 5500
+Wire Wire Line
+	4100 5500 4900 5500
+Wire Wire Line
+	3500 5500 4100 5500
+Wire Wire Line
+	4100 5500 4100 5650
+$Comp
+L MBRA140:MBRA140 D1
+U 1 1 5FB42DFE
+P 4800 2900
+F 0 "D1" V 4846 2810 50  0000 R CNN
+F 1 "MBRA140" V 4755 2810 50  0000 R CNN
+F 2 "MBRA140:SMA-DIODE" H 4800 2900 50  0001 L BNN
+F 3 "" H 4800 2900 50  0001 L BNN
+F 4 "DIO-08053" H 4800 2900 50  0001 L BNN "PROD_ID"
+	1    4800 2900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8000 3150 8400 3150
+Wire Wire Line
+	2300 3650 2100 3650
+Wire Wire Line
+	3400 2200 3450 2200
+Wire Wire Line
+	3450 2200 3450 1700
+Wire Wire Line
+	3450 2200 3550 2200
+Connection ~ 3450 2200
+Connection ~ 3550 2200
+Wire Wire Line
+	2500 6600 2500 6400
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5FB5E7D6
+P 8400 3150
+F 0 "#FLG0101" H 8400 3225 50  0001 C CNN
+F 1 "PWR_FLAG" H 8400 3323 50  0000 C CNN
+F 2 "" H 8400 3150 50  0001 C CNN
+F 3 "~" H 8400 3150 50  0001 C CNN
+	1    8400 3150
+	1    0    0    -1  
+$EndComp
+Connection ~ 8400 3150
+$Comp
+L power:GND #PWR0108
+U 1 1 5FB82346
+P 8400 3350
+F 0 "#PWR0108" H 8400 3100 50  0001 C CNN
+F 1 "GND" V 8405 3222 50  0000 R CNN
+F 2 "" H 8400 3350 50  0001 C CNN
+F 3 "" H 8400 3350 50  0001 C CNN
+	1    8400 3350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8000 3350 8400 3350
+Wire Wire Line
+	2500 6400 3500 6400
+Connection ~ 3500 6400
+Wire Wire Line
+	1800 6400 2500 6400
+Wire Wire Line
+	1200 6400 1800 6400
+Connection ~ 1800 6400
+Wire Wire Line
+	1800 6400 1800 5800
+$Comp
+L power:GND #PWR0113
+U 1 1 5FB9E22B
+P 9000 3250
+F 0 "#PWR0113" H 9000 3000 50  0001 C CNN
+F 1 "GND" H 9005 3077 50  0000 C CNN
+F 2 "" H 9000 3250 50  0001 C CNN
+F 3 "" H 9000 3250 50  0001 C CNN
+	1    9000 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5FB9E855
+P 9000 3250
+F 0 "#FLG0102" H 9000 3325 50  0001 C CNN
+F 1 "PWR_FLAG" H 9000 3423 50  0000 C CNN
+F 2 "" H 9000 3250 50  0001 C CNN
+F 3 "~" H 9000 3250 50  0001 C CNN
+	1    9000 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Motor:Fan_4pin M1
+U 1 1 5FBC518A
+P 4900 6000
+F 0 "M1" H 5058 6096 50  0000 L CNN
+F 1 "Fan_4pin" H 5058 6005 50  0000 L CNN
+F 2 "Connector:FanPinHeader_1x04_P2.54mm_Vertical" H 4900 6010 50  0001 C CNN
+F 3 "http://www.formfactors.org/developer%5Cspecs%5Crev1_2_public.pdf" H 4900 6010 50  0001 C CNN
+	1    4900 6000
+	1    0    0    -1  
+$EndComp
+NoConn ~ 4600 5900
+NoConn ~ 4600 6100
+Text Notes 2650 5300 0    50   ~ 0
+LM2941S regulates output and allows for trim pot to control Fan speed without using PWM signal.
+Text Notes 1900 3850 0    50   ~ 0
+This LED driver is adapted from SparkFun femtobuck design.
+Text Notes 1850 3950 0    50   ~ 0
+ I’ve added a trim pot to control the driver. It should output constant 330 mA to LEDs.
+$EndSCHEMATC

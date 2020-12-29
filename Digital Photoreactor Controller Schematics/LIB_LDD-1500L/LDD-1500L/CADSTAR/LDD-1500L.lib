@@ -1,0 +1,18 @@
+.LDD-1500L :1 ;LED Power Supplies 6-36Vin 2-30V 1500mA Pin DC-DC LED Driver
+LDD1500L
+*STM J
+*NGS
+*PLB 1="-VIN_1" 2="-VIN_2" 11="-VOUT_1" 12="-VOUT_2" 13="+VOUT_1" 14="+VOUT_2" 21="PWM +ANALOG DIM" 23="+VIN_1" 24="+VIN_2"
+*MXP 9
+*DFN LDD-1500L
+~!Manufacturer_Name (Mean Well)
+~!Manufacturer_Part_Number (LDD-1500L)
+~!Arrow Part Number (LDD-1500L)
+~!Link Arrow Price/Stock (https://www.arrow.com/en/products/ldd-1500l/mean-well-enterprises)
+~!Mouser Part Number (709-LDD-1500L)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/MEAN-WELL/LDD-1500L?qs=JK6Bpmia%2FmsTbFwcpjJldw%3D%3D)
+~!Link Datasheet (https://componentsearchengine.com/Datasheets/1/LDD-1500L.pdf)
+~!Height (12.2mm)
+~!3D_Model (LDD-1500L)
+LDD-1500L
+1.1!U 2.1!U 11.1!U 12.1!U 13.1!U 14.1!U 21.1!U 23.1!U 24.1!U 

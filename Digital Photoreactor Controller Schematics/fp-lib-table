@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name VXO7805-500-M)(type KiCad)(uri ${KIPRJMOD}/VXO7805-500-M)(options "")(descr "")(disabled))
+  (lib (name LDD-1500L)(type Legacy)(uri ${KIPRJMOD}/LIB_LDD-1500L/LDD-1500L/KiCad/LDD-1500L.mod)(options "")(descr ""))
+)
