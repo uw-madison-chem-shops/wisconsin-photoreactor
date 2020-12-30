@@ -1,51 +1,31 @@
+////////////////////////////////////////////////////////////////////////////////////
+// I2C test program for Digital Photoreactor Controller using TinyWireS library   //
+//                    Run this Master program on an Arduino Uno.                  //
+////////////////////////////////////////////////////////////////////////////////////
+// This test program is adapted from the TinyWireS stress test program            //
+// developed by Scott Hartog: https://github.com/rambo/TinyWire                   //
+//                                                                                //
+// The master program picks a random number of bytes between 1 and 12.            //
+// It then sends that many bytes of randomd data to the AtTiny85 slave.           //
+// Then, the master reads that same number of bytes back from the slave.          //
+// The recieved data is then compared to the original transmitted data.           //
+// The results of this comparison are displayed  in the serial monitor.           //
+//  The process is then looped.                                                   //
+//                                                                                //
+// BREADBOARD SETUP:                                                              //
+// Arduino Uno R3 (D18/SDA) = I2C SDA                                             //
+//     connect to SDA on slave with external pull-up (~4.7K)                      //
+// Arduino Uno R3 (D19/SCL) = I2C SCL                                             //
+//     connect to SCL on slave with external pull-up (~4.7K)                      //
+// Arduino Uno R3 (D2)                                                            //
+//     connect to !RST on slave                                                   //
+//     Can alternatively connect !RST on slave to the Ardiuno "!RESET" pin        //
+//                                                                                //
+////////////////////////////////////////////////////////////////////////////////////
 
-// ---------------------------------
-// Stress test program/example for TinyWireS I2C library.
-// Run this master program on the Arduino Uno R3.
-// Run the other slave program on the Attiny.
-// ---------------------------------
-// Written by Scott Hartog, 2/6/2016
-// This is the I2C master program which runs on on a regular Arduino
-// (not a AtTiny). This program uses the regular Wire library from the Arduino IDE.
-//
-// It performs these steps in a loop:
-//    1. picks a random number of bytes between 1 and 12
-//    2. sends that many bytes of random data to the AtTiny slave within
-//       a single Wire.beginTransmission() / Wire.write() / Wire.endTransmission() set
-//    3. reads that same number of bytes back with a single Wire.requestFrom() call
-//    4. compares the received data to the originally transmitted data
-//    5. displays the number of requests, number of requests with mismatches,
-//       and enough of the data so that the operator can tell it's working.
-//
 #include <Wire.h>
 
-// BREADBOARD SETUP:
-// Arduino Uno R3 (D18/SDA) = I2C SDA 
-//     connect to SDA on slave with external pull-up (~4.7K)
-// Arduino Uno R3 (D19/SCL) = I2C SCL 
-//     connect to SCL on slave with external pull-up (~4.7K)
-// Arduino Uno R3 (D2)
-//     connect to !RST on slave
-//     Can alternatively connect !RST on slave to the Ardiuno "!RESET" pin
-
 #define I2C_SLAVE_ADDR  0x26            // i2c slave address (38, 0x26)
-
-/*#if defined(ESP8266)
-  // pins that work for Monkey Board ESP8266 12-E
-  // SCL=5, SDA=4
-  #define SLAVE_RESET_PIN 2
-  #define ALL_OK_LED_PIN 16
-  #define OK_LED_PIN 14
-  #define ERROR_LED_PIN 13
-#else
-  // pins that work for Micro Pro, Uno, Mega 2560
-  // reference documentation for SCL and SDA pin locations
-  // Uno SDA=D18, SCL=D19
-  #define SLAVE_RESET_PIN 6
-  #define ALL_OK_LED_PIN 9
-  #define OK_LED_PIN 7
-  #define ERROR_LED_PIN 8
-#endif*/
 
 uint16_t count = 0;       // total number of passes so far
 uint16_t error_count = 0; // total errors encountered so far
@@ -54,33 +34,12 @@ char c_buf[64]; // for creating messages
 
 void setup()
 {
-  // set pin modes 
-  /*pinMode(SLAVE_RESET_PIN,OUTPUT);  // active low reset to slave device
-  pinMode(OK_LED_PIN,OUTPUT);       // indicates last transaction matched
-  pinMode(ALL_OK_LED_PIN,OUTPUT);   // indicates all transactions so far have matched
-  pinMode(ERROR_LED_PIN,OUTPUT);    // indicates last transaction mismatched*/
 
   // init the serial port
   Serial.begin(9600);
 
-  // print some useful pinnout info for the Arduino
-  //Serial.println(String("SCL:")+String(SCL)+String(", SDA:")+String(SDA));
-  //Serial.println(String("MOSI:")+String(MOSI)+String(", SCK:")+String(SCK));
-
   // init the Wire object (for I2C)
   Wire.begin(); 
-
-  // init the i2c clock
-  // default is 100kHz if not changed
-  // Wire.setClock(400000L);  // 400kHz
-  
-  // reset the slave
-  //digitalWrite(SLAVE_RESET_PIN, LOW);
-  //delay(10);
-  //digitalWrite(SLAVE_RESET_PIN, HIGH);
-
-  // set the all okay pin high
-  //digitalWrite(ALL_OK_LED_PIN, HIGH);
   
   // wait for slave to finish any init sequence
   delay(2000);
@@ -134,16 +93,6 @@ void loop()
   if (mismatch || (rand_byte_count != req_rtn)) 
   {
     error_count++;
-    //digitalWrite(ERROR_LED_PIN, HIGH);
-    //digitalWrite(OK_LED_PIN, LOW);
-    // If there's ever an error, reset the ALL_OK_LED
-    // and it is not set again until the master resets.
-    //digitalWrite(ALL_OK_LED_PIN, LOW);
-  }
-  else
-  {
-    //digitalWrite(ERROR_LED_PIN, LOW);
-    //digitalWrite(OK_LED_PIN, HIGH);
   }
 
   // The rest of the program just displays the results to the serial port
