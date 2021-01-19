@@ -12,7 +12,6 @@
 *.cb
 *.cb2
 *.listing
-*.pdf
 *.synctex*
 *latexmx
 *latexmk
