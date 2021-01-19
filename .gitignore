@@ -1,0 +1,33 @@
+# LaTeX
+*.aux
+*.bbl
+*.blg
+*.lof
+*.log
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+*.listing
+*.pdf
+*.synctex*
+*latexmx
+*latexmk
+
+# KiCad
+*.000
+*.bak
+*.bck
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*.kicad_prl
+*.sch-bak
+*~
+_autosave-*
+*.tmp
+*-save.pro
+*-save.kicad_pcb
+fp-info-cache
