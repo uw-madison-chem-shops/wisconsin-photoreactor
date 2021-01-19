@@ -2,7 +2,7 @@
 \contentsline {section}{\numberline {2}Mechanical Construction}{S4}{section.2}%
 \contentsline {section}{\numberline {3}Electronics}{S5}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Analog}{S5}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Digital}{S5}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}Driver}{S5}{subsubsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2}Controller}{S5}{subsubsection.3.2.2}%
-\contentsline {section}{\numberline {4}Efficacy}{S6}{section.4}%
+\contentsline {subsection}{\numberline {3.2}Digital}{S7}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Driver}{S7}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Controller}{S7}{subsubsection.3.2.2}%
+\contentsline {section}{\numberline {4}Efficacy}{S8}{section.4}%

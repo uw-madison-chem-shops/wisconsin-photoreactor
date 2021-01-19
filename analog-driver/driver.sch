@@ -1,17 +1,17 @@
 EESchema Schematic File Version 4
 EELAYER 30 0
 EELAYER END
-$Descr A4 11693 8268
+$Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
-Comp ""
-Comment1 ""
-Comment2 ""
-Comment3 ""
-Comment4 ""
+Title "Analog Photoreactor Driver"
+Date "2021-01-19"
+Rev "1.0.0"
+Comp "University of Wisconsin-Madison"
+Comment1 "Department of Chemistry"
+Comment2 "Gellman Group"
+Comment3 "Philip Lampkin"
+Comment4 "plampkin@wisc.edu "
 $EndDescr
 $Comp
 L AL8805W5-7:AL8805W5-7 U1

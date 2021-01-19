@@ -26,6 +26,7 @@
 \usepackage{epsfig}
 \usepackage{epstopdf}
 \usepackage{xpatch}
+\usepackage{pdfpages}
 
 % "S" prefix
 \renewcommand{\theequation}{S\arabic{equation}}
@@ -86,6 +87,8 @@
 \section{Electronics}
 
 \subsection{Analog}
+
+\includepdf[landscape=true]{"../analog-driver/driver.pdf"}
 
 \subsection{Digital}
 
