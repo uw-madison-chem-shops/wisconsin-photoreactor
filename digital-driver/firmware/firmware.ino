@@ -3,7 +3,7 @@
 //                    Run this slave program on the AtTiny85.                     //      
 ////////////////////////////////////////////////////////////////////////////////////
 
-#include "TinyWireS.h"                  // wrapper class for I2C slave routines
+#include "TinyWireS.h"                  // wrapper class for I2C slave routines   https://github.com/rambo/TinyWire/tree/master
 
 #define I2C_SLAVE_ADDR  0x26            // I2C slave address (38, 0x26), 
 
@@ -49,7 +49,6 @@ void receiveEvent(uint8_t num_bytes)
   digitalWrite(BlinkPin, HIGH);
   delay(10);
   digitalWrite(BlinkPin, LOW);
-  delay(10);
 
 }
 

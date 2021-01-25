@@ -91,6 +91,8 @@ F 3 "" H 2000 1250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
+	2000 1250 2000 1350
+Wire Wire Line
 	2600 2250 2800 2250
 Wire Wire Line
 	3100 2250 3350 2250
@@ -124,7 +126,7 @@ Wire Wire Line
 	2600 1750 2850 1750
 Text GLabel 2850 1750 2    50   Input ~ 0
 SDA
-Text GLabel 2100 5600 2    50   Input ~ 0
+Text GLabel 2200 5600 2    50   Input ~ 0
 PWM_FAN
 Text GLabel 2850 1950 2    50   Input ~ 0
 SCL
@@ -202,6 +204,28 @@ Wire Notes Line
 	750  750  3750 750 
 Wire Notes Line
 	3750 3000 750  3000
+$Comp
+L power:GND #PWR07
+U 1 1 5FCFA699
+P 1700 1350
+F 0 "#PWR07" H 1700 1100 50  0001 C CNN
+F 1 "GND" H 1705 1177 50  0000 C CNN
+F 2 "" H 1700 1350 50  0001 C CNN
+F 3 "" H 1700 1350 50  0001 C CNN
+	1    1700 1350
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5FCFAC53
+P 1850 1350
+F 0 "C1" H 1965 1396 50  0000 L CNN
+F 1 "0.1uF" H 1965 1305 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 1888 1200 50  0001 C CNN
+F 3 "~" H 1850 1350 50  0001 C CNN
+	1    1850 1350
+	0    -1   -1   0   
+$EndComp
 $Comp
 L Device:LED D1
 U 1 1 601595D2
@@ -337,6 +361,9 @@ F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microc
 $EndComp
 Text Notes 2400 900  0    50   ~ 0
 ATtiny85 HAS INTERNAL PULLUPS
+Connection ~ 2000 1350
+Wire Wire Line
+	2000 1350 2000 1450
 Text Notes 4200 2600 0    50   ~ 0
 I2C ASSIGNMENTS\n1 - SCL\n2 - SDA\n3 - VCC\n4 - GND
 $Comp
@@ -426,7 +453,7 @@ Text Notes 1800 4600 0    50   ~ 0
 LED -
 Text Notes 2300 4600 0    50   ~ 0
 LED +
-Text GLabel 3300 3850 2    50   Input ~ 0
+Text GLabel 3350 3850 2    50   Input ~ 0
 PWM_LED
 $Comp
 L LDD-1500L:LDD-1500L J6
@@ -581,7 +608,7 @@ Connection ~ 5500 1900
 Wire Wire Line
 	5500 1900 6000 1900
 Wire Wire Line
-	5350 1300 5500 1300
+	5350 1300 6000 1300
 Connection ~ 5350 1300
 $Comp
 L power:+5V #PWR0102
@@ -603,7 +630,7 @@ F 1 "4.7k" H 5568 1105 50  0000 L CNN
 F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" V 5540 1140 50  0001 C CNN
 F 3 "~" H 5500 1150 50  0001 C CNN
 	1    5500 1150
-	1    0    0    1   
+	1    0    0    -1  
 $EndComp
 $Comp
 L power:+5V #PWR0103
@@ -618,14 +645,9 @@ F 3 "" H 5500 1000 50  0001 C CNN
 $EndComp
 Text Notes 6150 1000 0    50   ~ 0
 TODO: ISOLATE I2C!
-Connection ~ 5500 1300
-Wire Wire Line
-	5500 1300 6000 1300
-Wire Wire Line
-	2000 1250 2000 1450
 $Comp
 L Device:R_US R6
-U 1 1 600F1ED2
+U 1 1 60429B5E
 P 3250 4000
 F 0 "R6" H 3318 4046 50  0000 L CNN
 F 1 "4.7k" H 3318 3955 50  0000 L CNN
@@ -635,13 +657,13 @@ F 3 "~" H 3250 4000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3300 3850 3250 3850
+	3350 3850 3250 3850
 Connection ~ 3250 3850
 Wire Wire Line
 	3250 3850 3050 3850
 $Comp
 L power:GND #PWR0104
-U 1 1 600F73D9
+U 1 1 6042B114
 P 3250 4150
 F 0 "#PWR0104" H 3250 3900 50  0001 C CNN
 F 1 "GND" H 3255 3977 50  0000 C CNN
@@ -652,7 +674,7 @@ F 3 "" H 3250 4150 50  0001 C CNN
 $EndComp
 $Comp
 L Device:R_US R7
-U 1 1 600FD36F
+U 1 1 6042F88B
 P 2050 5750
 F 0 "R7" H 2118 5796 50  0000 L CNN
 F 1 "4.7k" H 2118 5705 50  0000 L CNN
@@ -662,13 +684,13 @@ F 3 "~" H 2050 5750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1650 5600 2050 5600
-Wire Wire Line
-	2100 5600 2050 5600
+	2200 5600 2050 5600
 Connection ~ 2050 5600
+Wire Wire Line
+	2050 5600 1650 5600
 $Comp
 L power:GND #PWR0105
-U 1 1 60101AFD
+U 1 1 60430E7E
 P 2050 5900
 F 0 "#PWR0105" H 2050 5650 50  0001 C CNN
 F 1 "GND" H 2055 5727 50  0000 C CNN
@@ -677,4 +699,6 @@ F 3 "" H 2050 5900 50  0001 C CNN
 	1    2050 5900
 	1    0    0    -1  
 $EndComp
+Text Notes 5150 2350 0    50   ~ 0
+NOTE: MAY NOT WANT I2C PULL-UPS\nWHEN CONNECTED TO QWIIC MASTER
 $EndSCHEMATC
