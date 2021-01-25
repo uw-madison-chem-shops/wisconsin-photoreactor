@@ -6,6 +6,7 @@ A photoreactor driver board designed to be controlled digitally over I2C.
 
 This PCB was designed using KiCAD version 5.
 Refer to `driver.pdf` for schematic.
+PCB images generated with [tracespace](https://github.com/tracespace/tracespace) follow.
 
 ![top](./top.png "PCB top view")
 
