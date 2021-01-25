@@ -12,6 +12,7 @@ Refer to `driver.pdf` for schematic.
 ![bottom](./bottom.png "PCB bottom view")
 
 Bill of Materials
+
 | reference      | value         | manufacturer | part number | DigiKey | Newark |
 | :------------- | :------------ | :----------- | :---------- | :------ | :----- |
 | C2             | 10u           |              |             |         |        |
