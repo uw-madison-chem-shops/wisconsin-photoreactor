@@ -1,7 +1,5 @@
-EESchema-LIBRARY Version 2.3
+EESchema-LIBRARY Version 2.4
 #encoding utf-8
-#(c) SnapEDA 2016 (snapeda.com)
-#This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA) with Design Exception 1.0
 #
 # VXO7805-500-M
 #
@@ -14,15 +12,12 @@ F4 "3.5 mm" 0 0 50 H I L BNN
 F5 "CUI Inc." 0 0 50 H I L BNN
 F6 "Manufacturer Recommendations" 0 0 50 H I L BNN
 DRAW
-P 2 0 0 10 -500 300 500 300 N
-P 2 0 0 10 500 300 500 -300 N
-P 2 0 0 10 500 -300 -500 -300 N
-P 2 0 0 10 -500 -300 -500 300 N
-X +VIN 1 -700 200 200 R 40 40 0 0 I 
-X GND 2 -700 -200 200 R 40 40 0 0 W 
-X ON/OFF 4 -700 0 200 R 40 40 0 0 I 
-X +VO 3 700 200 200 L 40 40 0 0 O 
+S -500 300 500 -300 1 1 10 f
+X +VIN 1 -700 200 200 R 40 40 0 0 I
+X GND 2 -700 -200 200 R 40 40 0 0 W
+X +VO 3 700 200 200 L 40 40 0 0 O
+X ON/OFF 4 -700 0 200 R 40 40 0 0 I
 ENDDRAW
 ENDDEF
 #
-# End Library
+#End Library
