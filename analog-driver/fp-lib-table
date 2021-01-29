@@ -1,7 +1,3 @@
 (fp_lib_table
-  (lib (name VXO7805-500-M)(type KiCad)(uri ${KIPRJMOD}/VXO7805-500-M)(options "")(descr ""))
-  (lib (name MBRA140)(type KiCad)(uri ${KIPRJMOD}/MBRA140)(options "")(descr ""))
-  (lib (name LM2941S)(type KiCad)(uri ${KIPRJMOD}/LM2941S)(options "")(descr ""))
-  (lib (name AL8805W5-7)(type KiCad)(uri ${KIPRJMOD}/AL8805W5-7)(options "")(descr ""))
-  (lib (name BA00BC0WFP-E2-pcb-part-libraries)(type KiCad)(uri ${KIPRJMOD}/BA00BC0WFP-E2-pcb-part-libraries)(options "")(descr ""))
+  (lib (name footprints)(type KiCad)(uri ${KIPRJMOD}/footprints.pretty)(options "")(descr ""))
 )

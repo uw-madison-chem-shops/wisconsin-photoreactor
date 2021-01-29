@@ -1,9 +1,0 @@
-EESchema-DOCLIB  Version 2.0
-#
-$CMP LDD-1500L
-D LED Power Supplies 6-36Vin 2-30V 1500mA Pin DC-DC LED Driver
-K
-F https://componentsearchengine.com/Datasheets/1/LDD-1500L.pdf
-$ENDCMP
-#
-#End Doc Library

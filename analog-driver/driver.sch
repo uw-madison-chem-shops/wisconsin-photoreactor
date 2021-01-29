@@ -5,499 +5,403 @@ $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "Analog Photoreactor Driver"
-Date "2021-01-19"
+Date "2021-01-29"
 Rev "1.0.0"
 Comp "University of Wisconsin-Madison"
 Comment1 "Department of Chemistry"
 Comment2 "Gellman Group"
-Comment3 "Philip Lampkin"
-Comment4 "plampkin@wisc.edu "
+Comment3 "Blaise Thompson"
+Comment4 "blaise.thompson@wisc.edu"
 $EndDescr
 $Comp
-L AL8805W5-7:AL8805W5-7 U1
-U 1 1 5FB3F213
-P 2700 2800
-F 0 "U1" H 2850 2700 50  0000 C CNN
-F 1 "AL8805W5-7" H 2850 2600 50  0000 C CNN
-F 2 "AL8805W5-7:SOT95P280X130-5N" H 2700 2800 50  0001 L BNN
-F 3 "" H 2700 2800 50  0001 L BNN
-F 4 "AL8805W5-7" H 2700 2800 50  0001 L BNN "MPN"
-F 5 "1904023" H 2700 2800 50  0001 L BNN "OC_FARNELL"
-F 6 "55T1754" H 2700 2800 50  0001 L BNN "OC_NEWARK"
-F 7 "DIODES INC." H 2700 2800 50  0001 L BNN "SUPPLIER"
-F 8 "SOT-23-5" H 2700 2800 50  0001 L BNN "PACKAGE"
-	1    2700 2800
+L Connector_Generic:Conn_01x02 J7
+U 1 1 5FB5EC11
+P 2450 2300
+F 0 "J7" V 2550 2200 50  0000 L CNN
+F 1 "Conn_01x02" V 2650 2050 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 2450 2300 50  0001 C CNN
+F 3 "~" H 2450 2300 50  0001 C CNN
+	1    2450 2300
+	0    1    1    0   
+$EndComp
+Text Notes 2050 2350 0    50   ~ 0
+LED -
+Text Notes 2550 2350 0    50   ~ 0
+LED +
+Wire Wire Line
+	1500 1400 1500 1450
+$Comp
+L power:GND #PWR022
+U 1 1 5FB6D89A
+P 1500 1450
+F 0 "#PWR022" H 1500 1200 50  0001 C CNN
+F 1 "GND" V 1500 1250 50  0000 C CNN
+F 2 "" H 1500 1450 50  0001 C CNN
+F 3 "" H 1500 1450 50  0001 C CNN
+	1    1500 1450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3300 1400 3300 1450
+$Comp
+L power:+12V #PWR023
+U 1 1 5FB443DA
+P 3300 1450
+F 0 "#PWR023" H 3300 1300 50  0001 C CNN
+F 1 "+12V" V 3300 1650 50  0000 C CNN
+F 2 "" H 3300 1450 50  0001 C CNN
+F 3 "" H 3300 1450 50  0001 C CNN
+	1    3300 1450
+	0    1    1    0   
+$EndComp
+Connection ~ 3300 1450
+Wire Wire Line
+	3300 1450 3300 1500
+Connection ~ 1500 1450
+Wire Wire Line
+	1500 1450 1500 1500
+Wire Wire Line
+	3300 1700 3300 1750
+Wire Wire Line
+	3300 1750 3350 1750
+Wire Wire Line
+	3350 1750 3350 2100
+Wire Wire Line
+	2450 2100 3350 2100
+Connection ~ 3300 1750
+Wire Wire Line
+	3300 1750 3300 1800
+Wire Wire Line
+	1500 1600 1500 1650
+Wire Wire Line
+	1500 1650 1450 1650
+Wire Wire Line
+	1450 1650 1450 2100
+Wire Wire Line
+	1450 2100 2350 2100
+Connection ~ 1500 1650
+Wire Wire Line
+	1500 1650 1500 1700
+Wire Notes Line
+	1000 1000 1000 2750
+Text Notes 1050 1150 0    50   ~ 0
+LED DRIVER
+$Comp
+L LDD-1500L:LDD-1500L U2
+U 1 1 5FD3EABF
+P 1500 1400
+F 0 "U2" H 2400 1665 50  0000 C CNN
+F 1 "LDD-1500L" H 2400 1574 50  0000 C CNN
+F 2 "LDD-1500L:LDD1500L" H 3150 1500 50  0001 L CNN
+F 3 "https://componentsearchengine.com/Datasheets/1/LDD-1500L.pdf" H 3150 1400 50  0001 L CNN
+F 4 "LED Power Supplies 6-36Vin 2-30V 1500mA Pin DC-DC LED Driver" H 3150 1300 50  0001 L CNN "Description"
+F 5 "12.2" H 3150 1200 50  0001 L CNN "Height"
+F 6 "Mean Well" H 3150 1100 50  0001 L CNN "Manufacturer_Name"
+F 7 "LDD-1500L" H 3150 1000 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "LDD-1500L" H 3150 900 50  0001 L CNN "Arrow Part Number"
+F 9 "https://www.arrow.com/en/products/ldd-1500l/mean-well-enterprises" H 3150 800 50  0001 L CNN "Arrow Price/Stock"
+F 10 "709-LDD-1500L" H 3150 700 50  0001 L CNN "Mouser Part Number"
+F 11 "https://www.mouser.co.uk/ProductDetail/MEAN-WELL/LDD-1500L?qs=JK6Bpmia%2FmsTbFwcpjJldw%3D%3D" H 3150 600 50  0001 L CNN "Mouser Price/Stock"
+	1    1500 1400
 	1    0    0    -1  
 $EndComp
-Text Notes 2900 1250 0    50   ~ 0
-Analog Control LED Driver
+NoConn ~ 1900 5350
+Text Notes 2750 5650 0    50   ~ 0
+NF-A12x15 PWM\n130 mA @ 12 V POWER\nPWM 0-5 V
+Wire Notes Line
+	1000 6000 1000 5000
+Wire Notes Line
+	4000 6000 1000 6000
+Wire Notes Line
+	4000 5000 4000 6000
+Wire Notes Line
+	1000 5000 4000 5000
+Text Notes 1050 5150 0    50   ~ 0
+FAN
+NoConn ~ 1900 5450
+$Comp
+L Connector_Generic:Conn_01x04 J5
+U 1 1 5FDF07F8
+P 1700 5550
+F 0 "J5" H 1780 5542 50  0000 L CNN
+F 1 "Conn_01x04" H 1780 5451 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 1700 5550 50  0001 C CNN
+F 3 "~" H 1700 5550 50  0001 C CNN
+	1    1700 5550
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+12V #PWR021
+U 1 1 5FB6F7D4
+P 1900 5550
+F 0 "#PWR021" H 1900 5400 50  0001 C CNN
+F 1 "+12V" V 1900 5750 50  0000 C CNN
+F 2 "" H 1900 5550 50  0001 C CNN
+F 3 "" H 1900 5550 50  0001 C CNN
+	1    1900 5550
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR020
+U 1 1 5FBEAC28
+P 1900 5650
+F 0 "#PWR020" H 1900 5400 50  0001 C CNN
+F 1 "GND" V 1905 5477 50  0000 C CNN
+F 2 "" H 1900 5650 50  0001 C CNN
+F 3 "" H 1900 5650 50  0001 C CNN
+	1    1900 5650
+	0    -1   -1   0   
+$EndComp
+Wire Notes Line
+	1000 3000 1000 4750
+Text Notes 1050 4700 0    50   ~ 0
+TWO BARREL JACKS\nFOR DAISY CHAINING
+Wire Wire Line
+	1850 4250 2200 4250
+Wire Wire Line
+	2000 3550 2200 3550
+$Comp
+L Device:C C2
+U 1 1 600F4EFC
+P 2200 3850
+F 0 "C2" H 2085 3804 50  0000 R CNN
+F 1 "10u" H 2085 3895 50  0000 R CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 2238 3700 50  0001 C CNN
+F 3 "~" H 2200 3850 50  0001 C CNN
+	1    2200 3850
+	-1   0    0    1   
+$EndComp
+Connection ~ 1850 4250
+Wire Wire Line
+	1850 4250 1750 4250
+Wire Wire Line
+	1850 3750 1850 4250
+Wire Wire Line
+	1750 3750 1850 3750
+Wire Wire Line
+	2000 3550 2000 4050
+Connection ~ 2000 3550
+Wire Wire Line
+	2000 4050 1750 4050
+Wire Wire Line
+	1750 3550 2000 3550
+Text Notes 1050 3150 0    50   ~ 0
+POWER
+$Comp
+L Connector:Barrel_Jack J4
+U 1 1 5FE1EB67
+P 1450 4150
+F 0 "J4" H 1507 4475 50  0000 C CNN
+F 1 "Barrel_Jack" H 1507 4384 50  0000 C CNN
+F 2 "Connector_BarrelJack:BarrelJack_Horizontal" H 1500 4110 50  0001 C CNN
+F 3 "~" H 1500 4110 50  0001 C CNN
+	1    1450 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR018
+U 1 1 5FB82346
+P 1850 4250
+F 0 "#PWR018" H 1850 4000 50  0001 C CNN
+F 1 "GND" H 1950 4100 50  0000 R CNN
+F 2 "" H 1850 4250 50  0001 C CNN
+F 3 "" H 1850 4250 50  0001 C CNN
+	1    1850 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR012
+U 1 1 5FB85C4F
+P 2000 3550
+F 0 "#PWR012" H 2000 3400 50  0001 C CNN
+F 1 "+12V" H 1900 3700 50  0000 L CNN
+F 2 "" H 2000 3550 50  0001 C CNN
+F 3 "" H 2000 3550 50  0001 C CNN
+	1    2000 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Barrel_Jack J3
+U 1 1 5FB80D0D
+P 1450 3650
+F 0 "J3" H 1507 3975 50  0000 C CNN
+F 1 "Barrel_Jack" H 1507 3884 50  0000 C CNN
+F 2 "Connector_BarrelJack:BarrelJack_Horizontal" H 1500 3610 50  0001 C CNN
+F 3 "~" H 1500 3610 50  0001 C CNN
+	1    1450 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 600F73D9
+P 4400 2200
+F 0 "#PWR0104" H 4400 1950 50  0001 C CNN
+F 1 "GND" H 4405 2027 50  0000 C CNN
+F 2 "" H 4400 2200 50  0001 C CNN
+F 3 "" H 4400 2200 50  0001 C CNN
+	1    4400 2200
+	1    0    0    -1  
+$EndComp
+Text Notes 4200 4150 0    50   ~ 0
+POWER\nINDICATOR
 $Comp
 L power:GND #PWR0101
-U 1 1 5FB43C29
-P 2100 3650
-F 0 "#PWR0101" H 2100 3400 50  0001 C CNN
-F 1 "GND" V 2105 3522 50  0000 R CNN
-F 2 "" H 2100 3650 50  0001 C CNN
-F 3 "" H 2100 3650 50  0001 C CNN
-	1    2100 3650
-	0    1    1    0   
+U 1 1 6021594E
+P 4100 4200
+F 0 "#PWR0101" H 4100 3950 50  0001 C CNN
+F 1 "GND" H 4105 4027 50  0000 C CNN
+F 2 "" H 4100 4200 50  0001 C CNN
+F 3 "" H 4100 4200 50  0001 C CNN
+	1    4100 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R5
+U 1 1 60212114
+P 4100 3750
+F 0 "R5" H 4168 3796 50  0000 L CNN
+F 1 "1k" H 4168 3705 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" V 4140 3740 50  0001 C CNN
+F 3 "~" H 4100 3750 50  0001 C CNN
+	1    4100 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 601595D2
+P 4100 4050
+F 0 "D1" H 4093 3795 50  0000 C CNN
+F 1 "LED" H 4093 3886 50  0000 C CNN
+F 2 "LED_SMD:LED_1206_3216Metric" H 4100 4050 50  0001 C CNN
+F 3 "~" H 4100 4050 50  0001 C CNN
+	1    4100 4050
+	0    1    -1   0   
+$EndComp
+Text Notes 3650 1950 0    50   ~ 0
+CONTROL RANGE\n0.5 to 2.5 V DC
+$Comp
+L Device:R_POT_US RV1
+U 1 1 60152C38
+P 4500 1750
+F 0 "RV1" H 4432 1704 50  0000 R CNN
+F 1 "2.2k" H 4432 1795 50  0000 R CNN
+F 2 "footprints:TRIM_3362P-1-202TLF" H 4500 1750 50  0001 C CNN
+F 3 "~" H 4500 1750 50  0001 C CNN
+	1    4500 1750
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_US R2
+U 1 1 60156E27
+P 4400 2050
+F 0 "R2" H 4468 2096 50  0000 L CNN
+F 1 "470" H 4468 2005 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" V 4440 2040 50  0001 C CNN
+F 3 "~" H 4400 2050 50  0001 C CNN
+	1    4400 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R1
+U 1 1 6015726B
+P 4400 1450
+F 0 "R1" H 4468 1496 50  0000 L CNN
+F 1 "10k" H 4468 1405 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" V 4440 1440 50  0001 C CNN
+F 3 "~" H 4400 1450 50  0001 C CNN
+	1    4400 1450
+	1    0    0    -1  
 $EndComp
 $Comp
 L power:+12V #PWR0102
-U 1 1 5FB443DA
-P 3450 1700
-F 0 "#PWR0102" H 3450 1550 50  0001 C CNN
-F 1 "+12V" H 3465 1873 50  0000 C CNN
-F 2 "" H 3450 1700 50  0001 C CNN
-F 3 "" H 3450 1700 50  0001 C CNN
-	1    3450 1700
+U 1 1 6015A378
+P 4400 1300
+F 0 "#PWR0102" H 4400 1150 50  0001 C CNN
+F 1 "+12V" H 4415 1473 50  0000 C CNN
+F 2 "" H 4400 1300 50  0001 C CNN
+F 3 "" H 4400 1300 50  0001 C CNN
+	1    4400 1300
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	3750 1750 3750 1600
+Wire Wire Line
+	3300 1600 3750 1600
+$Comp
+L Connector:TestPoint TP1
+U 1 1 6016771D
+P 3750 1600
+F 0 "TP1" H 3808 1718 50  0000 L CNN
+F 1 "TestPoint" H 3808 1627 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_D3.0mm_Drill1.5mm" H 3950 1600 50  0001 C CNN
+F 3 "~" H 3950 1600 50  0001 C CNN
+	1    3750 1600
+	1    0    0    -1  
+$EndComp
+Connection ~ 3750 1600
+Wire Notes Line
+	1000 1000 4750 1000
+Wire Notes Line
+	4750 1000 4750 2750
+Wire Notes Line
+	4750 2750 1000 2750
+Wire Notes Line
+	1000 3000 4750 3000
+Wire Notes Line
+	4750 3000 4750 4750
+Wire Notes Line
+	4750 4750 1000 4750
+$Comp
+L Connector:TestPoint TP2
+U 1 1 6018D512
+P 2200 3550
+F 0 "TP2" V 2154 3738 50  0000 L CNN
+F 1 "TestPoint" V 2245 3738 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_D3.0mm_Drill1.5mm" H 2400 3550 50  0001 C CNN
+F 3 "~" H 2400 3550 50  0001 C CNN
+	1    2200 3550
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP3
+U 1 1 6018DB07
+P 2200 4250
+F 0 "TP3" V 2154 4438 50  0000 L CNN
+F 1 "TestPoint" V 2245 4438 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_D3.0mm_Drill1.5mm" H 2400 4250 50  0001 C CNN
+F 3 "~" H 2400 4250 50  0001 C CNN
+	1    2200 4250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2200 3700 2200 3550
+Connection ~ 2200 3550
+Wire Wire Line
+	2200 4000 2200 4250
+Connection ~ 2200 4250
 $Comp
 L power:+12V #PWR0103
-U 1 1 5FB44926
-P 2050 1900
-F 0 "#PWR0103" H 2050 1750 50  0001 C CNN
-F 1 "+12V" H 2065 2073 50  0000 C CNN
-F 2 "" H 2050 1900 50  0001 C CNN
-F 3 "" H 2050 1900 50  0001 C CNN
-	1    2050 1900
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_POT_TRIM RV1
-U 1 1 5FB45B96
-P 2050 2200
-F 0 "RV1" V 1843 2200 50  0000 C CNN
-F 1 "100KOhm" V 1934 2200 50  0000 C CNN
-F 2 "Potentiometer_THT:Potentiometer_Bourns_3296Y_Vertical" H 2050 2200 50  0001 C CNN
-F 3 "~" H 2050 2200 50  0001 C CNN
-	1    2050 2200
+U 1 1 601A8AF0
+P 4100 3600
+F 0 "#PWR0103" H 4100 3450 50  0001 C CNN
+F 1 "+12V" H 4115 3773 50  0000 C CNN
+F 2 "" H 4100 3600 50  0001 C CNN
+F 3 "" H 4100 3600 50  0001 C CNN
+	1    4100 3600
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2200 2200 2300 2200
-Text Notes 2850 1350 0    50   ~ 0
-0.3R = max current of 333 mA
-$Comp
-L Device:R R1
-U 1 1 5FB42B17
-P 3550 2400
-F 0 "R1" V 3450 2400 50  0000 C CNN
-F 1 "0.3R" V 3650 2400 50  0000 C CNN
-F 2 "Resistor_SMD:R_1206_3216Metric" V 3480 2400 50  0001 C CNN
-F 3 "~" H 3550 2400 50  0001 C CNN
-	1    3550 2400
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:C C1
-U 1 1 5FB53D75
-P 3450 2950
-F 0 "C1" H 3565 2996 50  0000 L CNN
-F 1 "1uF" H 3565 2905 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric" H 3488 2800 50  0001 C CNN
-F 3 "~" H 3450 2950 50  0001 C CNN
-	1    3450 2950
-	1    0    0    -1  
-$EndComp
+	4500 1900 4400 1900
 Wire Wire Line
-	3400 2600 3450 2600
-$Comp
-L Device:L L1
-U 1 1 5FB579E7
-P 3450 3450
-F 0 "L1" H 3503 3496 50  0000 L CNN
-F 1 "33uH" H 3503 3405 50  0000 L CNN
-F 2 "Inductor_SMD:L_Bourns_SRR1260" H 3450 3450 50  0001 C CNN
-F 3 "~" H 3450 3450 50  0001 C CNN
-	1    3450 3450
-	1    0    0    -1  
-$EndComp
+	3750 1750 4300 1750
 Wire Wire Line
-	3450 3600 3450 3650
+	4500 1600 4400 1600
 Wire Wire Line
-	3450 3650 3400 3650
+	4300 1600 4300 1750
+Connection ~ 4400 1600
 Wire Wire Line
-	3450 2600 3450 2700
+	4400 1600 4300 1600
+Connection ~ 4300 1750
 Wire Wire Line
-	3450 2700 3900 2700
-$Comp
-L Connector_Generic:Conn_01x02 J1
-U 1 1 5FB5EC11
-P 4100 2900
-F 0 "J1" H 4180 2892 50  0000 L CNN
-F 1 "Conn_01x02" H 4180 2801 50  0000 L CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 4100 2900 50  0001 C CNN
-F 3 "~" H 4100 2900 50  0001 C CNN
-	1    4100 2900
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3450 2700 3450 2800
-Connection ~ 3450 2700
-Wire Wire Line
-	3450 3100 3450 3200
-Wire Wire Line
-	3450 3200 3900 3200
-Connection ~ 3450 3200
-Wire Wire Line
-	3450 3200 3450 3300
-Text Notes 4050 3150 0    50   ~ 0
-LED -
-Text Notes 4050 2800 0    50   ~ 0
-LED +
-Wire Wire Line
-	3450 3650 4800 3650
-Connection ~ 3450 3650
-Wire Wire Line
-	4800 3650 4800 3000
-Wire Wire Line
-	4800 2800 4800 2200
-Wire Wire Line
-	3450 2600 3550 2600
-Wire Wire Line
-	3550 2600 3550 2550
-Connection ~ 3450 2600
-Wire Wire Line
-	3550 2200 3550 2250
-Wire Wire Line
-	3550 2200 4800 2200
-$Comp
-L Device:C C2
-U 1 1 5FB6BD2F
-P 4800 1950
-F 0 "C2" H 4915 1996 50  0000 L CNN
-F 1 "2.2uF" H 4915 1905 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric" H 4838 1800 50  0001 C CNN
-F 3 "~" H 4800 1950 50  0001 C CNN
-	1    4800 1950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4800 2200 4800 2100
-Connection ~ 4800 2200
-Wire Wire Line
-	4800 1800 4800 1700
-$Comp
-L power:GND #PWR0104
-U 1 1 5FB6D89A
-P 4800 1700
-F 0 "#PWR0104" H 4800 1450 50  0001 C CNN
-F 1 "GND" H 4805 1527 50  0000 C CNN
-F 2 "" H 4800 1700 50  0001 C CNN
-F 3 "" H 4800 1700 50  0001 C CNN
-	1    4800 1700
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	2050 2050 2050 1900
-Wire Wire Line
-	2050 2350 2050 2500
-$Comp
-L power:GND #PWR0105
-U 1 1 5FB72AD9
-P 2050 2500
-F 0 "#PWR0105" H 2050 2250 50  0001 C CNN
-F 1 "GND" H 2055 2327 50  0000 C CNN
-F 2 "" H 2050 2500 50  0001 C CNN
-F 3 "" H 2050 2500 50  0001 C CNN
-	1    2050 2500
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3900 2700 3900 2900
-Wire Wire Line
-	3900 3200 3900 3000
-$Comp
-L Connector:Barrel_Jack J3
-U 1 1 5FB7F0B4
-P 7750 4300
-F 0 "J3" H 7807 4625 50  0000 C CNN
-F 1 "Barrel_Jack" H 7807 4534 50  0000 C CNN
-F 2 "Connector_BarrelJack:BarrelJack_Horizontal" H 7800 4260 50  0001 C CNN
-F 3 "~" H 7800 4260 50  0001 C CNN
-	1    7750 4300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8050 4400 8550 4400
-Wire Wire Line
-	8050 4200 8550 4200
-$Comp
-L power:GND #PWR0106
-U 1 1 5FB7FF39
-P 8550 4400
-F 0 "#PWR0106" H 8550 4150 50  0001 C CNN
-F 1 "GND" V 8555 4272 50  0000 R CNN
-F 2 "" H 8550 4400 50  0001 C CNN
-F 3 "" H 8550 4400 50  0001 C CNN
-	1    8550 4400
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:+12V #PWR0107
-U 1 1 5FB803EA
-P 8550 4200
-F 0 "#PWR0107" H 8550 4050 50  0001 C CNN
-F 1 "+12V" V 8565 4328 50  0000 L CNN
-F 2 "" H 8550 4200 50  0001 C CNN
-F 3 "" H 8550 4200 50  0001 C CNN
-	1    8550 4200
-	0    1    1    0   
-$EndComp
-$Comp
-L Connector:Barrel_Jack J2
-U 1 1 5FB80D0D
-P 7700 3250
-F 0 "J2" H 7757 3575 50  0000 C CNN
-F 1 "Barrel_Jack" H 7757 3484 50  0000 C CNN
-F 2 "Connector_BarrelJack:BarrelJack_Horizontal" H 7750 3210 50  0001 C CNN
-F 3 "~" H 7750 3210 50  0001 C CNN
-	1    7700 3250
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+12V #PWR0109
-U 1 1 5FB85C4F
-P 8400 3150
-F 0 "#PWR0109" H 8400 3000 50  0001 C CNN
-F 1 "+12V" V 8415 3278 50  0000 L CNN
-F 2 "" H 8400 3150 50  0001 C CNN
-F 3 "" H 8400 3150 50  0001 C CNN
-	1    8400 3150
-	0    1    1    0   
-$EndComp
-Text Notes 8200 3950 0    50   ~ 0
-Daisy Chain Power
-Text Notes 8200 2900 0    50   ~ 0
-Board Power
-Wire Wire Line
-	3200 5500 3500 5500
-Wire Wire Line
-	3500 5500 3500 5550
-$Comp
-L Device:R R2
-U 1 1 5FBDADF1
-P 3500 5700
-F 0 "R2" H 3570 5746 50  0000 L CNN
-F 1 "8KOhm" H 3570 5655 50  0000 L CNN
-F 2 "Resistor_SMD:R_1206_3216Metric" V 3430 5700 50  0001 C CNN
-F 3 "~" H 3500 5700 50  0001 C CNN
-	1    3500 5700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4100 6400 3500 6400
-Connection ~ 3500 5500
-$Comp
-L LM2941S:LM2941S U2
-U 1 1 5FBD435C
-P 2500 5800
-F 0 "U2" H 2550 5950 50  0000 C CNN
-F 1 "LM2941S" H 2550 5800 50  0000 C CNN
-F 2 "LM2941S:VREG_TPS79625KTTR" H 2500 5800 50  0001 L BNN
-F 3 "" H 2500 5800 50  0001 L BNN
-	1    2500 5800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2500 5200 2500 5100
-Wire Wire Line
-	2500 5200 1200 5200
-Wire Wire Line
-	1200 5200 1200 5650
-Connection ~ 2500 5200
-Connection ~ 2500 6400
-$Comp
-L Device:C C3
-U 1 1 5FBE0110
-P 1200 5800
-F 0 "C3" H 1000 5850 50  0000 L CNN
-F 1 "0.47uF" H 850 5750 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric" H 1238 5650 50  0001 C CNN
-F 3 "~" H 1200 5800 50  0001 C CNN
-	1    1200 5800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1200 5950 1200 6400
-$Comp
-L Device:C C4
-U 1 1 5FBE055B
-P 4100 5800
-F 0 "C4" H 4215 5846 50  0000 L CNN
-F 1 "22uF" H 4215 5755 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric" H 4138 5650 50  0001 C CNN
-F 3 "~" H 4100 5800 50  0001 C CNN
-	1    4100 5800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4100 6400 4100 5950
-$Comp
-L power:+12V #PWR0110
-U 1 1 5FBE5E13
-P 2500 5100
-F 0 "#PWR0110" H 2500 4950 50  0001 C CNN
-F 1 "+12V" H 2515 5273 50  0000 C CNN
-F 2 "" H 2500 5100 50  0001 C CNN
-F 3 "" H 2500 5100 50  0001 C CNN
-	1    2500 5100
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0111
-U 1 1 5FBE6F4D
-P 2500 6600
-F 0 "#PWR0111" H 2500 6350 50  0001 C CNN
-F 1 "GND" H 2505 6427 50  0000 C CNN
-F 2 "" H 2500 6600 50  0001 C CNN
-F 3 "" H 2500 6600 50  0001 C CNN
-	1    2500 6600
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4900 5500 4900 5700
-Wire Wire Line
-	4900 6200 4900 6300
-$Comp
-L power:GND #PWR0112
-U 1 1 5FBEAC28
-P 4900 6300
-F 0 "#PWR0112" H 4900 6050 50  0001 C CNN
-F 1 "GND" H 4905 6127 50  0000 C CNN
-F 2 "" H 4900 6300 50  0001 C CNN
-F 3 "" H 4900 6300 50  0001 C CNN
-	1    4900 6300
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_POT_TRIM RV2
-U 1 1 5FBEDC0F
-P 3500 6100
-F 0 "RV2" H 3430 6146 50  0000 R CNN
-F 1 "5kOhm1" H 3430 6055 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Bourns_3296Y_Vertical" H 3500 6100 50  0001 C CNN
-F 3 "~" H 3500 6100 50  0001 C CNN
-	1    3500 6100
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	3500 5850 3500 5950
-Wire Wire Line
-	3500 6250 3500 6400
-Wire Wire Line
-	3350 6100 3200 6100
-Text Notes 2700 4800 0    50   ~ 0
-Analog Control Fan
-Connection ~ 4100 5500
-Wire Wire Line
-	4100 5500 4900 5500
-Wire Wire Line
-	3500 5500 4100 5500
-Wire Wire Line
-	4100 5500 4100 5650
-$Comp
-L MBRA140:MBRA140 D1
-U 1 1 5FB42DFE
-P 4800 2900
-F 0 "D1" V 4846 2810 50  0000 R CNN
-F 1 "MBRA140" V 4755 2810 50  0000 R CNN
-F 2 "MBRA140:SMA-DIODE" H 4800 2900 50  0001 L BNN
-F 3 "" H 4800 2900 50  0001 L BNN
-F 4 "DIO-08053" H 4800 2900 50  0001 L BNN "PROD_ID"
-	1    4800 2900
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	8000 3150 8400 3150
-Wire Wire Line
-	2300 3650 2100 3650
-Wire Wire Line
-	3400 2200 3450 2200
-Wire Wire Line
-	3450 2200 3450 1700
-Wire Wire Line
-	3450 2200 3550 2200
-Connection ~ 3450 2200
-Connection ~ 3550 2200
-Wire Wire Line
-	2500 6600 2500 6400
-$Comp
-L power:PWR_FLAG #FLG0101
-U 1 1 5FB5E7D6
-P 8400 3150
-F 0 "#FLG0101" H 8400 3225 50  0001 C CNN
-F 1 "PWR_FLAG" H 8400 3323 50  0000 C CNN
-F 2 "" H 8400 3150 50  0001 C CNN
-F 3 "~" H 8400 3150 50  0001 C CNN
-	1    8400 3150
-	1    0    0    -1  
-$EndComp
-Connection ~ 8400 3150
-$Comp
-L power:GND #PWR0108
-U 1 1 5FB82346
-P 8400 3350
-F 0 "#PWR0108" H 8400 3100 50  0001 C CNN
-F 1 "GND" V 8405 3222 50  0000 R CNN
-F 2 "" H 8400 3350 50  0001 C CNN
-F 3 "" H 8400 3350 50  0001 C CNN
-	1    8400 3350
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	8000 3350 8400 3350
-Wire Wire Line
-	2500 6400 3500 6400
-Connection ~ 3500 6400
-Wire Wire Line
-	1800 6400 2500 6400
-Wire Wire Line
-	1200 6400 1800 6400
-Connection ~ 1800 6400
-Wire Wire Line
-	1800 6400 1800 5800
-$Comp
-L power:GND #PWR0113
-U 1 1 5FB9E22B
-P 9000 3250
-F 0 "#PWR0113" H 9000 3000 50  0001 C CNN
-F 1 "GND" H 9005 3077 50  0000 C CNN
-F 2 "" H 9000 3250 50  0001 C CNN
-F 3 "" H 9000 3250 50  0001 C CNN
-	1    9000 3250
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:PWR_FLAG #FLG0102
-U 1 1 5FB9E855
-P 9000 3250
-F 0 "#FLG0102" H 9000 3325 50  0001 C CNN
-F 1 "PWR_FLAG" H 9000 3423 50  0000 C CNN
-F 2 "" H 9000 3250 50  0001 C CNN
-F 3 "~" H 9000 3250 50  0001 C CNN
-	1    9000 3250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Motor:Fan_4pin M1
-U 1 1 5FBC518A
-P 4900 6000
-F 0 "M1" H 5058 6096 50  0000 L CNN
-F 1 "Fan_4pin" H 5058 6005 50  0000 L CNN
-F 2 "Connector:FanPinHeader_1x04_P2.54mm_Vertical" H 4900 6010 50  0001 C CNN
-F 3 "http://www.formfactors.org/developer%5Cspecs%5Crev1_2_public.pdf" H 4900 6010 50  0001 C CNN
-	1    4900 6000
-	1    0    0    -1  
-$EndComp
-NoConn ~ 4600 5900
-NoConn ~ 4600 6100
-Text Notes 2650 5300 0    50   ~ 0
-LM2941S regulates output and allows for trim pot to control Fan speed without using PWM signal.
-Text Notes 1900 3850 0    50   ~ 0
-This LED driver is adapted from SparkFun femtobuck design.
-Text Notes 1850 3950 0    50   ~ 0
- I’ve added a trim pot to control the driver. It should output constant 330 mA to LEDs.
+	4300 1750 4350 1750
 $EndSCHEMATC
