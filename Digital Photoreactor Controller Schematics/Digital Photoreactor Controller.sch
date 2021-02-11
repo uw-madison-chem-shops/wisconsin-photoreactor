@@ -16,12 +16,12 @@ $EndDescr
 $Comp
 L power:+12V #PWR05
 U 1 1 5FB443DA
-P 3600 5850
-F 0 "#PWR05" H 3600 5700 50  0001 C CNN
-F 1 "+12V" H 3615 6023 50  0000 C CNN
-F 2 "" H 3600 5850 50  0001 C CNN
-F 3 "" H 3600 5850 50  0001 C CNN
-	1    3600 5850
+P 3900 5850
+F 0 "#PWR05" H 3900 5700 50  0001 C CNN
+F 1 "+12V" H 3915 6023 50  0000 C CNN
+F 2 "" H 3900 5850 50  0001 C CNN
+F 3 "" H 3900 5850 50  0001 C CNN
+	1    3900 5850
 	0    1    1    0   
 $EndComp
 $Comp
@@ -108,55 +108,55 @@ Text Notes 5600 4900 0    50   ~ 0
 $Comp
 L power:GND #PWR03
 U 1 1 5FB8538E
-P 1550 3200
-F 0 "#PWR03" H 1550 2950 50  0001 C CNN
-F 1 "GND" H 1555 3027 50  0000 C CNN
-F 2 "" H 1550 3200 50  0001 C CNN
-F 3 "" H 1550 3200 50  0001 C CNN
-	1    1550 3200
+P 2550 3300
+F 0 "#PWR03" H 2550 3050 50  0001 C CNN
+F 1 "GND" H 2555 3127 50  0000 C CNN
+F 2 "" H 2550 3300 50  0001 C CNN
+F 3 "" H 2550 3300 50  0001 C CNN
+	1    2550 3300
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1550 3050 1550 3200
+	2550 3150 2550 3300
 $Comp
 L power:+5V #PWR02
 U 1 1 5FB8614A
-P 1550 1650
-F 0 "#PWR02" H 1550 1500 50  0001 C CNN
-F 1 "+5V" H 1565 1823 50  0000 C CNN
-F 2 "" H 1550 1650 50  0001 C CNN
-F 3 "" H 1550 1650 50  0001 C CNN
-	1    1550 1650
+P 2550 1750
+F 0 "#PWR02" H 2550 1600 50  0001 C CNN
+F 1 "+5V" H 2565 1923 50  0000 C CNN
+F 2 "" H 2550 1750 50  0001 C CNN
+F 3 "" H 2550 1750 50  0001 C CNN
+	1    2550 1750
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1550 1650 1550 1850
-Text Notes 1450 1400 0    50   ~ 0
+	2550 1750 2550 1950
+Text Notes 2450 1500 0    50   ~ 0
 ATtiny84
 Wire Wire Line
-	2150 2650 2350 2650
+	3150 2750 3350 2750
 $Comp
 L Device:R R1
 U 1 1 5FB960BA
-P 2500 2650
-F 0 "R1" V 2600 2550 50  0000 C CNN
-F 1 "10K" V 2600 2750 50  0000 C CNN
-F 2 "Resistor_SMD:R_1206_3216Metric" V 2430 2650 50  0001 C CNN
-F 3 "~" H 2500 2650 50  0001 C CNN
-	1    2500 2650
+P 3500 2750
+F 0 "R1" V 3600 2650 50  0000 C CNN
+F 1 "10K" V 3600 2850 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 3430 2750 50  0001 C CNN
+F 3 "~" H 3500 2750 50  0001 C CNN
+	1    3500 2750
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	2650 2650 2900 2650
+	3650 2750 3900 2750
 $Comp
 L power:+5V #PWR04
 U 1 1 5FB97A9F
-P 2900 2650
-F 0 "#PWR04" H 2900 2500 50  0001 C CNN
-F 1 "+5V" V 2915 2778 50  0000 L CNN
-F 2 "" H 2900 2650 50  0001 C CNN
-F 3 "" H 2900 2650 50  0001 C CNN
-	1    2900 2650
+P 3900 2750
+F 0 "#PWR04" H 3900 2600 50  0001 C CNN
+F 1 "+5V" V 3915 2878 50  0000 L CNN
+F 2 "" H 3900 2750 50  0001 C CNN
+F 3 "" H 3900 2750 50  0001 C CNN
+	1    3900 2750
 	0    1    1    0   
 $EndComp
 $Comp
@@ -207,10 +207,10 @@ SCL
 Text Notes 5300 1100 0    50   ~ 0
 I2C Port 1
 Wire Wire Line
-	2150 2350 2400 2350
+	3150 2450 3400 2450
 Wire Wire Line
-	2150 2150 2400 2150
-Text GLabel 2400 2150 2    50   Input ~ 0
+	3150 2250 3400 2250
+Text GLabel 3400 2250 2    50   Input ~ 0
 SDA
 Wire Wire Line
 	9900 1300 10100 1300
@@ -272,9 +272,9 @@ Wire Notes Line
 	4600 2350 11250 2350
 Wire Notes Line
 	500  4350 11200 4350
-Text Notes 500  750  0    157  ~ 31
+Text Notes 1050 750  0    157  ~ 31
 Microcontroller
-Text Notes 600  4600 0    157  ~ 31
+Text Notes 1050 4750 0    157  ~ 31
 LED Driver
 Text Notes 4750 750  0    157  ~ 31
 I2C
@@ -328,68 +328,68 @@ PWM_FAN
 $Comp
 L LDD-1500L:LDD-1500L J1
 U 1 1 5FD3EABF
-P 1600 5850
-F 0 "J1" H 2500 6115 50  0000 C CNN
-F 1 "LDD-1500L" H 2500 6024 50  0000 C CNN
-F 2 "LDD-1500L:LDD1500L" H 3250 5950 50  0001 L CNN
-F 3 "https://componentsearchengine.com/Datasheets/1/LDD-1500L.pdf" H 3250 5850 50  0001 L CNN
-F 4 "LED Power Supplies 6-36Vin 2-30V 1500mA Pin DC-DC LED Driver" H 3250 5750 50  0001 L CNN "Description"
-F 5 "12.2" H 3250 5650 50  0001 L CNN "Height"
-F 6 "Mean Well" H 3250 5550 50  0001 L CNN "Manufacturer_Name"
-F 7 "LDD-1500L" H 3250 5450 50  0001 L CNN "Manufacturer_Part_Number"
-F 8 "LDD-1500L" H 3250 5350 50  0001 L CNN "Arrow Part Number"
-F 9 "https://www.arrow.com/en/products/ldd-1500l/mean-well-enterprises" H 3250 5250 50  0001 L CNN "Arrow Price/Stock"
-F 10 "709-LDD-1500L" H 3250 5150 50  0001 L CNN "Mouser Part Number"
-F 11 "https://www.mouser.co.uk/ProductDetail/MEAN-WELL/LDD-1500L?qs=JK6Bpmia%2FmsTbFwcpjJldw%3D%3D" H 3250 5050 50  0001 L CNN "Mouser Price/Stock"
-	1    1600 5850
+P 1900 5850
+F 0 "J1" H 2800 6115 50  0000 C CNN
+F 1 "LDD-1500L" H 2800 6024 50  0000 C CNN
+F 2 "LDD-1500L:LDD1500L" H 3550 5950 50  0001 L CNN
+F 3 "https://componentsearchengine.com/Datasheets/1/LDD-1500L.pdf" H 3550 5850 50  0001 L CNN
+F 4 "LED Power Supplies 6-36Vin 2-30V 1500mA Pin DC-DC LED Driver" H 3550 5750 50  0001 L CNN "Description"
+F 5 "12.2" H 3550 5650 50  0001 L CNN "Height"
+F 6 "Mean Well" H 3550 5550 50  0001 L CNN "Manufacturer_Name"
+F 7 "LDD-1500L" H 3550 5450 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "LDD-1500L" H 3550 5350 50  0001 L CNN "Arrow Part Number"
+F 9 "https://www.arrow.com/en/products/ldd-1500l/mean-well-enterprises" H 3550 5250 50  0001 L CNN "Arrow Price/Stock"
+F 10 "709-LDD-1500L" H 3550 5150 50  0001 L CNN "Mouser Part Number"
+F 11 "https://www.mouser.co.uk/ProductDetail/MEAN-WELL/LDD-1500L?qs=JK6Bpmia%2FmsTbFwcpjJldw%3D%3D" H 3550 5050 50  0001 L CNN "Mouser Price/Stock"
+	1    1900 5850
 	1    0    0    -1  
 $EndComp
-NoConn ~ 1600 5950
-NoConn ~ 1600 6050
-NoConn ~ 3400 6150
-NoConn ~ 3400 5950
+NoConn ~ 1900 5950
+NoConn ~ 1900 6050
+NoConn ~ 3700 6150
+NoConn ~ 3700 5950
 Wire Wire Line
-	3400 6050 3600 6050
-Text GLabel 3600 6050 2    50   Input ~ 0
+	3700 6050 3900 6050
+Text GLabel 3900 6050 2    50   Input ~ 0
 PWM_LED
 $Comp
 L power:GND #PWR01
 U 1 1 5FB6D89A
-P 1300 5850
-F 0 "#PWR01" H 1300 5600 50  0001 C CNN
-F 1 "GND" H 1305 5677 50  0000 C CNN
-F 2 "" H 1300 5850 50  0001 C CNN
-F 3 "" H 1300 5850 50  0001 C CNN
-	1    1300 5850
+P 1600 5850
+F 0 "#PWR01" H 1600 5600 50  0001 C CNN
+F 1 "GND" H 1605 5677 50  0000 C CNN
+F 2 "" H 1600 5850 50  0001 C CNN
+F 3 "" H 1600 5850 50  0001 C CNN
+	1    1600 5850
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	3400 5850 3600 5850
+	3700 5850 3900 5850
 Wire Wire Line
-	1300 5850 1600 5850
-Text Notes 2650 6800 0    50   ~ 0
+	1600 5850 1900 5850
+Text Notes 2950 6800 0    50   ~ 0
 LED +
-Text Notes 2150 6800 0    50   ~ 0
+Text Notes 2450 6800 0    50   ~ 0
 LED -
 $Comp
 L Connector_Generic:Conn_01x02 J2
 U 1 1 5FB5EC11
-P 2550 6750
-F 0 "J2" V 2650 6650 50  0000 L CNN
-F 1 "Conn_01x02" V 2750 6500 50  0000 L CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 2550 6750 50  0001 C CNN
-F 3 "~" H 2550 6750 50  0001 C CNN
-	1    2550 6750
+P 2850 6750
+F 0 "J2" V 2950 6650 50  0000 L CNN
+F 1 "Conn_01x02" V 3050 6500 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 2850 6750 50  0001 C CNN
+F 3 "~" H 2850 6750 50  0001 C CNN
+	1    2850 6750
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	1600 6150 1600 6550
+	1900 6150 1900 6550
 Wire Wire Line
-	3400 6550 3400 6250
+	3700 6550 3700 6250
 Wire Wire Line
-	1600 6550 2450 6550
+	1900 6550 2750 6550
 Wire Wire Line
-	2550 6550 3400 6550
+	2850 6550 3700 6550
 Wire Wire Line
 	6400 3100 6800 3100
 Connection ~ 6800 3100
@@ -397,23 +397,23 @@ Connection ~ 6800 3300
 $Comp
 L MCU_Microchip_ATtiny:ATtiny85-20PU U1
 U 1 1 5FDCDD75
-P 1550 2450
-F 0 "U1" H 1021 2496 50  0000 R CNN
-F 1 "ATtiny85-20PU" H 1021 2405 50  0000 R CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 1550 2450 50  0001 C CIN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf" H 1550 2450 50  0001 C CNN
-	1    1550 2450
+P 2550 2550
+F 0 "U1" H 2021 2596 50  0000 R CNN
+F 1 "ATtiny85-20PU" H 2021 2505 50  0000 R CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 2550 2550 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf" H 2550 2550 50  0001 C CNN
+	1    2550 2550
 	1    0    0    -1  
 $EndComp
-Text GLabel 2400 2350 2    50   Input ~ 0
+Text GLabel 3400 2450 2    50   Input ~ 0
 SCL
 Wire Wire Line
-	2150 2250 2400 2250
-Text GLabel 2400 2250 2    50   Input ~ 0
+	3150 2350 3400 2350
+Text GLabel 3400 2350 2    50   Input ~ 0
 PWM_FAN
 Wire Wire Line
-	2150 2550 2400 2550
-Text GLabel 2400 2550 2    50   Input ~ 0
+	3150 2650 3400 2650
+Text GLabel 3400 2650 2    50   Input ~ 0
 PWM_LED
 $Comp
 L Connector_Generic:Conn_01x04 J5
@@ -518,8 +518,8 @@ Wire Wire Line
 Wire Wire Line
 	8700 3100 9100 3100
 Wire Wire Line
-	2150 2450 2400 2450
-Text GLabel 2400 2450 2    50   Input ~ 0
+	3150 2550 3400 2550
+Text GLabel 3400 2550 2    50   Input ~ 0
 INDICATOR
 Wire Notes Line
 	4600 6200 6950 6200

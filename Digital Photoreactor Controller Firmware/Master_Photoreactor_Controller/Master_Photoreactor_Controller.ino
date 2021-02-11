@@ -21,8 +21,8 @@ void loop()
 
   //generate buffer containing data to send via I2C
   uint8_t buf[1];
-  buf[0] = 25;  // adjusting this byte changes fan speed. Can be adjusted from 0 to 256.
-  buf[1] = 1;  // adjusting this byte changes LED intensity. Can be adjusted from 0 to 256. 
+  buf[0] = 20;  // adjusting this byte changes fan speed. Can be adjusted from 0 to 256.
+  buf[1] = 20;  // adjusting this byte changes LED intensity. Can be adjusted from 0 to 256. 
 
   // send buffer 
   Wire.beginTransmission(I2C_SLAVE_ADDR);
