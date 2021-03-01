@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name LDD-1500L)(type Legacy)(uri ${KIPRJMOD}/LIB_LDD-1500L/LDD-1500L/KiCad/LDD-1500L.lib)(options "")(descr ""))
+  (lib (name VXO7805-500-M)(type Legacy)(uri ${KIPRJMOD}/VXO7805-500-M/VXO7805-500-M.lib)(options "")(descr ""))
+  (lib (name driver-rescue)(type Legacy)(uri ${KIPRJMOD}/driver-rescue.lib)(options "")(descr ""))
+)

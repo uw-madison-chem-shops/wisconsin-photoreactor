@@ -1,6 +1,0 @@
-(sym_lib_table
-  (lib (name AL8805W5-7)(type Legacy)(uri ${KIPRJMOD}/AL8805W5-7/AL8805W5-7.lib)(options "")(descr ""))
-  (lib (name VXO7805-500-M)(type Legacy)(uri ${KIPRJMOD}/VXO7805-500-M/VXO7805-500-M.lib)(options "")(descr ""))
-  (lib (name LM2941S)(type Legacy)(uri ${KIPRJMOD}/LM2941S/LM2941S.lib)(options "")(descr ""))
-  (lib (name MBRA140)(type Legacy)(uri ${KIPRJMOD}/MBRA140/MBRA140.lib)(options "")(descr ""))
-)
