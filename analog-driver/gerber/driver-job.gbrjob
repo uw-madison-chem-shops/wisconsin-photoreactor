@@ -7,7 +7,7 @@
       "Application": "Pcbnew",
       "Version":     "5.1.8+dfsg1-1+b1"
     },
-    "CreationDate":  "2021-01-29T12:05:02-06:00"
+    "CreationDate":  "2021-03-05T10:02:30-06:00"
   },
   "GeneralSpecs":
   {
@@ -15,7 +15,7 @@
     {
       "Name": "driver",
       "GUID": "64726976-6572-42e6-9b69-6361645f7063",
-      "Revision": "1.0.0"
+      "Revision": "B"
     },
     "Size":
     {

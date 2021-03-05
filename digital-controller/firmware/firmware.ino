@@ -4,11 +4,15 @@
 
 void setup()
 {
+  pinMode(A4, OUTPUT);
+  pinMode(A5, OUTPUT);
   // init the Wire object
   Wire.begin(); 
   
   // wait for slave to finish any init sequence
   delay(2000);
+
+  Serial.begin(9600);
 }
 
 void loop()
@@ -18,6 +22,7 @@ void loop()
   uint8_t buf[1];
   buf[0] = 255-a;  // adjusting this byte changes fan speed. Can be adjusted from 0 to 256.
   buf[1] = a;  // adjusting this byte changes LED intensity. Can be adjusted from 0 to 256. 
+  Serial.println(int(buf));
 
   // send buffer 
   Wire.beginTransmission(I2C_SLAVE_ADDR);

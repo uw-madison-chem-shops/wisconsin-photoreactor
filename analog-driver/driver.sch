@@ -5,8 +5,8 @@ $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "Analog Photoreactor Driver"
-Date "2021-01-29"
-Rev "1.0.0"
+Date "2021-03-05"
+Rev "B"
 Comp "University of Wisconsin-Madison"
 Comment1 "Department of Chemistry"
 Comment2 "Gellman Group"
@@ -295,7 +295,7 @@ L Device:R_US R2
 U 1 1 60156E27
 P 4400 2050
 F 0 "R2" H 4468 2096 50  0000 L CNN
-F 1 "470" H 4468 2005 50  0000 L CNN
+F 1 "100" H 4468 2005 50  0000 L CNN
 F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" V 4440 2040 50  0001 C CNN
 F 3 "~" H 4400 2050 50  0001 C CNN
 	1    4400 2050
@@ -306,7 +306,7 @@ L Device:R_US R1
 U 1 1 6015726B
 P 4400 1450
 F 0 "R1" H 4468 1496 50  0000 L CNN
-F 1 "10k" H 4468 1405 50  0000 L CNN
+F 1 "6.8k" H 4468 1405 50  0000 L CNN
 F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" V 4440 1440 50  0001 C CNN
 F 3 "~" H 4400 1450 50  0001 C CNN
 	1    4400 1450
