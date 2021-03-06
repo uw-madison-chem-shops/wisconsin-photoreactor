@@ -39,11 +39,11 @@ LED emission spectra were measured using an [Ocean Insight Flame VIS-NIR Minatur
 
 **TODO measure and add amber LED spectra**
 
-![Orange](./Green - 530 nm - XPEBGR-L1-0000-00D01.png "Orange Led emission spectra")
+![Orange](./Orange  - 620 nm - XPEBRO-L1-0000-00901.png "Orange Led emission spectra")
 
-![Red](./Red - 660 nm - XPEPHR-L1-0000-00801.png "Red Led emission spectra")
+![Red](./ Red - 660 nm - XPEPHR-L1-0000-00801.png "Red Led emission spectra")
 
-![NIR](./NIR - 730 nm - XPEFAR-L1-0000-00601.png "NiR Led emission spectra")
+![NIR](./ NIR - 730 nm - XPEFAR-L1-0000-00601.png "NiR Led emission spectra")
 
 ## Ordering Blank LED stars
 
@@ -51,4 +51,4 @@ The WPR lightsource is built to fit in industry standard, 20 mm [Indus Star A008
 
 To order blank Indus Star A008 LED stars for custom LED star creation, contact [LEDsupply](https://www.ledsupply.com/contact-us), [LEDdynamics](https://leddynamics.com/contact-us) or other vendors.
 
-Other 20 mm 3-up LED stars in industry standard packages could be incorporated into the WPR, but have not been tested.
+Different 20 mm 3-up LED stars in industry standard packages could be incorporated into the WPR, but have not been tested.
