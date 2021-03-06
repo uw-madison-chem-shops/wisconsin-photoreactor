@@ -5,8 +5,8 @@ $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "Digital Photoreactor Driver"
-Date "2021-01-22"
-Rev "1.0.0"
+Date "2021-03-06"
+Rev "B"
 Comp "University of Wisconsin-Madison"
 Comment1 "Department of Chemistry"
 Comment2 "Gellman Group"
@@ -108,13 +108,13 @@ $EndComp
 $Comp
 L Connector_Generic:Conn_01x04 J1
 U 1 1 5FBC8C0C
-P 4600 1300
-F 0 "J1" H 4680 1292 50  0000 L CNN
-F 1 "Conn_01x04" H 4680 1201 50  0000 L CNN
-F 2 "Connector_JST:JST_PH_S4B-PH-K_1x04_P2.00mm_Horizontal" H 4600 1300 50  0001 C CNN
-F 3 "~" H 4600 1300 50  0001 C CNN
-	1    4600 1300
-	-1   0    0    1   
+P 4600 1200
+F 0 "J1" H 4680 1192 50  0000 L CNN
+F 1 "Conn_01x04" H 4680 1101 50  0000 L CNN
+F 2 "Connector_JST:JST_PH_S4B-PH-K_1x04_P2.00mm_Horizontal" H 4600 1200 50  0001 C CNN
+F 3 "~" H 4600 1200 50  0001 C CNN
+	1    4600 1200
+	-1   0    0    -1  
 $EndComp
 Text GLabel 6000 1900 2    50   Input ~ 0
 SCL
@@ -151,13 +151,13 @@ NoConn ~ 1650 5700
 $Comp
 L Connector_Generic:Conn_01x04 J2
 U 1 1 5FE1AA2F
-P 4600 1800
-F 0 "J2" H 4680 1792 50  0000 L CNN
-F 1 "Conn_01x04" H 4680 1701 50  0000 L CNN
-F 2 "Connector_JST:JST_PH_S4B-PH-K_1x04_P2.00mm_Horizontal" H 4600 1800 50  0001 C CNN
-F 3 "~" H 4600 1800 50  0001 C CNN
-	1    4600 1800
-	-1   0    0    1   
+P 4600 1700
+F 0 "J2" H 4680 1692 50  0000 L CNN
+F 1 "Conn_01x04" H 4680 1601 50  0000 L CNN
+F 2 "Connector_JST:JST_PH_S4B-PH-K_1x04_P2.00mm_Horizontal" H 4600 1700 50  0001 C CNN
+F 3 "~" H 4600 1700 50  0001 C CNN
+	1    4600 1700
+	-1   0    0    -1  
 $EndComp
 $Comp
 L Connector:Barrel_Jack J4
@@ -284,26 +284,11 @@ Wire Wire Line
 Wire Wire Line
 	6200 4500 7000 4500
 Connection ~ 6200 4500
-$Comp
-L driver-rescue:VXO7805-500-M-VXO7805-500-M PS1
-U 1 1 60157AFB
-P 6200 4000
-F 0 "PS1" H 6200 4467 50  0000 C CNN
-F 1 "VXO7805-500-M" H 6200 4376 50  0000 C CNN
-F 2 "CONV_VXO7805-500-M" H 6200 4000 50  0001 L BNN
-F 3 "" H 6200 4000 50  0001 L BNN
-F 4 "1.0" H 6200 4000 50  0001 L BNN "PARTREV"
-F 5 "CUI Inc." H 6200 4000 50  0001 L BNN "MANUFACTURER"
-F 6 "3.5 mm" H 6200 4000 50  0001 L BNN "MAXIMUM_PACKAGE_HEIGHT"
-F 7 "Manufacturer Recommendations" H 6200 4000 50  0001 L BNN "STANDARD"
-	1    6200 4000
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4850 4500 5200 4500
 Connection ~ 5200 4500
 Wire Wire Line
-	5200 4500 6200 4500
+	5200 4500 5500 4500
 Wire Wire Line
 	5200 4200 5200 3800
 Wire Wire Line
@@ -677,4 +662,23 @@ F 3 "" H 2050 5900 50  0001 C CNN
 	1    2050 5900
 	1    0    0    -1  
 $EndComp
+$Comp
+L VXO7805-500-M:VXO7805-500-M PS1
+U 1 1 6042EFCA
+P 6200 4000
+F 0 "PS1" H 6200 4467 50  0000 C CNN
+F 1 "VXO7805-500-M" H 6200 4376 50  0000 C CNN
+F 2 "CONV_VXO7805-500-M" H 6200 4000 50  0001 L BNN
+F 3 "1.0" H 6200 4000 50  0001 L BNN
+F 4 "3.5 mm" H 6200 4000 50  0001 L BNN "Field4"
+F 5 "CUI Inc." H 6200 4000 50  0001 L BNN "Field5"
+F 6 "Manufacturer Recommendations" H 6200 4000 50  0001 L BNN "Field6"
+	1    6200 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 4200 5500 4500
+Connection ~ 5500 4500
+Wire Wire Line
+	5500 4500 6200 4500
 $EndSCHEMATC

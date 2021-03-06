@@ -41,3 +41,18 @@ Find in "firmware" folder.
 Use Arduino IDE.
 
 We programmed the ATtiny85 using the sparkfun Tiny AVR Programmer: [PGM-11801](https://www.sparkfun.com/products/11801).
+
+## Changelog
+
+### Unprinted
+
+### Revision B
+
+#### Fixed
+- silk screen polarity markings for LED
+- backwards I2C connectors
+
+### Revision A
+
+#### Added
+- initial design

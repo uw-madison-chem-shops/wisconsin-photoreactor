@@ -39,9 +39,9 @@ Boards themselves can be printed for approximately $5 each.
 
 ## Changelog
 
-### Revision B
-
 ### Unprinted
+
+### Revision B
 
 #### Fixed
 - sign of LED terminals on silkscreen
