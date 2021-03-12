@@ -1,10 +1,10 @@
 # Lightsource LEDS
 
-The WPR lightsource is built around 3 high-power, monochromatic LEDs mounted onto an industry-standard 20 mm LED star. 
+The WPR light source is built around 3 high-power, monochromatic LEDs mounted onto an industry-standard 20 mm LED star package. 
 
-Compatible LED stars are commercially availible in discrete wavelength ranges across the UV-Visible spectrum.
+WPR-comptabile LED stars emitting narrow wavelength ranges across the UV-Visible spectrum are  available from multiple vendors. A few are detailed below.
 
-Custom LED stars mounted with 3.5 mm surface mount LEDs of any wavelength can be fabricated using a reflow oven. 
+CPR-comptabible custom LED stars mounted with 3.5 mm surface mount LEDs of any wavelength can be fabricated using a reflow oven. 
 
 ## List of compatible commerical LED stars
 
@@ -20,12 +20,12 @@ Custom LED stars mounted with 3.5 mm surface mount LEDs of any wavelength can be
 | Red            | 660 nm       | Cree, Inc.   | XPEPHR-L1-0000-00801	   | CREEXPE-DRD-3                  | $10.50          | [DigiKey](https://www.digikey.com/en/products/detail/cree-inc/XPEPHR-L1-0000-00801/4895013) [Mouser](https://www.mouser.com/ProductDetail/Cree-Inc/XPEPHR-L1-0000-00801/?qs=3izLlwrMQ7lAtbsWL38zog%3D%3D) |
 | NIR            | 730 nm       | Cree, Inc.   | XPEFAR-L1-0000-00601	   | CREEXPE-FRD-3	                | $12.00          | [DigiKey](https://www.digikey.com/en/products/detail/cree-inc/XPEFAR-L1-0000-00601/5303643) [Mouser](https://www.mouser.com/ProductDetail/Cree-Inc/XPEFAR-L1-0000-00601?qs=k72kBymvut%252B0JKg4b6%252BzNg%3D%3D) |
 
-All prices are extended estimates in USD.
-In general these are overestimates, so this should be an upper-estimate on cost.
+All prices are in USD.
+In general, prices are overestimates, thereby providing an upper-estimate on cost.
 
 ## Commerical LED emission spectra
 
-LED emission spectra were measured using an [Ocean Insight Flame VIS-NIR Minature Spectrometer](https://www.oceaninsight.com/products/spectrometers/general-purpose-spectrometer/flame-series/flame-vis-nir/) loaned by the [Goldsmith Group](https://goldsmith.chem.wisc.edu).
+LED emission spectra were measured using an [Ocean Insight USB2000 Spectrometer](https://www.oceaninsight.com/products/spectrometers/general-purpose-spectrometer/flame-series/flame-vis-nir/) loaned by the [Goldsmith Group](https://goldsmith.chem.wisc.edu).
 
 ![UVA](./UVA - 365 nm - IN-C39CTOU2.png "UVA Led emission spectra")
 
@@ -37,7 +37,7 @@ LED emission spectra were measured using an [Ocean Insight Flame VIS-NIR Minatur
 
 ![Green](./Green - 530 nm - XPEBGR-L1-0000-00D01.png "Green Led emission spectra")
 
-**TODO measure and add amber LED spectra**
+![Amber](./Amber - 595 nm - LXML-PL01-0060.png "Green Led emission spectra")
 
 ![Orange](./Orange  - 620 nm - XPEBRO-L1-0000-00901.png "Orange Led emission spectra")
 
@@ -47,7 +47,7 @@ LED emission spectra were measured using an [Ocean Insight Flame VIS-NIR Minatur
 
 ## Ordering Blank LED stars
 
-The WPR lightsource is built to fit in industry standard, 20 mm [Indus Star A008 high power LED modules](https://leddynamics.com/indus-star-a007-a008).
+The WPR lightsource is built to fit an industry-standard, 20 mm [Indus Star A008 high power LED modules](https://leddynamics.com/indus-star-a007-a008).
 
 To order blank Indus Star A008 LED stars for custom LED star creation, contact [LEDsupply](https://www.ledsupply.com/contact-us), [LEDdynamics](https://leddynamics.com/contact-us) or other vendors.
 
