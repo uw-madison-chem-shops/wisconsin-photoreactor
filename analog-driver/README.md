@@ -4,8 +4,6 @@ A photoreactor driver board with a physical knob to adjust light intensity.
 
 ## PCB
 
-### Layout
-
 This PCB was designed using KiCAD version 5.
 Refer to `driver.pdf` for schematic.
 PCB images generated with [tracespace](https://github.com/tracespace/tracespace) follow.
@@ -13,7 +11,7 @@ PCB images generated with [tracespace](https://github.com/tracespace/tracespace)
 <img src="./driver-.top.svg" width="100%"/>
 <img src="./driver-.bottom.svg" width="100%"/>
 
-### Bill of Materials
+## Bill of Materials
 
 | reference      | value         | manufacturer | part number       | price | vendors |
 | :------------- | :------------ | :----------- | :---------------- | :---- | :------ |
