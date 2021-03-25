@@ -1,6 +1,6 @@
 # analog driver
 
-A photoreactor driver board with a physical knob.
+A photoreactor driver board with a physical knob to adjust light intensity.
 
 ## PCB
 
@@ -10,9 +10,8 @@ This PCB was designed using KiCAD version 5.
 Refer to `driver.pdf` for schematic.
 PCB images generated with [tracespace](https://github.com/tracespace/tracespace) follow.
 
-![top](./top.png "PCB top view")
-
-![bottom](./bottom.png "PCB bottom view")
+<img src="./driver-.top.svg" width="100%"/>
+<img src="./driver-.bottom.svg" width="100%"/>
 
 ### Bill of Materials
 
