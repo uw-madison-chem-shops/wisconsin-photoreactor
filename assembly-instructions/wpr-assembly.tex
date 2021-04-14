@@ -69,15 +69,92 @@ Throughout this document we refer to an online repository containing source and 
 This repository appears at \url{https://github.com/uw-madison-chem-shops/wisconsin-photoreactor}.
 This repository contains everything including the source for this very document.
 
+The Wisconsin Photo-Reactor (WPR) is made to be easily assembled.
+This document is meant to help chemists accomplish this assembly.
+Each reactor has two major components requiring detailed custom assembly:
+
+\begin{itemize}
+  \item The 3D printed enclosure, described in section TODO
+  \item The drive electronics, described in section TODO
+\end{itemize}
+
+With these two major components complete, assembly of the WPR is relatively straight-forward.
+Details of final assembly are described in section TODO.
+
+TODO: THIS IS A LIVING DOCUMENT, PLEASE CONTRIBUTE.
+
 \section{3D Printed Enclosure}
 
 \includegraphics[width=\textwidth]{"./3dp-coverat.jpg"}
+
+The body of the WPR is made up of three main pieces.
+
+\begin{itemize}
+    \item Base, containing LEDs, fan, and drive electronics.
+    \item Top plate accepting reaction vials.
+    \item Walls spacing the top plate at the appropriate distance away from the base.
+\end{itemize}
+
+The WPR base is the same for all reactors.
+The top plate and wall height can be adjusted depending on the particular vials desired.
+Look within the repository in the subdirectory ``photoreactor-tops'' to find existing designs of (wall, top) for a number of different vial sizes.
+We encourage you to design your own (wall, top) if none of these suit your application.
+Consider adding your new designs to repository so that others may benefit from your design efforts.
+In addition to these three main components you should also print a cable-anchor for each of your WPR bases.
+
+TODO: SHARE DETAILS ABOUT CAD SOFTWARE.
+TODO: MAKE IT CLEAR THAT STL FILES ARE THE RELEVANT EXCHANGE FILE.
+TODO: RECOMMEND STL VIEWER.
+TODO: RECOMMEND SLICER.
+
+There are many options for getting your enclosures printed.
+TODO: DO WE WANT TO GIVE ANY ADVICE ABOUT MATERIAL CHOICE?
+TODO: RECOMMEND SPECIFIC MANUFACTURERS.
+Of course, you may wish to print multiple (wall, top) types to be used interchangeably with one base.
+
+Once your parts are done you may need to remove extra bonding material with a razor blade or exacto-knife.
+The three pieces of your reactor should fit together snugly and securely.
+
+\includegraphics[width=0.5\textwidth]{"./heat-insert.jpg"}
+
+7 heat inserts...
 
 \section{Electronics}
 
 \includegraphics[width=\textwidth]{"./electronics-coverart.jpg"}
 
+The WPR incorporates small circuit boards controlling the incorporated LED and fan.
+We refer to these small boards as ``drivers''.
+There are two types available: the ``analog-driver'' and ``digital-driver''.
+Refer to the associated directories in the online repository for design files for each of these.
+
+The analog-driver circuit is made to be as simple as possible.
+The circuit accepts DC 12 V through a barrel jack.
+A small knob is used to adjust light intensity.
+Fan speed is not adjustable.
+
+The digital-driver circuit is made to be incorporated into an I$^2$C-based digital control system.
+In addition to power, these boards have 4-pin connectors to carry the I$^2$C serial data.
+More details about this digital control system are in TODO: LINK TO SECTION.
+
+\clearpage
 \subsection{Analog}
+
+TODO: PICTURE OF PCB AS DELIVERED BY MANUFACTURER
+
+TODO: ADD SURFACE MOUNT
+Recommend thin solder, e.g. 0.015''.
+Small green line on LED towards ground (left).
+
+TODO: ADD CONNECTORS, TRIMPOT
+Recommend standard solder, e.g. 0.031''.
+
+TODO: ADD BARREL JACKS, TEST POINTS
+
+TODO: TEST
+150 mA to 3 V
+
+TODO: ADD DRIVER
 
 \includepdf[landscape=true]{"../analog-driver/driver.pdf"}
 
@@ -96,22 +173,22 @@ Consistent with Adafruit, Sparkfun, Seeed...
 
 \includegraphics[width=\textwidth]{"./assembly-coverart.jpg"}
 
-
 0.5'' standoff: RAF 4505-440-AL
 
 \subsection{Base}
 
-\subsubsection{LED and Heatsink}
+TODO: ASSEMBLE LED
+In this case LED Supply 07007-PL000-F
+May be a challenge---heat sinking will fight you
+Add lead-based solder to make easier
 
 TODO: LED PCB part number
 
 TODO: heatsink part number
 
-\begin{figure}[H]
-  \centering
+\begin{center}
   \includegraphics[width=\textwidth/2]{"./tap-heatsink.jpg"}
-  \caption{Two of the innermost holes on the extruded heatsink must be 4-40 tapped.}
-\end{figure}
+\end{center}
 
 Tap the heatsink.
 We used thread-forming tap: OSG 1400105300.
@@ -120,11 +197,9 @@ TODO: heatsink compoud
 
 Install with wires facing towards printed hole
 
-Use 4-40 1/4''.
+Use 4-40 1/4''.   Fastenal 0146455
 
-\subsubsection{Fan}
-
-TODO: fan part number
+TODO: MOUNT FAN
 
 Noctua NF-A12x15 PWM
 
@@ -134,5 +209,16 @@ yellow: +12 V
 black: ground
 
 Use 4-40 3/4'' into captured nuts
+
+TODO: cable tie
+
+\subsubsection{Reflector}
+
+\begin{center}
+  \includegraphics[width=\textwidth/2]{"./reflector.jpg"}
+\end{center}
+
+TODO: part number
+
 
 \end{document}
