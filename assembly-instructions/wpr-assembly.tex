@@ -171,8 +171,6 @@ Recommend standard solder, e.g. 0.031''.
 
 150 mA to 3 V
 
-TODO: ADD DRIVER
-
 \includepdf[landscape=true]{"../analog-driver/driver.pdf"}
 
 \subsection{Digital}
@@ -190,20 +188,23 @@ Consistent with Adafruit, Sparkfun, Seeed...
 
 \includegraphics[width=\textwidth]{"./assembly-coverart.jpg"}
 
-0.5'' standoff: RAF 4505-440-AL
 
+\clearpage
 \subsection{Base}
 
-TODO: ASSEMBLE LED
+\begin{center}
+  \includegraphics[width=\textwidth/2]{"./bare-led.jpg"}
+\end{center}
+
+\begin{center}
+  \includegraphics[width=\textwidth/2]{"./soldered-led.jpg"}
+\end{center}
+
 In this case LED Supply 07007-PL000-F
 May be a challenge---heat sinking will fight you
 Add lead-based solder to make easier
 
 TODO: LED PCB part number
-
-TODO: LED PINS SOLUTION
-
-TODO: heatsink part number
 
 \begin{center}
   \includegraphics[width=\textwidth/2]{"./tap-heatsink.jpg"}
@@ -212,32 +213,52 @@ TODO: heatsink part number
 Tap the heatsink.
 We used thread-forming tap: OSG 1400105300.
 
-TODO: heatsink compoud
+Install with wires facing towards printed hole.
 
-Install with wires facing towards printed hole
+\begin{center}
+  \includegraphics[width=\textwidth/2]{"./led-and-heatsink.jpg"}
+\end{center}
 
 Use 4-40 1/4''.   Fastenal 0146455
 
-TODO: MOUNT FAN
+\begin{center}
+  \includegraphics[width=\textwidth/2]{"./mounted-fan.jpg"}
+\end{center}
 
 Noctua NF-A12x15 PWM
+
+Use 4-40 3/4'' into captured nuts TODO: Fastenal part number
+
+\begin{center}
+  \includegraphics[width=\textwidth/2]{"./cable-tie.jpg"}
+\end{center}
+
+
+TODO: cable tie
+
+\begin{center}
+  \includegraphics[width=\textwidth/2]{"./driver-on-base.jpg"}
+\end{center}
+
 
 pins:
 blue: PWM (5 V)
 yellow: +12 V
 black: ground
 
-Use 4-40 3/4'' into captured nuts
 
-TODO: cable tie
+0.5'' standoff: RAF 4505-440-AL
 
-\subsubsection{Reflector}
+TODO: LED PINS SOLUTION
+
+\subsection{Top}
+
+Language: top and chamber.
 
 \begin{center}
   \includegraphics[width=\textwidth/2]{"./reflector.jpg"}
 \end{center}
 
 TODO: part number
-
 
 \end{document}
