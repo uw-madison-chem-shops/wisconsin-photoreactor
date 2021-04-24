@@ -1,4 +1,0 @@
-(sym_lib_table
-  (lib (name VXO7805-500-M)(type Legacy)(uri ${KIPRJMOD}/symbols/VXO7805-500-M.lib)(options "")(descr ""))
-  (lib (name LDD-1500L)(type Legacy)(uri ${KIPRJMOD}/symbols/LDD-1500L.lib)(options "")(descr ""))
-)

@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name LDD-1500L)(type Legacy)(uri ${KIPRJMOD}/symbols/LDD-1500L.lib)(options "")(descr ""))
+)
