@@ -1,6 +1,10 @@
-# analog driver
+# Analog Driver Board
 
-A photoreactor driver board with a physical knob to adjust light intensity.
+A simple photoreactor driver board providing control of light intensity. This control is achieved through adjustment of the board-mounted potentiometer. No software is required, and multiple WPP reactors fitted with this board can be connected in series to a single power source.However, fan speed isn’t adjustable and is maintained at maximum. 
+
+Relative light intensity can be determined using the analog driver board test points and a multimeter. See operation instructions for more information.
+
+The analog driver board is the recommended  driver solution for a typical user. 
 
 ## PCB
 
@@ -41,11 +45,11 @@ Boards themselves can be printed for approximately $5 each.
 ### Revision B
 
 #### Fixed
-- sign of LED terminals on silkscreen
-- voltage divider: R1 to 6.8k R2 to 100 ohm
-- adjusted voltage divider silkscreen
+- Fixedsign of LED terminals on silkscreen
+- Voltage divider adjusted: R1 to 6.8k R2 to 100 ohm
+- Adjusted voltage divider silkscreen
 
 ### Revision A
 
 #### Added
-- initial design
+- Initial design
