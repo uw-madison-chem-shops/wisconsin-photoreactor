@@ -1,11 +1,9 @@
 # WPP Standardized Base
 
-The core structure of the Wisconsin Photoreactor Platform.
-Each reactor shares this component.
+The core structure of the Wisconsin Photoreactor Platform. Each reactor shares this component.
 
 Through variation of the LED star integrated into a base, the user can control the wavelengths of light delivered by the photon source to a reaction vessel. 
-See fabrication guide for LED star installation instructions.
-See directory `photon-source-leds` for list of LED stars confirmed compatible with the WPP architecture.
+See fabrication instructions for LED star installation instructions. See `photon-source-leds` directory for list of LED stars confirmed compatible with the WPP architecture.
 
 ![WPP base](./base.jpg)
 
@@ -20,7 +18,6 @@ See directory `photon-source-leds` for list of LED stars confirmed compatible wi
 | fan               | Noctua       | NF-A12x15 PWM     | $20.00 | [Amazon](https://www.amazon.com/Noctua-NF-A12x15-PWM-Premium-Quiet/dp/B071W6HJP6) |
 | 1/4" screws       | Fastenal     | 0146455           |        |
 | 3/4" screws       | Fastenal     | 72490             |        |
-| mirror sheet      | Aneco        |                   | $10.00 | [Amazon](https://www.amazon.com/gp/product/B075R3MMX1) |
 
 All prices are extended estimates in USD.
 In general these are overestimates, so this should be an upper-estimate on cost.
