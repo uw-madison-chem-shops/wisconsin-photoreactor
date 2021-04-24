@@ -1,10 +1,10 @@
-# Lightsource LEDS
+# Photon Source LEDS
 
-The WPR light source is built around 3 high-power, monochromatic LEDs mounted onto an industry-standard 20 mm LED star package. 
+The WPP photon source consists of 3 high-power, single-color LEDs mounted onto an industry-standard 20 mm LED star package. 
 
-WPR-comptabile LED stars emitting narrow wavelength ranges across the UV-Visible spectrum are  available from multiple vendors. A few are detailed below.
+WPP-comptabile LED stars emitting narrow wavelength ranges across the UV-Visible spectrum are available from multiple vendors. A few are detailed below.
 
-CPR-comptabible custom LED stars mounted with 3.5 mm surface mount LEDs of any wavelength can be fabricated using a reflow oven. 
+WPP-comptabible custom LED stars mounted with 3.5 mm surface mount LEDs of any wavelength can be fabricated using a reflow oven. See the fabrication instructions for more information.
 
 ## List of compatible commerical LED stars
 
@@ -25,30 +25,28 @@ In general, prices are overestimates, thereby providing an upper-estimate on cos
 
 ## Commerical LED emission spectra
 
-LED emission spectra were measured using an [Ocean Insight USB2000 Spectrometer](https://www.oceaninsight.com/products/spectrometers/general-purpose-spectrometer/flame-series/flame-vis-nir/) loaned by the [Goldsmith Group](https://goldsmith.chem.wisc.edu).
+LED emission spectra below were measured using an Ocean Insight USB2000 Spectrometer loaned by the [Goldsmith Group](https://goldsmith.chem.wisc.edu).
 
-![UVA](./UVA - 365 nm - IN-C39CTOU2.png "UVA Led emission spectra")
+![UVA](./UVA-365-nm-IN-C39CTOU2.png)
 
-![Violet](./Violet - 395 nm - IN-C39CTOU5.png "Violet Led emission spectra")
+![Violet](./Violet-395-nm-IN-C39CTOU5.png)
 
-![Blue](./Blue - 450 nm - XTEARY-00-0000-000000N09.png "Blue Led emission spectra")
+![Blue](./Blue-450-nm-XTEARY-00-0000-000000N09.png)
 
-![Cyan](./Cyan - 495 nm - LXML-PE01-0080.png "Cyan Led emission spectra")
+![Cyan](./Cyan-495-nm-LXML-PE01-0080.png)
 
-![Green](./Green - 530 nm - XPEBGR-L1-0000-00D01.png "Green Led emission spectra")
+![Green](./Green-530-nm-XPEBGR-L1-0000-00D01.png)
 
-![Amber](./Amber - 595 nm - LXML-PL01-0060.png "Green Led emission spectra")
+![Amber](./Amber-595-nm-LXML-PL01-0060.png)
 
-![Orange](./Orange  - 620 nm - XPEBRO-L1-0000-00901.png "Orange Led emission spectra")
+![Orange](./Orange-620-nm-XPEBRO-L1-0000-00901.png)
 
-![Red](./ Red - 660 nm - XPEPHR-L1-0000-00801.png "Red Led emission spectra")
+![Red](./Red-660-nm-XPEPHR-L1-0000-00801.png)
 
-![NIR](./ NIR - 730 nm - XPEFAR-L1-0000-00601.png "NiR Led emission spectra")
+![NIR](./NIR-730-nm-XPEFAR-L1-0000-00601.png)
 
 ## Ordering Blank LED stars
 
-The WPR lightsource is built to fit an industry-standard, 20 mm [Indus Star A008 high power LED modules](https://leddynamics.com/indus-star-a007-a008).
+The WPP lightsource is designed to fit an industry-standard, 20 mm [Indus Star A008 high power LED modules](https://leddynamics.com/indus-star-a007-a008).
 
 To order blank Indus Star A008 LED stars for custom LED star creation, contact [LEDsupply](https://www.ledsupply.com/contact-us), [LEDdynamics](https://leddynamics.com/contact-us) or other vendors.
-
-Different 20 mm 3-up LED stars in industry standard packages could be incorporated into the WPR, but have not been tested.
