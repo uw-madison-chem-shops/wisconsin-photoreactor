@@ -4,6 +4,8 @@ An open source photoreactor platfrom. 3D printed enclosure, commercially avaliab
 
 ![WPP photo](./coverart.jpg)
 
+A WPP device consists of a base, reaction module and reactor driver. The base houses the photon source and cooling fan. The reaction module consists of a  reaction chamber and  vessel holder. A digital driver board, analog driver board or simple circuit integrating a commercial light emitting diode (LED) driver can be fitted to the base to drive the reactor. Each component is highly versatile, and apparatus is fully modular.
+
 ## Repository
 
 This is an open source hardware project licensed under the CERN Open Hardware Licence Version 2 - Permissive.
