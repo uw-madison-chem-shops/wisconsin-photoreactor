@@ -30,7 +30,7 @@ Care must be taken to use safety glasses protective against the specific emissio
 ## Frabication and Operation Instructions
 
 This repository contains detailed instructions for fabrication, operation and documentation of WPP devices.
-Please see [wpp-assembly.pdf](./assembly-instructions/wpp-assembly.pdf)
+Please see [wpp-fabrication-operation.pdf](./fabrication-and-operation-instructions/wpp-fabrication-operation.tex)
 
 ## Enclosure
 
