@@ -27,23 +27,23 @@ In general, prices are overestimates, thereby providing an upper-estimate on cos
 
 LED emission spectra below were measured using an Ocean Insight USB2000 Spectrometer loaned by the [Goldsmith Group](https://goldsmith.chem.wisc.edu).
 
-![UVA](./UVA - 365 nm - IN-C39CTOU2.png "UVA Led emission spectra")
+![UVA](./UVA-365-nm-IN-C39CTOU2.png)
 
-![Violet](./Violet - 395 nm - IN-C39CTOU5.png "Violet Led emission spectra")
+![Violet](./Violet-395-nm-IN-C39CTOU5.png)
 
-![Blue](./Blue - 450 nm - XTEARY-00-0000-000000N09.png "Blue Led emission spectra")
+![Blue](./Blue-450-nm-XTEARY-00-0000-000000N09.png)
 
-![Cyan](./Cyan - 495 nm - LXML-PE01-0080.png "Cyan Led emission spectra")
+![Cyan](./Cyan-495-nm-LXML-PE01-0080.png)
 
-![Green](./Green - 530 nm - XPEBGR-L1-0000-00D01.png "Green Led emission spectra")
+![Green](./Green-530-nm-XPEBGR-L1-0000-00D01.png)
 
-![Amber](./Amber - 595 nm - LXML-PL01-0060.png "Green Led emission spectra")
+![Amber](./Amber-595-nm-LXML-PL01-0060.png)
 
-![Orange](./Orange  - 620 nm - XPEBRO-L1-0000-00901.png "Orange Led emission spectra")
+![Orange](./Orange-620-nm-XPEBRO-L1-0000-00901.png)
 
-![Red](./ Red - 660 nm - XPEPHR-L1-0000-00801.png "Red Led emission spectra")
+![Red](./Red-660-nm-XPEPHR-L1-0000-00801.png)
 
-![NIR](./ NIR - 730 nm - XPEFAR-L1-0000-00601.png "NiR Led emission spectra")
+![NIR](./NIR-730-nm-XPEFAR-L1-0000-00601.png)
 
 ## Ordering Blank LED stars
 
