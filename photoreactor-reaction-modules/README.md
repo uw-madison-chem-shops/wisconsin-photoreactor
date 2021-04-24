@@ -1,13 +1,13 @@
 # Photoreactor Reaction Modules
 
-![WPP modules](./modules.png)
+![WPP modules](./modules.jpg)
 
 A WPP reaction module consists of a reaction chamber and vessel holder. 
 
 By modifying chamber height and adjusting holder geometry, one can produce modules compatible with reaction vessels of various types and sizes. 
 Template reaction chamber and vessel holder CAD designs are provided in the `template` directory. 
 
-CAD designs and 3D-printable models for modules compatible with various common reaction vessl are provided in this directory. A table of compatible modules is offered below. 
+CAD designs and 3D-printable models for modules compatible with various common reaction vessl are provided in this directory. A table of compatible vessels is offered below. 
 
 ## List of reaction vessels with compatible modules
 
