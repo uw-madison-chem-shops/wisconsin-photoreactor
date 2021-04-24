@@ -1,11 +1,11 @@
 # WPP Standardized Base
 
+![WPP base](./base.jpg)
+
 The core structure of the Wisconsin Photoreactor Platform. Each reactor shares this component.
 
 Through variation of the LED star integrated into a base, the user can control the wavelengths of light delivered by the photon source to a reaction vessel. 
 See fabrication instructions for LED star installation instructions. See `photon-source-leds` directory for list of LED stars confirmed compatible with the WPP architecture.
-
-![WPP base](./base.jpg)
 
 ### Bill of Materials
 
