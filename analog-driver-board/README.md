@@ -42,6 +42,9 @@ Boards themselves can be printed for approximately $5 each.
 
 ### Unprinted
 
+### Changed
+- removed wisconsin crest logo
+
 ### Revision B
 
 #### Fixed

@@ -8,9 +8,8 @@ This PCB was designed using KiCAD version 5.
 Refer to `driver.pdf` for schematic.
 PCB images generated with [tracespace](https://github.com/tracespace/tracespace) follow.
 
-![top](./top.png "PCB top view")
-
-![bottom](./bottom.png "PCB bottom view")
+<img src="./driver-.top.svg" width="100%"/>
+<img src="./driver-.bottom.svg" width="100%"/>
 
 Bill of Materials
 
@@ -45,6 +44,9 @@ We programmed the ATtiny85 using the sparkfun Tiny AVR Programmer: [PGM-11801](h
 ## Changelog
 
 ### Unprinted
+
+#### Changed
+- removed wisconsin crest logo
 
 ### Revision B
 
