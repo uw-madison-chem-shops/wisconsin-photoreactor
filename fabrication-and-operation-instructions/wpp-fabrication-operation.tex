@@ -54,7 +54,7 @@
 % title
 \title{Wisconsin Photoreactor Platform\\Fabrication and Operation Guide}
 \author{
-  Philip Lampkin \\
+  Philip P. Lampkin \\
   Blaise J. Thompson \\
   Samuel H. Gellman
   }
@@ -70,138 +70,204 @@
 
 \section{Introduction}
 
-The Wisconsin Photo-Reactor (WPR) is made to be easily assembled.
-This document is meant to help chemists accomplish this assembly.
-Each reactor has two major components requiring detailed custom assembly:
+Below are instructions for fabrication, operation and documentation of Wisconsin Photoreactor Platform (WPP) devices. 
 
-\begin{itemize}
-  \item The 3D printed enclosure, described in \autoref{SEC:enclosure}
-  \item The drive electronics, described in \autoref{SEC:electronics}
-\end{itemize}
+For access to all project source files, documentation and resources, visit the Wisconsin Photoreactor Platform project repository on GitHub at \href{https://github.com/uw-madison-chem-shops/wisconsin-photoreactor}{https://github.com/uw-madison-chem-shops/wisconsin-photoreactor}. 
 
-With these two major components complete, assembly of the WPR is relatively straight-forward.
-Details of final assembly are described in \autoref{SEC:assembly}.
-
-Throughout this document we refer to an online repository containing source and design files.
-This repository appears at \url{https://github.com/uw-madison-chem-shops/wisconsin-photoreactor}.
-This repository contains everything including the source for this very document.
-
-A working WPR is made up of many separate commercially available parts.
-This guide assumes that you have already done the work of procuring those parts.
-The online repository contains several README files with detailed part numbers and suggested vendors.
-
-The WPR is a living project.
-We welcome and encourage duplication and modification of our designs and documentation.
-If you notice problems or omissions within this assembly document, please consider opening an issue or pull request.
-
-TODO: FIGURE 1 FROM OPERATION GUIDE
-
-A WPP device consists of a base, reaction module and reactor driver (Figure 1).
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{"./fig1.png"}
+	\caption{(A) Unassembled WPP device comprised of a vessel holder, reaction chamber and standardized base fitted with a digital driver board. (B) Modular apparatus assembly.}
+\end{figure}
+A WPP device consists of a base, reaction module and reactor driver (Figure 1A).
 The base houses the photon source and cooling fan.
 The reaction module is comprised of a reflective reaction chamber and rigid vessel holder.
 A digital driver board, analog driver board or simple circuit integrating a commercial light emitting diode (LED) driver can be fitted to the base to drive the reactor.
-Each component is highly versatile, and apparatus assembly is fully modular (Figure 1B).
 
+Each component is highly versatile, and apparatus assembly is fully modular (Figure 1B).
 Through variation of each component, one can quickly produce bespoke WPP devices to meet specific research needs.
-Configurational variations are easily documented for later reproduction.
-Detailed below are instructions for configuration and documentation of each component in a WPP apparatus.
+
+The WPP is a living project.
+We encourage duplication and modification of our designs.
+If you would like to contribute to the WPP project or notice an issue, please consider opening an pull request or issue on GitHub.
 
 \section{Fabrication}
 
-\subsection{Photon Source} \label{SEC:photon-source}
-
-TODO: FIGURE 2 FROM OPERATION GUIDE
-
-The WPP architecture utilizes industry standard 20 mm LED star circuit boards mounted with 3 high-intensity LEDs to deliver photons to photoreactions (Figure 2A).
-These LED star boards are commercially available or can be easily fabricated (see fabrication guide).
-The range of wavelengths provided by a LED star depends upon the emission profile of the mounted LEDs.
-Through variation of the LED star integrated into a base (Figure 2B), the user can control the wavelengths of light delivered by the photon source to a reaction vessel.
-See fabrication guide for LED star installation instructions.
-
-\subsection{3D Printed Enclosure} \label{SEC:enclosure}
-
-\includegraphics[width=\textwidth]{"./3dp-coverat.jpg"}
-
-A WPP reaction module consists of a reaction chamber and vessel holder.
-By modifying chamber height and adjusting holder geometry, one can produce modules compatible with reaction vessels of various types and sizes.
-Template reaction chamber and vessel holder CAD designs are provided in the project repository.
-CAD designs and 3D-printable models for modules compatible with 1-, 4-, 8- and 24-mL vials are also provided in the repository (Figure 3A—B).
-
-A single reaction module can offer multiple layouts for reaction vessel placement.
-For the provided modules, two vessel placement configurations exist.
-First, the single reaction configuration, where one vessel is placed in the center of the module directly above the photon source (Figure 3C).
-This configuration exposes one vessel to maximum light intensity.
-Second, the multiple reaction configuration, where multiple vessels are placed in a circle around the photon source (Figure 3D).
-This configuration exposes each vessel to less light relative to the single reaction configuration but provides equivalent exposure to each vessel.
-Through variation of the reaction module, the user can configure the reaction vessel type, size and placement within a WPP apparatus.
-
-The body of the WPR is made up of three main pieces:
+WPP devices are simple to fabricate.
+The fabrication process is divided into three parts:
 
 \begin{itemize}
-    \item Base, containing LEDs, fan, and drive electronics.
-    \item Top plate accepting reaction vials.
-    \item Chamber walls spacing the top plate at the appropriate distance away from the base.
+	\item Base fabrication, described in \autoref{SEC:base}
+	\item Reaction module fabrication, described in \autoref{SEC:enclosure}
+	\item Reactor driver electronics fabrication, described in \autoref{SEC:electronics}
 \end{itemize}
 
-The WPR base is the same for all reactors.
-Look within the repository in the subdirectory ``photoreactor-base'' to find design and production files to produce the WPR base.
-You will also need to print a cable anchor, see files in that same directory.
+With these components complete, final assembly of WPP devices is straightforward.
+Details of the final assembly process are described in \autoref{SEC:assembly}.
 
-The top plate and chamber height must be specified for the particular reaction vessels used.
-Four examples for different vial sizes are pictured above.
-Look within the repository in the subdirectory ``photoreactor-tops'' to find existing designs.
-We encourage you to design your own if none of these suit your application.
-Consider adding your new designs to repository so that others may benefit from your design efforts.
+A WPP device is made up of many separate commercially available parts.
+This guide assumes that you have already procured those parts.
+The project repository provides README files containing a bill of materials for each component with detailed part numbers and suggested vendors.
 
-When interacting with the design files in our online repository you will see several different filetypes.
-We have designed the WPR enclosure using Fusion 360, and have included those f3d design files for those that wish to extend or modify the designs.
-Interacting with f3d files will require a Fusion 360 license.
-You will also find stl files in the online repository.
-These are common 3D-model exchange files which can be viewed using any 3D modeling program.
-In fact, GitHub itself has a built in stl viewer which you may use to inspect our designs.
+\subsection{Base Fabrication} \label{SEC:base}
 
-There are many options for getting your enclosures printed.
-We recommend white PLA as a material, although any white material should work---we have also used ABS.
-If you are printing yourself, follow the instructions provided by your printer to produce slices and program your printer.
-Note that you will need support material for the base.
-Any company or shop offering 3D printing as a service should be able to accept our stl files without further modification.
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{"./fig2.png"}
+	\caption{(A) Commercial 20 mm LED star mounted with 450 nm Cree, Inc. XT-E LEDs. (B) Top-down view of WPP base depicting integrated LED star.}
+\end{figure}
+
+The WPP architecture uses industry standard 20 mm ``LED star'' circuit boards mounted with 3 high-intensity LEDs to deliver photons to photoreactions (Figure 2A).
+LED stars are commercially available or can be easily fabricated. 
+The range of wavelengths provided by a LED star depends upon the emission profile of the mounted LEDs.
+\textbf{\textit{Through variation of the LED star integrated into a WPP base (Figure 2B), the user can control the wavelengths of light delivered by the photon source to a reaction vessel.}}
+An aluminim heatsink and cooling fan are integrated to keep the LED star from overheating. 
+
+A list of LED stars tested with the WPP platform is available in the 'photon-source-leds' subdirectory of the project repository. 
+It is easiest to use LED stars with pre-mounted LEDs.
+Otherwise, you can order discrete LEDs and bare LED star circuit boards to fabricate your own.
+Custom LED star production requires a reflow oven. 
+
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{"./fig3.png"}
+	\caption{(A) Unsoldered commerical LED star. (B) LED star with leads. (C) Connectors on other end of leads.}
+\end{figure}
+
+Fabrication of a WPP base begins with preparation of an LED star. 
+Solder leads onto your LED star, using the red positive and black negative convention (Figure 3A---B).
+Soldering may be challenging, as the LED star itself will resist efforts to heat it.
+Using lead-based solder with a low melting point may help.
+
+TODO: INCLUDE INSTRUCTIONS ON WHAT MALE CONNECTOR TO SOLDER TO END OF LED WIRES. 
+
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{"./fig4.png"}
+	\caption{(A) 3D-printed WPP base. (B) Securing a threaded inset into base.}
+\end{figure}
+
+Next, 3D-print the enclosure base and cable anchor models provided in the 'photoreactor-base' subdirectory of the project repository (Figure 4A).
+The same base is shared by all WPP devices.
+
+When interacting with the design files in our repository you will see several filetypes.
+We have designed the WPP enclosure using Fusion 360, and included f3d design source files for those that wish to extend or modify our designs.
+Interacting with f3d files requires use of Fusion 360 license.
+You will also find stl files in the repository.
+These are common 3D-model exchange files which can be viewed with 3D modeling programs or printed with 3D-printers. 
+
+\clearpage
+
+We recommend white PLA as the printing material. We have also used white ABS.
+If you are printing yourself, follow the instructions provided by your 3D-printer's manufacturer.
+You will need to enable support material for printing the base.
+Any company or shop offering 3D printing as a service should accept our stl files without modification.
+Once your base is printed you may need to remove excess material with a razor blade or exacto-knife.
 
 We have succesfully printed using the following printers:
 
 \begin{itemize}
-  \item Ender 3
-  \item Stratasys uPrint SE Plus
-  \item Ultimaker 3
+	\item Creality Ender 3
+	\item Stratasys uPrint SE Plus
+	\item Ultimaker 3 Extended
 \end{itemize}
 
-Once your parts are done you may need to remove extra bonding material with a razor blade or exacto-knife.
-The three pieces of your reactor should fit together snugly and securely.
+Each base contains seven threaded heat inserts.
+These allow components such as the drive circuit board to rigidly attach to the base via machine screws.
+Use a soldering iron to carefully heat these while pushing them into their cavities (Figure 4B).
+
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{"./fig5.png"}
+	\caption{(A) Tapping aluminium heatsink. (B) LED star and heatsink installed into WPP base.}
+\end{figure}
+
+Now tap an aluminum heatsink for imperial 4-40 machine screws.
+We used thread-forming tap: OSG 1400105300 with a pneumatic ``air-tapper'' (Figure 4).
+The heatsink can be tapped by hand.
+You only need to tap two of the innermost holes.
+
+Install the LED star and heatsink into the WPP base using 1/4'' screws.
+Ensure the LED wires face towards the hole in the side of the printed base.  
+
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{"./fig6.png"}
+	\caption{(A) Integrated Fan. (B) Installed cable anchor with captured fan cord. (C) Metal standoffs screwed into base.}
+\end{figure}
+
+Install the fan.
+Pay special attention to the orientation of the fan, including the location of the cord.
+Use 3/4'' screws here.
+Then, install the cable anchor using a 1/4'' screw.
+Use a zip tie to capture the fan cord.
+Finally, screw in the threaded standoffs. 
+Your WPP base is now ready for use.
+
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{"./fig7.png"}
+	\caption{A WPP base fitted with an analog driver board with and without power.}
+\end{figure}
+
+To test the photoreactor base, simply screw a driver board to the threaded standoffs and plug the LED and fan into the board.
+Pay special attention to the orientation of both connectors.
+Your base should light up upon connection to power.
+Remember to use proper eye protection.
 
 \clearpage
 
-\begin{center}
-  \includegraphics[width=0.5\textwidth]{"./heat-insert.jpg"}
-\end{center}
+\subsection{Reaction Module} \label{SEC:enclosure}
 
-Each WPR base contains seven threaded heat inserts.
-These allow components such as the drive circuit board to rigidly attach to the base via machine screws.
-Use a soldering iron to carefully heat these while pushing them into their cavities.
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{"./fig8.png"}
+	\caption{(A) Provided reaction modules for 1-, 4-, 8- and 24-mL vials. (B) WPP devices fitted with the provided reaction modules. (C) Single and (D) multiple reaction configurations for provide 4-mL module.}
+\end{figure}
 
-\subsection{Electronics} \label{SEC:electronics}
+A WPP reaction module consists of a reaction chamber and vessel holder.
+By modifying chamber height and adjusting holder geometry, one can produce modules compatible with reaction vessels of various types and sizes.
+Template reaction chamber and vessel holder Fusion360 designs are provided in the project repository.
+Fusion360 designs and stl models for modules compatible with 1-, 4-, 8- and 24-mL vials are provided in the 'photoreaction-modules' subdirectory of the project repository (Figure 8A—B).
 
-\includegraphics[width=\textwidth]{"./electronics-coverart.jpg"}
+We encourage you to design your own if none of these suit your application.
+Consider adding your new designs to WPP repository so that others may benefit from your design efforts.
 
-The WPR incorporates small circuit boards controlling the incorporated LED and fan.
-We refer to these small boards as ``drivers''.
-There are two types available: the ``analog-driver'' and ``digital-driver''.
-Refer to the associated directories in the online repository for design files for each of these.
+A single reaction module can offer multiple layouts for reaction vessel placement.
+For the provided modules, two vessel placement configurations exist.
+First, the single reaction configuration, where one vessel is placed in the center of the module directly above the photon source (Figure 8C).
+This configuration exposes one vessel to maximum light intensity.
+Second, the multiple reaction configuration, where multiple vessels are placed in a circle around the photon source (Figure 8D).
+This configuration exposes each vessel to less light relative to the single reaction configuration but provides equivalent exposure to each vessel.
+\textbf{\textit{Through variation of the reaction module, the user can configure the reaction vessel type, size and placement within a WPP apparatus.}}
 
-Both drivers are built around Mean Well's LDD-1000L LED driver module.
+To fabricate a reaction module, simply 3D-print a reaction chamber and vial holder models. You can use those supplied in the 'photoreaction-modules' subdirectory or design your own using the templates designs in the same subdirectory. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{"./fig9.jpg"}
+	\caption{4-mL reaction chamber lined with reflective material.}
+\end{figure}
+
+Once you have both parts printed, cut reflective material to line the inside of the reaction chamber (Figure 9).
+Remove the backing and stick the material to the chamber walls.
+It is fine to leave overlap around the interior.
+The 3D printed vial holder requires no modification.
+Your reaction module is now ready for use. 
+
+\clearpage
+
+\subsection{Reactor Driver Electronics} \label{SEC:electronics}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{"./fig10.png"}
+	\caption{(A) Analog driver board. (B) Digital driver board. (C) Simple LED driver circuit.}
+\end{figure}
+
+A WPP device can be driven using an analog driver circuit board, a digital driver circuit board or a simple electronic circuit with a commercial LED driver (Figure 10).
+All provide power to the cooling fan and constant current to the LEDs.
+All utilize 1000 mA LED drivers. \textbf{\textit{Each provides different configurational abilities.}}
+
+Both driver boards are built around Mean Well's LDD-1000L LED driver module.
 This module delivers constant current up to one amp.
 The current delivered can be controlled electronically in several different ways.
-WPR users wishing to understand this design should refer to Mean Well's datasheet.
+Users wishing to understand this design should refer to Mean Well's datasheet.
+Refer to the "analog-driver-board" and "digital-driver-board" directories in the online repository for design files for each board.
 
-The analog-driver circuit is made to be as simple as possible.
+The analog-driver circuit is designed to be as simple as possible.
 The circuit accepts DC 12 V through a barrel jack.
 A small knob is used to adjust light intensity.
 Fan speed is not adjustable.
@@ -209,7 +275,6 @@ Refer to \autoref{SEC:analog-driver} for analog-driver assembly instructions and
 
 The digital-driver circuit is made to be incorporated into an I$^2$C-based digital control system.
 In addition to power, these boards have 4-pin connectors to carry the I$^2$C serial data.
-The digital-driver is pictured above, without any connectors attached.
 Refer to \autoref{SEC:digital-driver} for digital-driver assembly instructions and further explanation.
 
 When interacting with the design files in our online repository you will see several different filetypes.
@@ -218,75 +283,95 @@ All KiCad files are contained within the ``kicad'' subdirectories.
 You may modify and extend these designs however you like.
 
 Those wishing to reproduce our designs should refer to the gerber subdirectory.
-Within the gerber directory you will find zip files for each separate version of the PCB.
+Within the gerber directory you will find zip files for each separate version of the printed circuit board (PCB).
 You may upload these zip files to PCB manufacturers when ordering copies of our designs.
-
-A WPP device can be driven using a digital driver circuit board, an analog driver circuit board or a simple electronic circuit with a commercial LED driver (Figure 4).
-Digital and analog driver board fabrication instructions are provided in the fabrication guide.
-All provide power to the cooling fan and constant current to the LEDs.
-All utilize 1000 mA forward current LED drivers. Each driver provides different configurational abilities.
 
 \clearpage
 \subsubsection{Analog Driver} \label{SEC:analog-driver}
 
-The analog driver circuit is meant to be as simple as possible while still allowing for reproducible LED intensity control.
-To this end, the number of components has been minimized as much as possible.
-A full schematic of the analog circuit appears at the end of this section.
-A bill of materials appears within the README of the online repository.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{"./fig11.png"}
+	\caption{(A) WPP devices fitted with analog driver boards connected in series. (B) Multimeter and WPP apparatus fitted with analog driver board. (C) Connection of multimeter to test points. (D) WPP apparatus at ~60 percent light intensity (1.5 V test point voltage)}
+\end{figure}
 
-Through use of the analog driver board, one can control WPP device light intensity.
+\textbf{\textit{Through use of the analog driver board, one can reproducibly control WPP device light intensity.}}
 This control is achieved through adjustment of the board-mounted potentiometer.
-No software is required, and multiple WPP reactors can be connected in series to a single power source (Figure 6A).
+No software is required, and multiple WPP reactors can be connected in series to a single power source (Figure 11A).
 However, fan speed isn’t adjustable and is maintained at maximum.
-Relative light intensity can be determined using the analog driver board test points and a multimeter (Figure 6B-D).
-The measured voltage can then be converted to relative light intensity using the values in Table 3.
-These values are derived from the manufacturer’s datasheet for the analog board’s LED driver.
-See the fabrication guide for more details.
+A full schematic of the analog circuit appears at the end of this section.
+A bill of materials appears within the README file of the 'analog-driver-board' subdirectory of the project repository.
 
-TODO: TABLE 3 FROM OPERATION GUIDE
+Relative light intensity can be determined using the analog driver board test points and a multimeter (Figure 11B-D).
+The measured voltage can then be converted to relative light intensity using the values in Table 1.
+These values are derived from Mean Well's datasheet for the analog board’s LDD-1000L LED driver.
 
-\begin{center}
-  \includegraphics[width=\textwidth/2]{"./bare-pcb.jpg"}
-\end{center}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{ll}
+		\centering
+		\textbf{Test Point Voltage} & \textbf{Approximate Relative Light Intensity} \\
+		2.5                         & 100\%                                         \\
+		2.25                        & 90\%                                          \\
+		2.00                        & 80\%                                          \\
+		1.75                        & 70\%                                          \\
+		1.5                         & 60\%                                          \\
+		1.25                        & 50\%                                          \\
+		1.00                        & 40\%                                          \\
+		0.75                        & 30\%                                          \\
+		0.5                         & 20\%                                          \\
+		0.45                        & 0\%                                          
+	\end{tabular}
+	\caption{Test point voltage to approximate relative LED intensity conversion. TODO: FIX TABLE FORMATTING.}
+	\label{tab:analog-board-conversion}
+\end{table}
 
-Your PCB manufacturer will send you a bare board, as seen above.
+To fabricate an analog driver board, start by ordering analog board PCBs from a PCB manufacturer. Your PCB manufacturer will send you bare boards of the type seen in Figure 12A. 
 
-\begin{center}
-  \includegraphics[width=\textwidth/2]{"./surface-mount.jpg"}
-\end{center}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{"./fig12.png"}
+	\caption{(A) Blank analog driver board. (B) Analog driver board with labeled surface mount components.}
+\end{figure}
 
-Begin by adding the surface mount components.
-Recommend thin solder, e.g. 0.015''.
-The LED does have a polarity---ensure that the small green line points towards ground (left).
-Once done your board should look like the above.
+Begin by adding the surface mount components. 
+Refer to the analog driver schematic for part identities.
+We recommend using thin solder, e.g. 0.015''.
+The surface mount resistors and capacitors have no polarity.
+However, the power indicator LED does have a polarity---ensure that the small green line points towards ground (left).
+Once done your analog board should look that depicted in Figure 12B. 
 
-\begin{center}
-  \includegraphics[width=\textwidth/2]{"./connectors.jpg"}
-\end{center}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{"./fig13.png"}
+	\caption{(A) Analog driver board with potentiometer and connectors (B) Powered analog driver board.}
+\end{figure}
 
-Next, add the connectors and the potentiometer knob.
+Next, solder on the connectors and the potentiometer knob (Figure 13A).
 From now on we recommend standard gage solder, e.g. 0.031''.
-Once done your board should look like the above.
-
-\begin{center}
-  \includegraphics[width=\textwidth/2]{"./barrels-tested.jpg"}
-\end{center}
-
-Next, add the barrel jacks and the test points.
+You can then add the barrel jacks and test points. 
 With these added you may plug in your board for the first time.
-You should see your power indicator LED illuminate.
-You should also be able to adjust the DC control voltage relative to ground by turning the knob, as shown above.
+You should see your power indicator LED illuminate (Figure 13B)
 
-\begin{center}
-  \includegraphics[width=\textwidth/2]{"./pcb-driver.jpg"}
-\end{center}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{"./fig14.jpg"}
+	\caption{(A) Blank analog driver board. (B) Analog driver board with labeled surface mount components.}
+\end{figure}
 
-Finally, add the Mean Well LED driver.
-Note that this component goes on the back of the PCB, as shown above.
+Finally, solder on the Mean Well LDD-100L LED driver (Figure 14).
+This component goes on the back of the analog driver board. 
+The analog driver board is now ready for use.
 
 \includepdf[landscape=true]{"../analog-driver-board/driver.pdf"}
 
 \subsubsection{Digital Driver} \label{SEC:digital-driver}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{"./fig15.png"}
+	\caption{(A) WPP devices fitted with digital driver boards connected in series. (B) Powered WPP devices connected in series.}
+\end{figure}
 
 The digital driver circuit can be controlled from a computer or some other digital device.
 We built our driver to work over I2C, consistent with an emerging standard for many ``maker'' products.
@@ -325,100 +410,27 @@ You may find an example within the online repository that dynamically controls b
 
 \subsubsection{Simple Driver} \label{SEC:simple-driver}
 
-TODO: FIGURE 7 FROM OPERATION GUIDE
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{"./fign7.png"}
+	\caption{(A) Unassembled pieces of the simple LED driver circuit integrating a LUXdrive 1000mA PowerPuck LED driver (Part number: 2008B-1000). (B) Assembled circuit. (C) Powered circuit.}
+\end{figure}
 
-The LED driver circuit shown in Figure 6 is the simplest way to drive a WPP apparatus.
+The LED driver circuit shown in Figure N is the simplest way to drive a WPP apparatus.
 Neither light intensity nor fan speed can be configured when using the simple LED driver circuit.
 Both are maintained at maximum power.
 However, no circuit board fabrication is required, and any commercial 1000 mA LED driver can be used.
 
-\subsection{Assembly} \label{SEC:assembly}
-
-\includegraphics[width=\textwidth]{"./assembly-coverart.jpg"}
-
-Once 3D printing is done and PCBs have been filled, WPR assembly is fairly straight-forward.
-The various electronic components must be installed into the base (pictured above), as described in \autoref{SEC:base}.
-Reflective coating must be added to the chamber walls, as described in \autoref{SEC:top}.
-After these final steps, your WPR is ready for synthesis!
-
-\clearpage
-\subsubsection{Base} \label{SEC:base}
-
-\begin{center}
-  \includegraphics[width=\textwidth/2]{"./bare-led.jpg"}
-\end{center}
-
-If possible, it's best to order your LEDs pre-attached to an ``LED star'' heat sink.
-Otherwise you may order bare LED stars and discrete LEDs.
-Either way, you will have a filled LED star as pictured above.
-In this example we are using LED Supply part number 07007-PL000-F.
-
-\begin{center}
-  \includegraphics[width=\textwidth/2]{"./soldered-led.jpg"}
-\end{center}
-
-Start by soldering leads onto your LED star, using the red positive black negative convention.
-Soldering here may be challenging, as the LED star itself will resist your efforts to heat it.
-Adding some lead-based solder may help, due to the lower melting point.
-
-\begin{center}
-  \includegraphics[width=\textwidth/2]{"./tap-heatsink.jpg"}
-\end{center}
-
-The aluminum heatsinks arrive preformed but without any tapping.
-Tap the heatsink for imperial 4-40 machine screws.
-We used thread-forming tap: OSG 1400105300 with a pneumatic ``air-tapper'' (pictured above), but you may do this by hand if you wish.
-You will need to tap just two of the innermost holes.
-
-\begin{center}
-  \includegraphics[width=\textwidth/2]{"./led-and-heatsink.jpg"}
-\end{center}
-
-Install the LED star and heatsink with wires facing towards printed hole.
-Use 1/4'' screws.
-
-\begin{center}
-  \includegraphics[width=\textwidth/2]{"./mounted-fan.jpg"}
-\end{center}
-
-Install the fan.
-Pay special attention to the orientation of the fan, including the location of the cord.
-Use 3/4'' screws here.
-
-\begin{center}
-  \includegraphics[width=\textwidth/2]{"./cable-tie.jpg"}
-\end{center}
-
-Install the cable anchor using a 1/4'' screw.
-Use a zip tie to capture the fan cord, as shown above.
-
-\clearpage
-
-\begin{center}
-  \includegraphics[width=\textwidth/2]{"./driver-on-base.jpg"}
-\end{center}
-
-Install the driver board using the threaded standoffs.
-Plug the LED and fan into the board.
-Pay special attention to the orientation of the fan connector.
-You should now be ready to test your base---remember to use proper eye protection!
-
-\clearpage
-\subsubsection{Top} \label{SEC:top}
-
-\begin{center}
-  \includegraphics[width=\textwidth/2]{"./reflector.jpg"}
-\end{center}
-
-Simply cut the reflective material to line the chamber.
-It's good to leave overlap around the interior, as shown.
-Remove the backing and stick the material to the chamber walls.
-
 \section{Operation}
 
-Once a WPP apparatus is configured with the desired photon source, reaction module and reactor driver, it can be used to drive photoreactions.
+Once a WPP apparatus is configured with the desired photon source, reaction module and reactor driver, it is ready to drive photoreactions.
 
-TODO: FIGURE 8 FROM OPERATION GUIDE
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{"./fign8.png"}
+	\caption{A WPP apparatus with a 450 nm photon source, 4 mL reactor module and digital driver board on a standard laboratory stir plate conducting 6 simultaneous photoreactions in the multiple reaction configuration.}
+\end{figure}
+
 
 To conduct a photoreaction using a WPP device, an assembled apparatus should be placed on a lab stir plate, to provide reaction mixture stirring, and reaction vessels should be inserted into the apparatus in the desired layout (Figure 8).
 The 130 by 130 mm footprint of the WPP architecture is compatible with typical stir plates.
