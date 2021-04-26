@@ -1,3 +1,24 @@
+/* EXAMPLE FIRMWARE
+ * CONTROLLING WPP DRIVERS FROM ARDUINO UNO
+ * 
+ * SERIAL INTERFACE
+ * 9600 baud
+ * newline terminated (no carriage return)
+ * space separated commands:
+ * <ADDRESS> <LED INTENSITY> <FAN INTENSITY>
+ * 
+ * example: full brightness full speed:
+ * 38 255 255
+ * example: LED off fan full speed:
+ * 38 0 255
+ * example: LED medium fan off
+ * 38 100 0
+ * 
+ * if <ADDRESS> 0, commands sent to all devices
+ * 
+ * if <ADDRESS> -1, list of addresses seen returned
+ */
+
 #include <Wire.h>
 
 #define INPUT_SIZE 100  // TODO: make this a reasonable value

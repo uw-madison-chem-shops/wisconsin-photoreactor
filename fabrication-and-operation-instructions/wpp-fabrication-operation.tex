@@ -379,13 +379,14 @@ The analog driver board is now ready for use.
 \subsubsection{Digital Driver Board} \label{SEC:digital-driver}
 
 \begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{"./fig15.png"}
-	\caption{(A) WPP devices fitted with digital driver boards connected in series. (B) Powered WPP devices connected in series.}
+  \centering
+  \includegraphics[width=\textwidth]{"./fig15.png"}
+  \caption{(A) WPP devices fitted with digital driver boards connected in series. (B) Powered WPP devices connected in series.}
+  \label{FIG:digital-driver-network}
 \end{figure}
 
 The digital driver circuit can be controlled from a computer or some other digital device.
-We built our driver to work over I2C, consistent with an emerging standard for many ``maker'' products.
+We built our driver to work over I$^2$C, consistent with an emerging standard for many ``maker'' products.
 While the physical connectors may be different, our digital circuit is compatible with the following systems.
 
 \begin{itemize}
@@ -395,28 +396,37 @@ While the physical connectors may be different, our digital circuit is compatibl
   \item \href{https://store.ncd.io/?fwp_product_type=i2c-mini-modules}{NCD I2C Mini Modules}
 \end{itemize}
 
+Multiple digital driver boards may be ``networked'' together onto one I$^2$C bus by simply daisy-chaining the boards together, as shown in \autoref{FIG:digital-driver-network}.
+I$^2$C peripherals in these families can be connected to digital driver boards to expand functionality, but software must be produced to interface with them.
 Through use of the digital driver board, one can control WPP device light intensity and fan speed.
 This control is achieved by connecting a control unit, like an Arduino Uno, to the digital driver board using custom software.
-Multiple WPP devices with digital driver boards can be connected to a single control unit and power supply (Figure 5).
-Open-source software for interfacing digital driver boards and Arduino Uno control units is provided in the project repository.
-Instructions for implementing this software and controlling WPP devices using it are in the fabrication guide.
-Other I2C peripherals can be connected to digital driver boards to expand functionality, but software must be produced to interface with them.
+A schematic of the digital driver board appears at the end of this section.
+
+\clearpage
 
 \begin{center}
-  \includegraphics[width=\textwidth/2]{"./digital-wired.jpg"}
+  \includegraphics[width=\textwidth/2]{"./tiny-programmer.jpg"}
 \end{center}
 
-Each digital driver is based around an ATtiny85 microcontroller acting as an I2C peripheral.
-Multiple digital driver boards may be ``networked'' together onto one I2C bus by simply daisy-chaining the boards together, as shown above.
-In such a use-case you must choose a unique I2C address for each ATtiny85 peripheral.
+Each digital driver board requires a programmed ATtiny85 microcontroller which acts as the ``brains'' of the circuit.
+The microcontroller's primary purpose is to serve as a peripheral in the I$^2$C network.
+The firmware is provided within the /digital-driver-board/firmware directory of the online repository.
+We used the Arduino IDE and a commercially available programmer (pictured above).
+Follow the detailed instructions provided with the programmer that you purchase.
+Note that each peripheral has an address, defined at the top of the firmware file.
+This address must be totally unique within the network of connected I$^2$C devices.
+You may wish to write the address used onto the microcontroller chips as you program them.
 
 \begin{center}
-  \includegraphics[width=\textwidth/2]{"./redboard.jpg"}
+  \includegraphics[width=\textwidth/2]{"./arduino-interface.jpg"}
 \end{center}
 
-There are many ways to interface with the I2C bus.
-We have used a SparkFun RedBoard, pictured above.
-You may find an example within the online repository that dynamically controls both the LED intensity and fan speed.
+There are many strategies you might employ for interfacing with your digital driver boards.
+We have provided firmware appropriate for using an Arduino Uno to control the reactors over a USB cable from any computer.
+Find the firmware within the /digital-controller/arduino-uno-controller/firmware directory.
+Once you have flashed this firmware onto your Arduino, connect at least the SCL, SDA, and GND pins as pictured above.
+This example firmware allows you to control multiple reactors by sending serial-over-USB commands from your computer.
+Read the description at the top of the firmware file for details.
 
 \includepdf[landscape=true]{"../digital-driver-board/driver.pdf"}
 
@@ -438,11 +448,10 @@ However, no circuit board fabrication is required, and any commercial 1000 mA LE
 Once a WPP apparatus is configured with the desired photon source, reaction module and reactor driver, it is ready to drive photoreactions.
 
 \begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{"./fign8.png"}
-	\caption{A WPP apparatus with a 450 nm photon source, 4 mL reactor module and digital driver board on a standard laboratory stir plate conducting 6 simultaneous photoreactions in the multiple reaction configuration.}
+  \centering
+  \includegraphics[width=\textwidth]{"./fign8.png"}
+  \caption{A WPP apparatus with a 450 nm photon source, 4 mL reactor module and digital driver board on a standard laboratory stir plate conducting 6 simultaneous photoreactions in the multiple reaction configuration.}
 \end{figure}
-
 
 To conduct a photoreaction using a WPP device, an assembled apparatus should be placed on a lab stir plate, to provide reaction mixture stirring, and reaction vessels should be inserted into the apparatus in the desired layout (Figure 8).
 The 130 by 130 mm footprint of the WPP architecture is compatible with typical stir plates.
