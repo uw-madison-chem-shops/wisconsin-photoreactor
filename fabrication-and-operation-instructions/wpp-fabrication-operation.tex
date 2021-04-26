@@ -336,7 +336,7 @@ These values are derived from Mean Well's datasheet for the analog board’s LDD
 	\label{tab:analog-board-conversion}
 \end{table}
 
-To fabricate an analog driver board, start by ordering analog board PCBs from a PCB manufacturer. Your PCB manufacturer will send you bare boards of the type seen in Figure 12A.
+To fabricate an analog driver board, start by ordering analog driver PCBs from a PCB manufacturer. Your PCB manufacturer will send you bare boards of the type seen in Figure 12A.
 
 \begin{figure}[H]
 	\centering
@@ -349,7 +349,7 @@ Refer to the analog driver schematic for part identities.
 We recommend using thin solder, e.g. 0.015''.
 The surface mount resistors and capacitors have no polarity.
 However, the power indicator LED does have a polarity---ensure that the small green line points towards ground (left).
-Once done your analog board should look that depicted in Figure 12B.
+Once done your analog board should look like that depicted in Figure 12B.
 
 \begin{figure}[H]
 	\centering
@@ -357,7 +357,7 @@ Once done your analog board should look that depicted in Figure 12B.
 	\caption{(A) Analog driver board with potentiometer and connectors (B) Powered analog driver board.}
 \end{figure}
 
-Next, solder on the connectors and the potentiometer knob (Figure 13A).
+Next, solder on the connectors and  potentiometer knob (Figure 13A).
 From now on we recommend standard gage solder, e.g. 0.031''.
 You can then add the barrel jacks and test points.
 With these added you may plug in your board into power for the first time.
@@ -367,10 +367,10 @@ You should see your power indicator LED illuminate (Figure 13B)
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.5\textwidth]{"./fig14.jpg"}
-	\caption{(A) Blank analog driver board. (B) Analog driver board with labeled surface mount components.}
+	\caption{analog driver board fitted with Mean Well LDD-1000L LED driver}
 \end{figure}
 
-Finally, solder on the Mean Well LDD-100L LED driver (Figure 14).
+Finally, solder on the Mean Well LDD-1000L LED driver (Figure 14).
 This component goes on the back of the analog driver board.
 The analog driver board is now ready for use.
 
@@ -384,6 +384,60 @@ The analog driver board is now ready for use.
   \caption{(A) WPP devices fitted with digital driver boards connected in series. (B) Powered WPP devices connected in series.}
   \label{FIG:digital-driver-network}
 \end{figure}
+
+\textbf{\textit{Through use of the digital driver board, one can control WPP device light intensity and fan speed.}} This control is achieved by connecting a control unit, like an Arduino Uno, to the digital driver board using custom software. Multiple WPP devices with digital driver boards can be connected to a single control unit and power supply (Figure 15A---B). Open-source software for interfacing digital driver boards and Arduino Uno control units is provided in the project repository. Other I2C peripherals can be connected to digital driver boards to expand functionality, but software must be produced to interface with them.
+
+To fabricate an digital driver board, start by ordering digital driver PCBs from a PCB manufacturer. Your PCB manufacturer will send you bare boards of the type seen in Figure 16A.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{"./fig16.png"}
+	\caption{(A) Blank digital driver board. (B) Digital driver board with labeled surface mount components.}
+\end{figure}
+
+Begin by adding the surface mount components to the front and back of the digital board PC.
+Refer to the digital driver schematic for part identities.
+We recommend using thin solder, e.g. 0.015''.
+The surface mount resistors and capacitors have no polarity.
+However, both  indicator LEDs  have a polarity---ensure that the small green line on both points towards ground (left).
+Once done your analog board should look like that depicted in Figure 16B and C.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{"./fig17.png"}
+	\caption{(A) Digital driver board mounted with power regulator(B) Digital driver board with connectors, microcontroller socket, JST connectors and barrel jacks.}
+\end{figure}
+
+Next, solder on the power regulator (Figure 17A).
+Pay special attention to the orientation of the regulator.
+From now on we recommend standard gage solder, e.g. 0.031''.
+You can then add the connectors, microcontroller socket, JST connectors and barrel jacks (figure 17B).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{"./fig18.png"}
+	\caption{(A) Digital driver board fitted with Mean Well LDD-1000L LED driver (B) Completed digital driver board with microcontroller}
+\end{figure}
+
+Finally, solder on the Mean Well LDD-1000L LED driver (Figure 18A).
+This component goes on the back of the digital driver board.
+The digital driver board is now ready to be fitted with a programmed microcontroller (Figure 18B).
+
+\begin{center}
+	\includegraphics[width=\textwidth/2]{"./tiny-programmer.jpg"}
+\end{center}
+
+Each digital driver board requires a programmed ATtiny85 microcontroller which acts as the ``brains'' of the board.
+The microcontroller's allows the digital driver board serve as a peripheral in the I$^2$C network.
+Firmware for the microcontroller is provided within the '/digital-driver-board/firmware' subdirectory of the repository.
+We used the Arduino IDE and a commercially available programmer (Figure 19).
+Follow the detailed instructions provided with the programmer that you purchase.
+Note that each peripheral has an address, defined at the top of the firmware file.
+This address must be totally unique within the network of connected I$^2$C devices.
+You may wish to write the address used onto the microcontroller chips as you program them
+
+A microcontroller can now be socketed onto the digital driver board.
+The microcontroller must be fully programmed with firmware prior to socketing.
 
 The digital driver circuit can be controlled from a computer or some other digital device.
 We built our driver to work over I$^2$C, consistent with an emerging standard for many ``maker'' products.
@@ -401,8 +455,6 @@ I$^2$C peripherals in these families can be connected to digital driver boards t
 Through use of the digital driver board, one can control WPP device light intensity and fan speed.
 This control is achieved by connecting a control unit, like an Arduino Uno, to the digital driver board using custom software.
 A schematic of the digital driver board appears at the end of this section.
-
-\clearpage
 
 \begin{center}
   \includegraphics[width=\textwidth/2]{"./tiny-programmer.jpg"}
