@@ -2,7 +2,7 @@
 
 An open source photoreactor platform. 3D printed enclosure, commercially available components, and a little bit of custom circuitry.
 
-![WPP photo](./coverart.jpg)
+![WPP photo](./coverart.png)
 
 ## Repository
 
