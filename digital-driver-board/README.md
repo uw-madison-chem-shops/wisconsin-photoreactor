@@ -1,6 +1,8 @@
 # digital-driver
 
-A photoreactor driver board designed to be controlled digitally over I2C. For fabrication instructions, please see [wpp-fabrication-operation.pdf](./fabrication-and-operation-instructions/wpp-fabrication-operation.tex).
+A photoreactor driver board designed to be controlled digitally over I2C. For fabrication instructions, please see the fabrication and operation guide.
+
+The digital driver is recommended for users who are experienced with electronics and interested in automating WPP devices.
 
 ## PCB
 

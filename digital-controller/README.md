@@ -9,4 +9,3 @@ Open-source firmware for controlling a digital driver board with an Ardunio Uno 
 See the firmware files for use instructions.
 
 Instructions on connecting an Arduino Uno to a digital driver board are provided in the fabrication and operation instructions.
-Please see [wpp-fabrication-operation.pdf](./fabrication-and-operation-instructions/wpp-fabrication-operation.tex).
