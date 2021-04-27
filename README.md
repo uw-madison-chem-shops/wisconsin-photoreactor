@@ -1,17 +1,15 @@
 # Wisconsin Photoreactor Platform (WPP)
 
-An open source photoreactor platfrom. 3D printed enclosure, commercially avaliable components, and a little bit of custom circuitry.
+An open source photoreactor platform. 3D printed enclosure, commercially available components, and a little bit of custom circuitry.
 
-![WPP photo](./coverart.png)
-
-A WPP device consists of a base, reaction module and reactor driver. The base houses the photon source and cooling fan. The reaction module consists of a  reaction chamber and  vessel holder. A digital driver board, analog driver board or simple circuit integrating a commercial light emitting diode (LED) driver can be fitted to the base to drive the reactor. Each component is highly versatile, and apparatus is fully modular.
+![WPP photo](./coverart.jpg)
 
 ## Repository
 
-This is an open source hardware project licensed under the CERN Open Hardware Licence Version 2 - Permissive.
+This is an open source hardware project licensed under the CERN Open Hardware License Version 2 - Permissive.
 Please see the LICENSE file for the complete license.
 
-This repository is being mirrored to several version control systems in an attempt to ensure maximum avaliability.
+This repository is being mirrored to several version control systems in an attempt to ensure maximum availability.
 
 | name             | url                                                             |
 | ---------------- | --------------------------------------------------------------- |
@@ -21,13 +19,13 @@ This repository is being mirrored to several version control systems in an attem
 
 ## Safety
 
-The Wisconsin Photoreactor is for use by trained chemistry researchers and should be handled carefully.
+The Wisconsin Photoreactor is for use by trained chemists.
 
 WPP apparatuses utilize high-intensity light emitting diodes (LED) that can cause eye damage if proper safety precautions are not observed. 
 Light-filtering safety glasses should be worn whenever a WPP apparatus photon source is powered. 
 Care must be taken to use safety glasses protective against the specific emission wavelengths of a photon source.
 
-## Frabication and Operation Instructions
+## Fabrication and Operation Instructions
 
 This repository contains detailed instructions for fabrication, operation and documentation of WPP devices.
 Please see [wpp-fabrication-operation.pdf](./fabrication-and-operation-instructions/wpp-fabrication-operation.tex)
@@ -41,5 +39,5 @@ See directory `photoreactor-tops` for our growing collection of reaction modules
 
 ## Electronics
 
-The WPP incorporates small custom circuit boards providing control over light intensity and fan speed.
+The WPP incorporates small custom circuit boards providing control over reaction conditions.
 Please see the fabrication instructions for more detailed information.
