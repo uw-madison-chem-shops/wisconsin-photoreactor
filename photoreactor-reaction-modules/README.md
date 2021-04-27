@@ -7,7 +7,7 @@ A WPP reaction module consists of a reflective reaction chamber and rigid vessel
 By modifying chamber height and adjusting holder geometry, one can produce modules compatible with reaction vessels of various types and sizes. 
 Template reaction chamber and vessel holder CAD designs are provided in the `template` directory. 
 
-CAD designs and 3D-printable models for modules compatible with various common reaction vessl are provided in this directory. A table of compatible vessels is offered below. 
+CAD designs and 3D-printable models for modules compatible with various common reaction vessel are provided in this directory. A table listing vessels with already created reaction modules is offered below. 
 
 ## Reaction vessels with compatible modules
 
@@ -21,7 +21,7 @@ CAD designs and 3D-printable models for modules compatible with various common r
 
 ## Bill of Materials
 
-The interior of WPP reaciton chambers should be covered with reflective material. One option is offered below.
+The interior of WPP reaction chambers should be covered with reflective material. One option is offered below.
 
 | reference         | manufacturer | part number       | price  | vendors |
 | :---------------- | :----------- | :---------------- | :----- | :------ |

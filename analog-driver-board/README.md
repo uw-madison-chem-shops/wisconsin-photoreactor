@@ -1,10 +1,10 @@
 # Analog Driver Board
 
-A simple photoreactor driver board providing control of light intensity. This control is achieved through adjustment of the board-mounted potentiometer. No software is required, and multiple WPP reactors fitted with this board can be connected in series to a single power source.However, fan speed isn’t adjustable and is maintained at maximum. 
+A simple photoreactor driver board providing control of light intensity. This control is achieved through adjustment of the board-mounted potentiometer. No software is required, and multiple WPP reactors fitted with this board can be connected in series to a single power source. However, fan speed isn’t adjustable and is maintained at maximum. 
 
 Relative light intensity can be determined using the analog driver board test points and a multimeter. See operation instructions for more information.
 
-The analog driver board is the recommended  driver solution for a typical user. 
+The analog driver board is the recommended driver solution for a typical user. 
 
 ## PCB
 
@@ -34,7 +34,7 @@ PCB images generated with [tracespace](https://github.com/tracespace/tracespace)
 | U2             | LED driver    | Mean Well    | LDD-1000L         | $6.00 | [DigiKey](https://www.digikey.com/en/products/detail/mean-well-usa-inc/LDD-1000L/7704722) [Allied](https://www.alliedelec.com/product/mean-well/ldd-1000l/70345765/) |
 
 All prices are extended estimates in USD.
-In general these are overestimates, so this should be an upper-estimate on cost.
+In general, these are overestimates, so this should be an upper-estimate on cost.
 Many of these components can be substituted, so take the above as suggestions.
 Boards themselves can be printed for approximately $5 each.
 

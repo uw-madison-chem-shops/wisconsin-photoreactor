@@ -2,14 +2,14 @@
 
 The WPP photon source consists of 3 high-power, single-color LEDs mounted onto an industry-standard 20 mm LED star package. 
 
-WPP-comptabile LED stars emitting narrow wavelength ranges across the UV-Visible spectrum are available from multiple vendors. A few are detailed below.
+WPP-compatible LED stars emitting narrow wavelength ranges across the UV-Visible spectrum are available from multiple vendors. A few are detailed below.
 
-WPP-comptabible custom LED stars mounted with 3.5 mm surface mount LEDs of any wavelength can be fabricated using a reflow oven. See the fabrication instructions for more information.
+WPP-compatible custom LED stars mounted with 3.5 mm surface mount LEDs of any wavelength can be fabricated using a reflow oven. Please see [wpp-fabrication-operation.pdf](./fabrication-and-operation-instructions/wpp-fabrication-operation.tex) for fabrication instructions for more information.
 
-## List of compatible commerical LED stars
+## List of compatible commercial LED stars
 
-| color          | max emission | manufacturer | manufacturer part number  | LEDsupply LED star part number | LEDsupply price | Other vendors |
-| :------------- | :----------- | :----------- | :------------------------ | :----------------------------- | :-------------- |:------------- |
+| color          | max emission | manufacturer | manufacturer part number | LEDsupply LED star part number | LEDsupply price | Other vendors |
+| :------------- | :----------- | :----------- | :----------------------- | :----------------------------- | :-------------- |:------------- |
 | UVA            | 365 nm       | Inolux       | IN-C39CTOU2 	     	   | N/A (mounted by user)	        | N/A             | [DigiKey](https://www.digikey.com/en/products/detail/inolux/IN-C39CTOU2/9681227) [Mouser](https://www.mouser.com/ProductDetail/Inolux/IN-C39CTOU2/?qs=qSfuJ%252Bfl%2Fd4759YPTEyoag%3D%3D) |
 | Violet         | 400 nm       | Inolux       | IN-C39CTOU5		       | N/A (mounted by user)          | N/A             | [DigiKey](https://www.digikey.com/en/products/detail/inolux/IN-C39CTOU5/9681233) [Mouser](https://www.mouser.com/ProductDetail/Inolux/IN-C39CTOU5/?qs=qSfuJ%252Bfl%2Fd6BLbca08ZG2g%3D%3D) |
 | Blue           | 450 nm       | Cree, Inc.   | XTEARY-00-0000-000000N09  | CREEXTE-ROY-3	                | $10.10          | [DigiKey](https://www.digikey.com/en/products/detail/cree-inc/XTEARY-00-0000-000000N09/3744336) [Mouser](https://www.mouser.com/ProductDetail/Cree-Inc/XTEARY-00-0000-000000N09?qs=ygRr%2Ftkhtevu4HqMzfGc3w%3D%3D) |
@@ -21,9 +21,9 @@ WPP-comptabible custom LED stars mounted with 3.5 mm surface mount LEDs of any w
 | NIR            | 730 nm       | Cree, Inc.   | XPEFAR-L1-0000-00601	   | CREEXPE-FRD-3	                | $12.00          | [DigiKey](https://www.digikey.com/en/products/detail/cree-inc/XPEFAR-L1-0000-00601/5303643) [Mouser](https://www.mouser.com/ProductDetail/Cree-Inc/XPEFAR-L1-0000-00601?qs=k72kBymvut%252B0JKg4b6%252BzNg%3D%3D) |
 
 All prices are in USD.
-In general, prices are overestimates, thereby providing an upper-estimate on cost.
+In general, prices are overestimates, thereby providing an upper estimate on cost.
 
-## Commerical LED emission spectra
+## Commercial LED emission spectra
 
 LED emission spectra below were measured using an Ocean Insight USB2000 Spectrometer loaned by the [Goldsmith Group](https://goldsmith.chem.wisc.edu).
 
@@ -47,6 +47,6 @@ LED emission spectra below were measured using an Ocean Insight USB2000 Spectrom
 
 ## Ordering Blank LED stars
 
-The WPP lightsource is designed to fit an industry-standard, 20 mm [Indus Star A008 high power LED modules](https://leddynamics.com/indus-star-a007-a008).
+The WPP base is designed to fit an industry-standard, 20 mm [Indus Star A008 high power LED modules](https://leddynamics.com/indus-star-a007-a008).
 
 To order blank Indus Star A008 LED stars for custom LED star creation, contact [LEDsupply](https://www.ledsupply.com/contact-us), [LEDdynamics](https://leddynamics.com/contact-us) or other vendors.

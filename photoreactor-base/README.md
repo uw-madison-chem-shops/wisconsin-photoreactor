@@ -2,10 +2,10 @@
 
 ![WPP base](./base.jpg)
 
-The core structure of the Wisconsin Photoreactor Platform. Each reactor shares this component. It has a 140 mm by 140 mm footprint and is compatible with typical laboratory stir plates.
+The core structure of the Wisconsin Photoreactor Platform. Each reactor shares this component. It has a 130 mm by 130 mm footprint and is compatible with typical laboratory stir plates.
 
 Through variation of the LED star integrated into a base, the user can control the wavelengths of light delivered by the photon source to a reaction vessel. 
-See fabrication instructions for LED star installation instructions. See `photon-source-leds` directory for list of LED stars confirmed compatible with the WPP architecture.
+Please see [wpp-fabrication-operation.pdf](./fabrication-and-operation-instructions/wpp-fabrication-operation.tex) for fabrication instructions and LED star installation instructions. See `photon-source-leds` directory for list of LED stars confirmed compatible with the WPP architecture.
 
 ### Bill of Materials
 
@@ -20,4 +20,4 @@ See fabrication instructions for LED star installation instructions. See `photon
 | 3/4" screws       | Fastenal     | 72490             |        |
 
 All prices are extended estimates in USD.
-In general these are overestimates, so this should be an upper-estimate on cost.
+In general, these are overestimates, so this should be an upper estimate on cost.
