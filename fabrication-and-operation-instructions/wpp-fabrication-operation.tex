@@ -523,35 +523,47 @@ Once finished, the WPP apparatus can be switched off by simply unplugging it and
 
 \section{Documentation}
 
+WPP devices are trivial to document.
+Suggested below are the aspects of a WPP device that one should documented whenever a WPP device is used in an investigation. 
+Documenting each of these aspects will allow for precise reproduction of the exact WPP device used within a study. 
+
 \subsection{Base and Photon Source} \label{SEC:doc-photon-source}
 
-Users should report the following for each photon source used:
+Users should report the following for each based and photon source used:
 
-    (1) Max emission wavelength for LEDs.
-    (2) Manufacturer and part number for LEDs.
-    (3) Supplier and part number for LED star (if commercial).
+\begin{itemize}
+	\item Max emission wavelength for LEDs.
+	\item Manufacturer and part number for LEDs.
+	\item Supplier and part number for LED star (if commercial).
+\end{itemize}
 
-This information enables precise reproduction of WPP photon sources. Characterization of a photon source’s emission profile using a spectrometer is recommended but not required for reproduction. Emission profiles for commercial LEDs are supplied in part datasheets provided by manufacturers. A list of WPP-compatible LED stars exhibiting emission profiles across the visible range is provided in the project repository.
+This information enables precise reproduction of WPP photon sources. Characterization of a photon source’s emission profile using a spectrometer is recommended but not required for reproduction. Emission profiles for commercial LEDs are supplied in part datasheets provided by manufacturers.
 
 \subsection{Reaction Module} \label{SEC:doc-reaction modules}
 
-Users should provide and report the following for each module used:
+Users should provide and report the following for each reaction module used:
 
-    (1) Original CAD designs for both module parts.
-    (2) 3D-printable models for both module parts.
-    (3) Photos of each reaction vessel placement configuration.
-    (4) Manufacturer and part number for reaction vessel.
+\begin{itemize}
+	\item Original CAD designs for both module parts.
+	\item 3D-printable models for both module parts.
+	\item Photos of each reaction vessel placement configuration.
+	\item Manufacturer and part number for reaction vessel.
+\end{itemize}
 
 These provisions enable precise reproduction of reaction modules. Documenting the height a vessel is held above the photon source is recommended but not required for reaction module reproduction. All reaction modules provided in the project repository hold vessels a standardized 7 mm above the photon source.
 
-\subsection{Reactor Drivers} \label{SEC:doc-reactor-drivers}
+\subsection{Reactor Driver Electronics} \label{SEC:doc-reactor-drivers}
+
+As each reactor driver offers different configurational abilities, each requires documentation of different aspects for full reproduction.
 
 \subsubsection{Analog Driver Board } \label{SEC:doc-analog-driver}
 
 Users should report the following when an analog driver board is used:
 
-    (1) Measured test point voltage.
-    (2) Relative intensity at which LEDs are driven (0 to 100%).
+\begin{itemize}
+	\item Measured test point voltage.
+	\item Relative intensity at which LEDs are driven (0 to 100\%).
+\end{itemize}
 
 These provisions enable precise reproduction of reaction conditions for transformations carried out using WPP devices fitted with analog driver boards.
 
@@ -559,17 +571,21 @@ These provisions enable precise reproduction of reaction conditions for transfor
 
 Users should provide and document the following when a digital driver board is used:
 
-    (1) Software used to operate the digital driver board, control unit and any other peripherals.
-    (2) Relative intensity at which LEDs are driven (0 to 100%).
-    (3) Relative fan speed (0 to 100%).
+\begin{itemize}
+	\item Software used to operate the digital driver board, control unit and any other peripherals.
+	\item Relative intensity at which LEDs are driven (0 to 100\%).
+	\item Relative fan speed (0 to 100\%).
+\end{itemize}
 
-These provisions enable precise reproduction of reaction conditions for transformations carried out using WPP devices fitted with digital driver boards
+These provisions enable precise reproduction of reaction conditions for transformations carried out using WPP devices fitted with digital driver boards.
 
 \subsubsection{Simple Driver Circuit} \label{SEC:doc-simple-driver}
 
 Users should report the following when a simple LED driver circuit is used:
 
-    (1) Manufacturer and part number for LED driver.
+\begin{itemize}
+	\item Manufacturer and part number for LED driver.
+\end{itemize}
 
 This information enables reproduction WPP devices fitted with the simple LED driver circuit.
 
