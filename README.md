@@ -35,7 +35,7 @@ Please see [wpp-fabrication-operation.pdf](./fabrication-and-operation-instructi
 The WPP is designed around a mechanically robust 3D printed enclosure.
 Every WPP device has the same base, see directory `photoreactor-base`.
 WPP reaction modules are meant to be switched based on the reaction vessel used.
-See directory `photoreactor-tops` for our growing collection of reaction modules for common vessel types.
+See directory `photoreactor-reaction-modules` for our growing collection of reaction modules for common vessel types.
 
 ## Electronics
 
