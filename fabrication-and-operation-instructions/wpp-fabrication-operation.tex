@@ -72,7 +72,7 @@
 
 Below are instructions for fabrication, operation and documentation of Wisconsin Photoreactor Platform (WPP) devices.
 
-For access to all project source files, documentation and resources, visit the Wisconsin Photoreactor Platform project repository on GitHub at \href{https://github.com/uw-madison-chem-shops/wisconsin-photoreactor}{https://github.com/uw-madison-chem-shops/wisconsin-photoreactor}.
+For access to all project files, documentation and resources, visit the Wisconsin Photoreactor Platform project repository on GitHub at \href{https://github.com/uw-madison-chem-shops/wisconsin-photoreactor}{https://github.com/uw-madison-chem-shops/wisconsin-photoreactor}.
 
 \begin{figure}[H]
 	\includegraphics[width=\textwidth]{"./fig1.png"}
@@ -93,23 +93,20 @@ If you would like to contribute to the WPP project or notice an issue, please co
 \section{Fabrication}
 
 WPP devices are simple to fabricate.
-To fabricate a WPP device, you'll need a soldering iron, electronics tweezers, thin nose pliers and a screwdriver.
+To fabricate a WPP device, you'll need a soldering iron, electronics tweezers, thin nose pliers and a screwdriver at minimum.
 The fabrication process is divided into three parts:
 
 \begin{itemize}
-	\item Base fabrication, described in \autoref{SEC:base}
+	\item Base and photon source fabrication, described in \autoref{SEC:base}
 	\item Reaction module fabrication, described in \autoref{SEC:enclosure}
 	\item Reactor driver electronics fabrication, described in \autoref{SEC:electronics}
 \end{itemize}
 
-With these components complete, final assembly of WPP devices is straightforward.
-Details of the final assembly process are described in \autoref{SEC:assembly}.
-
-A WPP device is made up of many separate commercially available parts.
+A WPP device is made up of many commercially available parts.
 This guide assumes that you have already procured those parts.
 The project repository provides README files containing a bill of materials for each component with detailed part numbers and suggested vendors.
 
-\subsection{Base Fabrication} \label{SEC:base}
+\subsection{Base and Photon Source} \label{SEC:base}
 
 \begin{figure}[H]
 	\includegraphics[width=\textwidth]{"./fig2.png"}
@@ -124,7 +121,7 @@ An aluminim heatsink and cooling fan are integrated to keep the LED star from ov
 
 A list of LED stars tested with the WPP platform is available in the 'photon-source-leds' subdirectory of the project repository.
 It is easiest to use LED stars with pre-mounted LEDs.
-Otherwise, you can order discrete LEDs and bare LED star circuit boards to fabricate your own.
+Otherwise, you can fabricate custom LED stars with discrete LEDs and bare LED star circuit boards.
 Custom LED star production requires a reflow oven.
 All LED stars must be mounted with LEDs with a maximum forward current of 1000 mA.
 
@@ -136,34 +133,32 @@ All LED stars must be mounted with LEDs with a maximum forward current of 1000 m
 Fabrication of a WPP base begins with preparation of an LED star.
 Solder leads onto your LED star, using the red positive and black negative convention (Figure 3A---B).
 We recommend 22 gauge solid core wire.
-This is often sold as "standard hookup wire"
+This is often sold as "standard hookup" wire.
 Soldering may be challenging, as the LED star itself will resist efforts to heat it.
 Using lead-based solder with a low melting point may help.
 
 Solder a connector to the end of the LED star.
-Ensure the connection between the connector and wire is strong and has plenty of sodler ()Figure 3C).
-Using heat-shrink tubing, seal the connector and wire junction (Figure 3D).
+Ensure the connection between the connector and wire is strong and has plenty of solder (Figure 3C).
+Using heat-shrink tubing, seal the connection (Figure 3D).
 
 \begin{figure}[H]
 	\includegraphics[width=\textwidth]{"./fig4.png"}
 	\caption{(A) 3D-printed WPP base. (B) Securing a threaded inset into base.}
 \end{figure}
 
-Next, 3D-print the enclosure base and cable anchor models provided in the 'photoreactor-base' subdirectory of the project repository (Figure 4A).
+Next, 3D-print a base enclosure and cable anchor.
+Models for both are provided in the 'photoreactor-base' subdirectory of the project repository (Figure 4A).
 The same base is shared by all WPP devices.
 
 When interacting with the design files in our repository you will see several filetypes.
-We have designed the WPP enclosure using Fusion 360, and included f3d design source files for those that wish to extend or modify our designs.
-Interacting with f3d files requires use of Fusion 360 license.
+We have designed the WPP enclosure using Autodesk's Fusion 360, and included f3d design files for those that wish to extend or modify our designs.
+Interacting with f3d files requires a Fusion 360 license, which is free to students and educators.
 You will also find stl files in the repository.
 These are common 3D-model exchange files which can be viewed with 3D modeling programs or printed with 3D-printers.
 
 We recommend white PLA as the printing material. We have also used white ABS.
-If you are printing yourself, follow the instructions provided by your 3D-printer's manufacturer.
-You will need to enable support material for printing the base.
-Any company or shop offering 3D printing as a service should accept our stl files without modification.
-Once your base is printed you may need to remove excess material with a razor blade or exacto-knife.
-
+If you are printing yourself, follow the instructions provided by the manufacturer of your 3D-printer.
+You will need to enable support material in your 3D slicer when printing the base base enclosure.
 We have succesfully printed using the following printers:
 
 \begin{itemize}
@@ -172,9 +167,12 @@ We have succesfully printed using the following printers:
 	\item Ultimaker 3 Extended
 \end{itemize}
 
-Each base contains seven threaded heat inserts.
-These allow components such as the drive circuit board to rigidly attach to the base via machine screws.
-Use a soldering iron to carefully heat these while pushing them into their cavities (Figure 4B).
+Any company or shop offering 3D printing as a service should accept our stl files without modification.
+Once your base and cable anchor are printed, printed you may need to remove excess material with a razor blade or exacto-knife.
+
+Each base contains seven threaded inserts.
+These allow components such as an analog driver board and fan to rigidly attach to the base with screws.
+Use a soldering iron to carefully heat the threaded inserts while pushing them into their cavities to set them (Figure 4B).
 
 \begin{figure}[H]
 	\includegraphics[width=\textwidth]{"./fig5.png"}
@@ -182,7 +180,7 @@ Use a soldering iron to carefully heat these while pushing them into their cavit
 \end{figure}
 
 Now tap an aluminum heatsink for imperial 4-40 machine screws.
-We used thread-forming tap: OSG 1400105300 with a pneumatic ``air-tapper'' (Figure 4).
+We used thread-forming tap: OSG 1400105300 with a pneumatic ``air-tapper'' (Figure 5).
 The heatsink can be tapped by hand.
 You only need to tap two of the innermost holes.
 
@@ -223,11 +221,11 @@ Remember to use proper eye protection.
 
 A WPP reaction module consists of a reaction chamber and vessel holder.
 By modifying chamber height and adjusting holder geometry, one can produce modules compatible with reaction vessels of various types and sizes.
-Template reaction chamber and vessel holder Fusion360 designs are provided in the project repository.
 Fusion360 designs and stl models for modules compatible with 1-, 4-, 8- and 24-mL vials are provided in the 'photoreaction-modules' subdirectory of the project repository (Figure 8A—B).
+Template reaction chamber and vessel holder Fusion360 designs are provided in the same directory.
 
-We encourage you to design your own if none of these suit your application.
-Consider adding your new designs to WPP repository so that others may benefit from your design efforts.
+We encourage you to design your own reactions modules if those provided in the project repository do not meet your needs.
+If you do, we suggest you add your designs to WPP repository so that others may benefit from your efforts.
 
 A single reaction module can offer multiple layouts for reaction vessel placement.
 For the provided modules, two vessel placement configurations exist.
@@ -237,7 +235,7 @@ Second, the multiple reaction configuration, where multiple vessels are placed i
 This configuration exposes each vessel to less light relative to the single reaction configuration but provides equivalent exposure to each vessel.
 \textbf{\textit{Through variation of the reaction module, the user can configure the reaction vessel type, size and placement within a WPP apparatus.}}
 
-To fabricate a reaction module, simply 3D-print a reaction chamber and vial holder models. You can use those supplied in the 'photoreaction-modules' subdirectory or design your own using the templates designs in the same subdirectory.
+To fabricate a reaction module, simply 3D-print a reaction chamber and vial holder of your own design or taken from the 'reaction-modules' subdirectory of the project repository.
 
 \begin{figure}[H]
 	\centering
@@ -245,7 +243,7 @@ To fabricate a reaction module, simply 3D-print a reaction chamber and vial hold
 	\caption{(A) 4-mL reaction chamber. (B) Chamber lined with reflective material.}
 \end{figure}
 
-Once you have both parts printed, cut reflective material to line the inside of the reaction chamber.
+Once both parts are finished printing, cut reflective material to line the inside of the reaction chamber.
 Remove the backing and stick the material to the chamber walls (Figure 9A---B).
 It is fine to leave overlap around the interior.
 The 3D printed vial holder requires no modification.
@@ -258,12 +256,13 @@ Your reaction module is now ready for use.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{"./fig10.png"}
-	\caption{(A) Analog driver board. (B) Digital driver board. (C) Simple LED driver circuit.}
+	\caption{(A) Analog driver board. (B) Digital driver board. (C) Simple driver circuit.}
 \end{figure}
 
 A WPP device can be driven using an analog driver circuit board, a digital driver circuit board or a simple electronic circuit with a commercial LED driver (Figure 10).
 All provide power to the cooling fan and constant current to the LEDs.
-All utilize 1000 mA LED drivers. \textbf{\textit{Each provides different configurational abilities.}}
+All utilize 1000 mA LED drivers. 
+\textbf{\textit{Each provides different configurational abilities.}}
 
 Both driver boards are built around Mean Well's LDD-1000L LED driver module.
 This module delivers constant current up to one amp.
@@ -276,15 +275,15 @@ The circuit accepts DC 12 V through a barrel jack.
 A small knob is used to adjust light intensity.
 Fan speed is not adjustable.
 \textbf{We recommend chemists interested in adopting the WPP architecture first build and test the analog driver board.}
-Refer to \autoref{SEC:analog-driver} for analog driver board assembly instructions and further explanation.
+Refer to \autoref{SEC:analog-driver} for analog driver board fabrication instructions and further explanation.
 
 
 The digital driver board is made to be incorporated into an I$^2$C-based digital control system.
 In addition to power, these boards have 4-pin connectors to carry the I$^2$C serial data.
-\textbf{We recommend experienced chemists interested in automation of WPP devices and integration of peripherals to expand device functionality use the digital driver board.}
-Refer to \autoref{SEC:digital-driver} for digital driver board assembly instructions and further explanation.
+\textbf{We recommend chemists experienced in electronics and interested in automation of WPP devices or taking advantage of I$^2$C peripherals to expand device functionality use the digital driver board.}
+Refer to \autoref{SEC:digital-driver} for digital driver board fabrication instructions and further explanation.
 
-The simple driver circuit allows for use of any commerical 1000 mA LED driver with the WPP architecture.
+The simple driver circuit allows for any commerical 1000 mA LED driver to be used with a WPP device.
 Refer to \autoref{SEC:simple-driver} for further explanation.
 
 When interacting with the design files in our online repository you will see several different filetypes.
@@ -292,8 +291,8 @@ These circuit boards were designed using KiCad, a free and open source electroni
 All KiCad files are contained within the ``kicad'' subdirectories.
 You may modify and extend these designs however you like.
 
-Those wishing to reproduce our designs should refer to the gerber subdirectory.
-Within the gerber directory you will find zip files for each separate version of the printed circuit board (PCB).
+Those wishing to produce the analog driver board or digital driver board designs should refer to the 'gerber' subdirectory.
+Within this subdirectory you will find zip files containing everything necessary for production of printed circuit boards (PCB) of each board design.
 You may upload these zip files to PCB manufacturers when ordering copies of our designs.
 
 \clearpage
@@ -307,14 +306,14 @@ You may upload these zip files to PCB manufacturers when ordering copies of our 
 
 \textbf{\textit{Through use of the analog driver board, one can reproducibly control WPP device light intensity.}}
 This control is achieved through adjustment of the board-mounted potentiometer.
-No software is required, and multiple WPP reactors can be connected in series to a single power source (Figure 11A).
+No firmware is required, and multiple WPP reactors can be connected in series to a single power source (Figure 11A).
 However, fan speed isn’t adjustable and is maintained at maximum.
 A full schematic of the analog circuit appears at the end of this section.
 A bill of materials appears within the README file of the 'analog-driver-board' subdirectory of the project repository.
 
 Relative light intensity can be determined using the analog driver board test points and a multimeter (Figure 11B-D).
 The measured voltage can then be converted to relative light intensity using the values in Table 1.
-These values are derived from Mean Well's datasheet for the analog board’s LDD-1000L LED driver.
+These values are derived from Mean Well's datasheet for the analog board’s LDD-1000L LED driver and are not exact.
 
 \begin{table}[H]
 	\centering
@@ -332,11 +331,11 @@ These values are derived from Mean Well's datasheet for the analog board’s LDD
 		0.5                         & 20\%                                          \\
 		0.45                        & 0\%
 	\end{tabular}
-	\caption{Test point voltage to approximate relative LED intensity conversion. TODO: FIX TABLE FORMATTING.}
+	\caption{Test point voltage to approximate relative LED intensity conversion.}
 	\label{tab:analog-board-conversion}
 \end{table}
 
-To fabricate an analog driver board, start by ordering analog board PCBs from a PCB manufacturer. Your PCB manufacturer will send you bare boards of the type seen in Figure 12A.
+To fabricate an analog driver board, first order analog driver PCBs from a PCB manufacturer. Your PCB manufacturer will send you bare boards of the type seen in Figure 12A.
 
 \begin{figure}[H]
 	\centering
@@ -344,12 +343,12 @@ To fabricate an analog driver board, start by ordering analog board PCBs from a 
 	\caption{(A) Blank analog driver board. (B) Analog driver board with labeled surface mount components.}
 \end{figure}
 
-Begin by adding the surface mount components.
+Begin by soldering the surface mount components.
 Refer to the analog driver schematic for part identities.
 We recommend using thin solder, e.g. 0.015''.
 The surface mount resistors and capacitors have no polarity.
-However, the power indicator LED does have a polarity---ensure that the small green line points towards ground (left).
-Once done your analog board should look that depicted in Figure 12B.
+The power indicator LED has a polarity---ensure that the small green line points towards ground (left).
+Once finished, your analog board should look like that depicted in Figure 12B.
 
 \begin{figure}[H]
 	\centering
@@ -357,20 +356,20 @@ Once done your analog board should look that depicted in Figure 12B.
 	\caption{(A) Analog driver board with potentiometer and connectors (B) Powered analog driver board.}
 \end{figure}
 
-Next, solder on the connectors and the potentiometer knob (Figure 13A).
-From now on we recommend standard gage solder, e.g. 0.031''.
-You can then add the barrel jacks and test points.
+Next, solder the connectors and potentiometer knob to the board (Figure 13A).
+From now on we recommend standard gauge solder, e.g. 0.031''.
+Then add the barrel jacks and test points.
 With these added you may plug in your board into power for the first time.
-Either barrel jack can be plugged in.
-You should see your power indicator LED illuminate (Figure 13B)
+Either barrel jack can be plugged into power.
+Your power indicator LED should illuminate (Figure 13B)
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.5\textwidth]{"./fig14.jpg"}
-	\caption{(A) Blank analog driver board. (B) Analog driver board with labeled surface mount components.}
+	\includegraphics[width=\textwidth/2]{"./fig14.jpg"}
+	\caption{Analog driver board fitted with Mean Well LDD-1000L LED driver.}
 \end{figure}
 
-Finally, solder on the Mean Well LDD-100L LED driver (Figure 14).
+Finally, solder the Mean Well LDD-1000L LED driver to the board (Figure 14).
 This component goes on the back of the analog driver board.
 The analog driver board is now ready for use.
 
@@ -385,8 +384,93 @@ The analog driver board is now ready for use.
   \label{FIG:digital-driver-network}
 \end{figure}
 
-The digital driver circuit can be controlled from a computer or some other digital device.
-We built our driver to work over I$^2$C, consistent with an emerging standard for many ``maker'' products.
+\textbf{\textit{Through use of the digital driver board, one can control WPP device light intensity and fan speed.}} This control is achieved by interfacing a control unit, like an Arduino Uno, to the digital driver board using custom software. Multiple WPP devices with digital driver boards can be connected to a single control unit and power supply (Figure 15). Open-source firmware for interfacing digital driver boards with an Arduino Uno control unit is provided in the project repository. Other peripherals can be connected to digital driver boards to expand functionality, but firmware must be produced to interface with them.
+
+To fabricate a digital driver board, first order digital driver PCBs from a PCB manufacturer. You will be sent bare boards of the type seen in Figure 16A.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{"./fig16.png"}
+	\caption{(A) Blank digital driver board. (B) Front and (C) back of digital driver board with labeled surface mount components.}
+\end{figure}
+
+Begin by adding the surface mount components to the front and back of the digital driver board PCB.
+Refer to the digital driver schematic for part identities.
+We recommend using thin solder, e.g. 0.015''.
+The surface mount resistors and capacitors have no polarity.
+Both indicator LEDs have a polarity---ensure that the small green line on both points towards ground (left).
+Once finished, your digital driver board should look like that in Figure 16B and C.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{"./fig17.png"}
+	\caption{(A) Digital driver board mounted with power regulator. (B) Digital driver board with connectors, microcontroller socket, JST connectors and barrel jacks.}
+\end{figure}
+
+Next, solder the power regulator to the board (Figure 17A).
+Pay special attention to the orientation of the regulator.
+From now on we recommend standard gauge solder, e.g. 0.031''.
+Solder on the connectors, microcontroller socket, JST connectors and barrel jacks (figure 17B).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth/2]{"./fig18.png"}
+	\caption{Digital driver board fitted with Mean Well LDD-1000L LED driver.}
+\end{figure}
+
+Finally, solder a Mean Well LDD-1000L LED driver to the board (Figure 18).
+This component goes on the back of the digital driver board.
+Physical fabrication of the digital driver board is now complete.
+However, a microcontroller programmed with the necessary firmware must be installed onto the board to make it functional.
+
+Each digital driver board requires an ATtiny85 microcontroller to act as the ``brains'' of the board.
+This microcontroller allows the digital driver board to serve as a peripheral in an I$^2$C network supervised by a central control unit.
+I$^2$C is a standard protocol for communciation between digital circuits.
+To "communicate" with the control unit, the ATtiny85 microcontroller must be programmed with firmware.
+Firmware for the ATtiny85 microcontroller is provided within the '/digital-driver-board/firmware' subdirectory of the project repository.
+This firmware can be edited if needed or you can create your own. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth/2]{"./tiny-programmer.jpg"}
+	\caption{An ATtiny85 microcontroller programmer purchased from SparkFun (item number PGM-11801).}
+\end{figure}
+
+\clearpage
+
+We recommend using the Arduino IDE and a commercial programmer to program ATtiny85 microcontrollers (Figure 19).
+Follow the instructions provided by the manufacturer of your programmer to program microcontrollers with the provided firmware.
+Note that each digital driver board has an address that is defined at the top of the firmware file programmed onto each microcontroller.
+You should change the address of each microcontroller to be unique within the ``network'' of all I$^2$C peripherals connected to a single control unit.
+Multiple digital driver boards with unique addresses may be networked together onto one I$^2$C bus by simply daisy-chaining the boards together, as shown in \autoref{FIG:digital-driver-network}.
+You should physically label each microcontroller you program with its address.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth/2]{"./fig20.png"}
+	\caption{Digital driver board with a ATtiny85 microcontroller installed.}
+\end{figure}
+
+Once you have a programmed ATtiny85 microcontroller, install it into the socket of the digital driver board.
+Ensure the notch in the microcontroller is facing the correct direction (up and to the left).
+Your digital driver board is now ready for use with a control unit.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth/2]{"./arduino-interface.jpg"}
+	\caption{Digital driver board connected to an Arduino Uno.}
+\end{figure}
+
+\clearpage
+
+There are many strategies one can employ to control digital driver boards.
+We have provided firmware appropriate for using an Arduino Uno to control digital driver boards over a USB cable from any computer.
+Find the firmware within the '/digital-controller/arduino-uno-controller/firmware' subdirectory of the project repository.
+Flash this firmware onto an Arduino and connect at least the SCL, SDA, and GND pins to an Arduino Uno as shown in Figure 21.
+This example firmware allows you to control multiple reactors by sending serial-over-USB commands from your computer.
+Read the description at the top of the firmware file for details.
+
+Many I$^2$C-compatible peripherals offering diverse functionalities are commercially available.
 While the physical connectors may be different, our digital circuit is compatible with the following systems.
 
 \begin{itemize}
@@ -396,37 +480,9 @@ While the physical connectors may be different, our digital circuit is compatibl
   \item \href{https://store.ncd.io/?fwp_product_type=i2c-mini-modules}{NCD I2C Mini Modules}
 \end{itemize}
 
-Multiple digital driver boards may be ``networked'' together onto one I$^2$C bus by simply daisy-chaining the boards together, as shown in \autoref{FIG:digital-driver-network}.
 I$^2$C peripherals in these families can be connected to digital driver boards to expand functionality, but software must be produced to interface with them.
-Through use of the digital driver board, one can control WPP device light intensity and fan speed.
-This control is achieved by connecting a control unit, like an Arduino Uno, to the digital driver board using custom software.
-A schematic of the digital driver board appears at the end of this section.
 
 \clearpage
-
-\begin{center}
-  \includegraphics[width=\textwidth/2]{"./tiny-programmer.jpg"}
-\end{center}
-
-Each digital driver board requires a programmed ATtiny85 microcontroller which acts as the ``brains'' of the circuit.
-The microcontroller's primary purpose is to serve as a peripheral in the I$^2$C network.
-The firmware is provided within the /digital-driver-board/firmware directory of the online repository.
-We used the Arduino IDE and a commercially available programmer (pictured above).
-Follow the detailed instructions provided with the programmer that you purchase.
-Note that each peripheral has an address, defined at the top of the firmware file.
-This address must be totally unique within the network of connected I$^2$C devices.
-You may wish to write the address used onto the microcontroller chips as you program them.
-
-\begin{center}
-  \includegraphics[width=\textwidth/2]{"./arduino-interface.jpg"}
-\end{center}
-
-There are many strategies you might employ for interfacing with your digital driver boards.
-We have provided firmware appropriate for using an Arduino Uno to control the reactors over a USB cable from any computer.
-Find the firmware within the /digital-controller/arduino-uno-controller/firmware directory.
-Once you have flashed this firmware onto your Arduino, connect at least the SCL, SDA, and GND pins as pictured above.
-This example firmware allows you to control multiple reactors by sending serial-over-USB commands from your computer.
-Read the description at the top of the firmware file for details.
 
 \includepdf[landscape=true]{"../digital-driver-board/driver.pdf"}
 
@@ -438,7 +494,7 @@ Read the description at the top of the firmware file for details.
 	\caption{(A) Unassembled pieces of the simple LED driver circuit integrating a LUXdrive 1000mA PowerPuck LED driver (Part number: 2008B-1000). (B) Assembled circuit. (C) Powered circuit.}
 \end{figure}
 
-The LED driver circuit shown in Figure N is the simplest way to drive a WPP apparatus.
+The LED driver circuit shown in Figure 22 is the simplest way to drive a WPP apparatus.
 Neither light intensity nor fan speed can be configured when using the simple LED driver circuit.
 Both are maintained at maximum power.
 However, no circuit board fabrication is required, and any commercial 1000 mA LED driver can be used.
@@ -466,41 +522,69 @@ Once finished, the WPP apparatus can be switched off by simply unplugging it and
 
 \section{Documentation}
 
-Users should report the following for each photon source used:
+WPP devices are trivial to document.
+Suggested below are the aspects of a WPP device that one should document whenever a WPP device is used in an investigation. 
+Documenting each of these aspects will allow for precise reproduction of the exact WPP device used within a study. 
 
-    (1) Max emission wavelength for LEDs.
-    (2) Manufacturer and part number for LEDs.
-    (3) Supplier and part number for LED star (if commercial).
+\subsection{Base and Photon Source} \label{SEC:doc-photon-source}
 
-This information enables precise reproduction of WPP photon sources. Characterization of a photon source’s emission profile using a spectrometer is recommended but not required for reproduction. Emission profiles for commercial LEDs are supplied in part datasheets provided by manufacturers. A list of WPP-compatible LED stars exhibiting emission profiles across the visible range is provided in the project repository.
+Users should report the following for each based and photon source used:
 
-Users should provide and report the following for each module used:
+\begin{itemize}
+	\item Max emission wavelength for LEDs.
+	\item Manufacturer and part number for LEDs.
+	\item Supplier and part number for LED star (if commercial).
+\end{itemize}
 
-    (1) Original CAD designs for both module parts.
-    (2) 3D-printable models for both module parts.
-    (3) Photos of each reaction vessel placement configuration.
-    (4) Manufacturer and part number for reaction vessel.
+This information enables precise reproduction of WPP photon sources. Characterization of a photon source’s emission profile using a spectrometer is recommended but not required for reproduction. Emission profiles for commercial LEDs are supplied in part datasheets provided by manufacturers.
+
+\subsection{Reaction Module} \label{SEC:doc-reaction modules}
+
+Users should provide and report the following for each reaction module used:
+
+\begin{itemize}
+	\item Original CAD designs for both module parts.
+	\item 3D-printable models for both module parts.
+	\item Photos of each reaction vessel placement configuration.
+	\item Manufacturer and part number for reaction vessel.
+\end{itemize}
 
 These provisions enable precise reproduction of reaction modules. Documenting the height a vessel is held above the photon source is recommended but not required for reaction module reproduction. All reaction modules provided in the project repository hold vessels a standardized 7 mm above the photon source.
 
+\subsection{Reactor Driver Electronics} \label{SEC:doc-reactor-drivers}
+
+As each reactor driver offers different configurational abilities, each requires documentation of different aspects for precise reproducability.
+
+\subsubsection{Analog Driver Board } \label{SEC:doc-analog-driver}
+
 Users should report the following when an analog driver board is used:
 
-    (1) Measured test point voltage.
-    (2) Relative intensity at which LEDs are driven (0 to 100%).
+\begin{itemize}
+	\item Measured test point voltage.
+	\item Relative intensity at which LEDs are driven (0 to 100\%).
+\end{itemize}
 
 These provisions enable precise reproduction of reaction conditions for transformations carried out using WPP devices fitted with analog driver boards.
 
+\subsubsection{Digital Driver Board} \label{SEC:doc-digital-driver}
+
 Users should provide and document the following when a digital driver board is used:
 
-    (1) Software used to operate the digital driver board, control unit and any other peripherals.
-    (2) Relative intensity at which LEDs are driven (0 to 100%).
-    (3) Relative fan speed (0 to 100%).
+\begin{itemize}
+	\item Firmware used to operate the digital driver board, control unit and any other peripherals.
+	\item Relative intensity at which LEDs are driven (0 to 100\%).
+	\item Relative fan speed (0 to 100\%).
+\end{itemize}
 
-These provisions enable precise reproduction of reaction conditions for transformations carried out using WPP devices fitted with digital driver boards
+These provisions enable precise reproduction of reaction conditions for transformations carried out using WPP devices fitted with digital driver boards.
+
+\subsubsection{Simple Driver Circuit} \label{SEC:doc-simple-driver}
 
 Users should report the following when a simple LED driver circuit is used:
 
-    (1) Manufacturer and part number for LED driver.
+\begin{itemize}
+	\item Manufacturer and part number for LED driver.
+\end{itemize}
 
 This information enables reproduction WPP devices fitted with the simple LED driver circuit.
 
