@@ -88,7 +88,7 @@ Through variation of each component, one can quickly produce bespoke WPP devices
 
 The WPP is a living project.
 We encourage duplication and modification of our designs.
-If you would like to contribute to the WPP project or notice an issue, please consider opening an pull request or issue on GitHub.
+If you would like to contribute to the WPP project or notice an issue, please consider opening a pull request or issue on GitHub.
 
 \section{Fabrication}
 
@@ -117,7 +117,7 @@ The WPP architecture uses industry standard 20 mm ``LED star'' circuit boards mo
 LED stars are commercially available or can be easily fabricated.
 The range of wavelengths provided by a LED star depends upon the emission profile of the mounted LEDs.
 \textbf{\textit{Through variation of the LED star integrated into a WPP base (Figure 2B), the user can control the wavelengths of light delivered by the photon source to a reaction vessel.}}
-An aluminim heatsink and cooling fan are integrated to keep the LED star from overheating.
+An aluminum heatsink and cooling fan are integrated to keep the LED star from overheating.
 
 A list of LED stars tested with the WPP platform is available in the 'photon-source-leds' subdirectory of the project repository.
 It is easiest to use LED stars with pre-mounted LEDs.
@@ -132,7 +132,7 @@ All LED stars must be mounted with LEDs with a maximum forward current of 1000 m
 
 Fabrication of a WPP base begins with preparation of an LED star.
 Solder leads onto your LED star, using the red positive and black negative convention (Figure 3A---B).
-We recommend 22 gauge solid core wire.
+We recommend 22-gauge solid core wire.
 This is often sold as "standard hookup" wire.
 Soldering may be challenging, as the LED star itself will resist efforts to heat it.
 Using lead-based solder with a low melting point may help.
@@ -151,14 +151,14 @@ Models for both are provided in the 'photoreactor-base' subdirectory of the proj
 The same base is shared by all WPP devices.
 
 When interacting with the design files in our repository you will see several filetypes.
-We have designed the WPP enclosure using Autodesk's Fusion 360, and included f3d design files for those that wish to extend or modify our designs.
+We have designed the WPP enclosure using Autodesk's Fusion 360 and included f3d design files for those that wish to extend or modify our designs.
 Interacting with f3d files requires a Fusion 360 license, which is free to students and educators.
 You will also find stl files in the repository.
 These are common 3D-model exchange files which can be viewed with 3D modeling programs or printed with 3D-printers.
 
 We recommend white PLA as the printing material. We have also used white ABS.
 If you are printing yourself, follow the instructions provided by the manufacturer of your 3D-printer.
-You will need to enable support material in your 3D slicer when printing the base base enclosure.
+You will need to enable support material in your 3D slicer when printing the base enclosure.
 We have succesfully printed using the following printers:
 
 \begin{itemize}
@@ -283,7 +283,7 @@ In addition to power, these boards have 4-pin connectors to carry the I$^2$C ser
 \textbf{We recommend chemists experienced in electronics and interested in automation of WPP devices or taking advantage of I$^2$C peripherals to expand device functionality use the digital driver board.}
 Refer to \autoref{SEC:digital-driver} for digital driver board fabrication instructions and further explanation.
 
-The simple driver circuit allows for any commerical 1000 mA LED driver to be used with a WPP device.
+The simple driver circuit allows for any commercial 1000 mA LED driver to be used with a WPP device.
 Refer to \autoref{SEC:simple-driver} for further explanation.
 
 When interacting with the design files in our online repository you will see several different filetypes.
@@ -317,7 +317,7 @@ These values are derived from Mean Well's datasheet for the analog board’s LDD
 
 \begin{table}[H]
 	\centering
-	\begin{tabular}{ll}
+	\begin{tabular}{cc}
 		\centering
 		\textbf{Test Point Voltage} & \textbf{Approximate Relative Light Intensity} \\
 		2.5                         & 100\%                                         \\
@@ -425,7 +425,7 @@ However, a microcontroller programmed with the necessary firmware must be instal
 
 Each digital driver board requires an ATtiny85 microcontroller to act as the ``brains'' of the board.
 This microcontroller allows the digital driver board to serve as a peripheral in an I$^2$C network supervised by a central control unit.
-I$^2$C is a standard protocol for communciation between digital circuits.
+I$^2$C is a standard protocol for communication between digital circuits.
 To "communicate" with the control unit, the ATtiny85 microcontroller must be programmed with firmware.
 Firmware for the ATtiny85 microcontroller is provided within the '/digital-driver-board/firmware' subdirectory of the project repository.
 This firmware can be edited if needed or you can create your own. 
@@ -451,7 +451,7 @@ You should physically label each microcontroller you program with its address.
 	\caption{Digital driver board with a ATtiny85 microcontroller installed.}
 \end{figure}
 
-Once you have a programmed ATtiny85 microcontroller, install it into the socket of the digital driver board.
+Once you have a programmed ATtiny85 microcontroller, install it into the socket of the digital driver board as shown in Figure 21.
 Ensure the notch in the microcontroller is facing the correct direction (up and to the left).
 Your digital driver board is now ready for use with a control unit.
 
@@ -553,7 +553,7 @@ These provisions enable precise reproduction of reaction modules. Documenting th
 
 \subsection{Reactor Driver Electronics} \label{SEC:doc-reactor-drivers}
 
-As each reactor driver offers different configurational abilities, each requires documentation of different aspects for precise reproducability.
+As each reactor driver offers different configurational abilities, each requires different levels of documentation for exact reproduction.
 
 \subsubsection{Analog Driver Board } \label{SEC:doc-analog-driver}
 
