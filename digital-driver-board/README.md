@@ -22,8 +22,8 @@ Bill of Materials
 | D2             | (blue)        | Lite-On      | LTST-C150TBKT        | $0.50 | [DigiKey](https://www.digikey.com/en/products/detail/lite-on-inc/LTST-C150TBKT/388526?s=N4IgTCBcDaIDIBUDKCC0BhAjAVgAwICEBpBEAXQF8g) |
 | J1, J2         | i2c connector | JST          | S4B-PH-K-S(LF)(SN)   | $0.50 | [DigiKey](https://www.digikey.com/en/products/detail/jst-sales-america-inc/S4B-PH-K-S-LF-SN/926628) [Newark](https://www.newark.com/jst-japan-solderless-terminals/s4b-ph-k-s-lf-sn/connector-header-2mm-4-position/dp/38K8074) |
 | J3, J4         | power input   | CUI          | PJ-002A              | $1.50 | [DigiKey](https://www.digikey.com/en/products/detail/cui-devices/PJ-002A/96962) [Mouser](https://www.mouser.com/ProductDetail/CUI-Devices/PJ-002A/?qs=WyjlAZoYn51CKfAix9Mngw%3D%3D) |
-| J5             | fan connector |
-| J7             | LED connector |
+| J5             | fan connector | Sullins      | PREC040SAAN-RC       | $0.50 | [DigiKey](https://www.digikey.com/en/products/detail/sullins-connector-solutions/PREC040SAAN-RC/2774814) |
+| J7             | LED connector | Molex        | 0901471102           | $0.75 | [DigiKey](https://www.digikey.com/en/products/detail/molex/0901471102/3303846) |
 | PS1            | regulator     | CUI          | VXO7805-500-M-TR     | $3.00 | [DigiKey](https://www.digikey.com/en/products/detail/cui-inc/VXO7805-500-M-TR/11569188) [Newark](https://www.newark.com/cui/vxo7805-500-m-tr/non-isolated-dc-switching-regulator/dp/13AJ1536) |
 | R1, R4, R6, R7 | 4.7k          | Yageo        | RC1206DR-074K7L      | $0.10 | [DigiKey](https://www.digikey.com/en/products/detail/yageo/rc1206dr-074k7l/5919134) |
 | R2, R5         | 470           | Yageo        | RC1206FR-07470RL     | $0.10 | [DigiKey](https://www.digikey.com/en/products/detail/yageo/RC1206FR-07470RL/728934) |
