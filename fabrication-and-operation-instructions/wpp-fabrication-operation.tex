@@ -88,7 +88,7 @@ Through variation of each component, one can quickly produce bespoke WPP devices
 
 The WPP is a living project.
 We encourage duplication and modification of our designs.
-If you would like to contribute to the WPP project or notice an issue, please consider opening a pull request or issue on GitHub.
+If you would like to contribute to the WPP project or notice a problem, please consider opening a pull request or issue on GitHub.
 
 \section{Fabrication}
 
@@ -104,7 +104,7 @@ The fabrication process is divided into three parts:
 
 A WPP device is made up of many commercially available parts.
 This guide assumes that you have already procured those parts.
-The project repository provides README files containing a bill of materials for each component with detailed part numbers and suggested vendors.
+The project repository provides README files containing a bill of materials for each component with part numbers and suggested vendors.
 
 \subsection{Base and Photon Source} \label{SEC:base}
 
@@ -113,7 +113,7 @@ The project repository provides README files containing a bill of materials for 
 	\caption{(A) Commercial 20 mm LED star mounted with 450 nm Cree, Inc. XT-E LEDs. (B) Top-down view of WPP base depicting integrated LED star.}
 \end{figure}
 
-The WPP architecture uses industry standard 20 mm ``LED star'' circuit boards mounted with 3 high-intensity LEDs to deliver photons to photoreactions (Figure 2A).
+The WPP architecture uses industry standard 20 mm ``LED star'' circuit boards mounted with 3 high-intensity LEDs to deliver photons to reaction vessels (Figure 2A).
 LED stars are commercially available or can be easily fabricated.
 The range of wavelengths provided by a LED star depends upon the emission profile of the mounted LEDs.
 \textbf{\textit{Through variation of the LED star integrated into a WPP base (Figure 2B), the user can control the wavelengths of light delivered by the photon source to a reaction vessel.}}
@@ -123,11 +123,11 @@ A list of LED stars tested with the WPP platform is available in the 'photon-sou
 It is easiest to use LED stars with pre-mounted LEDs.
 Otherwise, you can fabricate custom LED stars with discrete LEDs and bare LED star circuit boards.
 Custom LED star production requires a reflow oven.
-All LED stars must be mounted with LEDs with a maximum forward current of 1000 mA.
+All LED stars must be mounted that have LEDs with a maximum drive current of 1000 mA.
 
 \begin{figure}[H]
 	\includegraphics[width=\textwidth]{"./fig3.png"}
-	\caption{(A) Unsoldered commerical LED star. (B) LED star with leads. (C) Connectors on other end of leads. (D) Connector sealed with heat-shrink tubing.}
+	\caption{(A) Unsoldered commercial LED star. (B) LED star with leads. (C) Connectors on other end of leads. (D) Connector sealed with heat-shrink tubing.}
 \end{figure}
 
 Fabrication of a WPP base begins with preparation of an LED star.
@@ -151,15 +151,15 @@ Models for both are provided in the 'photoreactor-base' subdirectory of the proj
 The same base is shared by all WPP devices.
 
 When interacting with the design files in our repository you will see several filetypes.
-We have designed the WPP enclosure using Autodesk's Fusion 360 and included f3d design files for those that wish to extend or modify our designs.
+We have designed the WPP enclosure using Autodesk's Fusion 360 and included f3d design files for those who wish to extend or modify our designs.
 Interacting with f3d files requires a Fusion 360 license, which is free to students and educators.
 You will also find stl files in the repository.
-These are common 3D-model exchange files which can be viewed with 3D modeling programs or printed with 3D-printers.
+These are common 3D-model exchange files that can be viewed with 3D modeling programs or printed with 3D-printers.
 
 We recommend white PLA as the printing material. We have also used white ABS.
 If you are printing yourself, follow the instructions provided by the manufacturer of your 3D-printer.
 You will need to enable support material in your 3D slicer when printing the base enclosure.
-We have succesfully printed using the following printers:
+We have successfully printed using the following printers:
 
 \begin{itemize}
 	\item Creality Ender 3
@@ -168,7 +168,7 @@ We have succesfully printed using the following printers:
 \end{itemize}
 
 Any company or shop offering 3D printing as a service should accept our stl files without modification.
-Once your base and cable anchor are printed, printed you may need to remove excess material with a razor blade or exacto-knife.
+Once your base and cable anchor are printed, you may need to remove excess material with a razor blade or exacto-knife.
 
 Each base contains seven threaded inserts.
 These allow components such as an analog driver board and fan to rigidly attach to the base with screws.
@@ -176,7 +176,7 @@ Use a soldering iron to carefully heat the threaded inserts while pushing them i
 
 \begin{figure}[H]
 	\includegraphics[width=\textwidth]{"./fig5.png"}
-	\caption{(A) Tapping aluminium heatsink. (B) LED star and heatsink installed into WPP base.}
+	\caption{(A) Tapping aluminum heatsink. (B) LED star and heatsink installed into WPP base.}
 \end{figure}
 
 Now tap an aluminum heatsink for imperial 4-40 machine screws.
@@ -224,8 +224,8 @@ By modifying chamber height and adjusting holder geometry, one can produce modul
 Fusion360 designs and stl models for modules compatible with 1-, 4-, 8- and 24-mL vials are provided in the 'photoreaction-modules' subdirectory of the project repository (Figure 8A—B).
 Template reaction chamber and vessel holder Fusion360 designs are provided in the same directory.
 
-We encourage you to design your own reactions modules if those provided in the project repository do not meet your needs.
-If you do, we suggest you add your designs to WPP repository so that others may benefit from your efforts.
+We encourage you to design your own reaction modules if those provided in the project repository do not meet your needs.
+If you do, we suggest you add your designs to the WPP repository so that others may benefit from your efforts.
 
 A single reaction module can offer multiple layouts for reaction vessel placement.
 For the provided modules, two vessel placement configurations exist.
@@ -262,7 +262,7 @@ Your reaction module is now ready for use.
 A WPP device can be driven using an analog driver circuit board, a digital driver circuit board or a simple electronic circuit with a commercial LED driver (Figure 10).
 All provide power to the cooling fan and constant current to the LEDs.
 All utilize 1000 mA LED drivers. 
-\textbf{\textit{Each provides different configurational abilities.}}
+\textbf{\textit{Each provides different configurational capabilities.}}
 
 Both driver boards are built around Mean Well's LDD-1000L LED driver module.
 This module delivers constant current up to one amp.
@@ -270,17 +270,17 @@ The current delivered can be controlled electronically in several different ways
 Users wishing to understand this design should refer to Mean Well's datasheet.
 Refer to the "analog-driver-board" and "digital-driver-board" directories in the online repository for design files for each board.
 
-The analog driver board is designed exceedingly simple to fabricate and use.
+The analog driver board is designed to be exceedingly simple to fabricate and use.
 The circuit accepts DC 12 V through a barrel jack.
 A small knob is used to adjust light intensity.
 Fan speed is not adjustable.
-\textbf{We recommend chemists interested in adopting the WPP architecture first build and test the analog driver board.}
+\textbf{We recommend that chemists interested in adopting the WPP architecture first build and test the analog driver board.}
 Refer to \autoref{SEC:analog-driver} for analog driver board fabrication instructions and further explanation.
 
 
 The digital driver board is made to be incorporated into an I$^2$C-based digital control system.
 In addition to power, these boards have 4-pin connectors to carry the I$^2$C serial data.
-\textbf{We recommend chemists experienced in electronics and interested in automation of WPP devices or taking advantage of I$^2$C peripherals to expand device functionality use the digital driver board.}
+\textbf{We recommend that chemists experienced in electronics and interested in automation of WPP devices or taking advantage of I$^2$C peripherals to expand device functionality use the digital driver board.}
 Refer to \autoref{SEC:digital-driver} for digital driver board fabrication instructions and further explanation.
 
 The simple driver circuit allows for any commercial 1000 mA LED driver to be used with a WPP device.
@@ -359,7 +359,7 @@ Once finished, your analog board should look like that depicted in Figure 12B.
 Next, solder the connectors and potentiometer knob to the board (Figure 13A).
 From now on we recommend standard gauge solder, e.g. 0.031''.
 Then add the barrel jacks and test points.
-With these added you may plug in your board into power for the first time.
+With these added you may plug your board into power for the first time.
 Either barrel jack can be plugged into power.
 Your power indicator LED should illuminate (Figure 13B)
 
@@ -511,18 +511,18 @@ Once a WPP apparatus is configured with the desired photon source, reaction modu
 
 To conduct a photoreaction using a WPP device, an assembled apparatus should be placed on a lab stir plate, to provide reaction mixture stirring, and reaction vessels should be inserted into the apparatus in the desired layout (Figure 8).
 The 130 by 130 mm footprint of the WPP architecture is compatible with typical stir plates.
-A standard 12 V power supply can then be plugged into the reactor driver to turn on the device and start reaction.
+A standard 12 V power supply can then be plugged into the reactor driver to turn on the device and start irradiation.
 A single 12V 2 A power supply is sufficient to drive 2 WPP devices simultaneously.
 A switch can be installed between the WPP apparatus and power supply to provide power switching.
 
 Reaction and photon source cooling is provided by the fan integrated into the base.
 Additional cooling can be achieved through placement of fans above the WPP apparatus or by placing a WPP device on a stir plate within a refrigerator or cold room.
 
-Once finished, the WPP apparatus can be switched off by simply unplugging it and disassembled for storage.
+Once finished, the WPP apparatus can be switched off by simply unplugging it. The apparatus can be disassembled for storage.
 
 \section{Documentation}
 
-WPP devices are trivial to document.
+WPP devices are easy to document.
 Suggested below are the aspects of a WPP device that one should document whenever a WPP device is used in an investigation. 
 Documenting each of these aspects will allow for precise reproduction of the exact WPP device used within a study. 
 
@@ -593,5 +593,9 @@ This information enables reproduction WPP devices fitted with the simple LED dri
 WPP reactors utilize high-intensity light emitting diodes (LED) that can cause eye damage if proper safety precautions are not observed.
 Light-filtering safety glasses should be worn whenever a WPP apparatus photon source is powered.
 Care must be taken to use safety glasses protective against the specific emission wavelengths of the photon source.
+
+\section{Acknowledgements}
+
+We thank Dr. Ilia Guzei for photography. We are grateful to Sebastian Thompson for help in production of custom LED stars. 
 
 \end{document}
