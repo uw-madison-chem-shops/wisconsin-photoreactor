@@ -4,7 +4,7 @@ The WPP photon source consists of 3 high-power, single-color LEDs mounted onto a
 
 WPP-compatible LED stars emitting narrow wavelength ranges across the UV-Visible spectrum are available from multiple vendors. A few are detailed below.
 
-WPP-compatible custom LED stars mounted with 3.5 mm surface mount LEDs of any wavelength can be fabricated using a reflow oven. Please see [wpp-fabrication-operation.pdf](./fabrication-and-operation-instructions/wpp-fabrication-operation.tex) for fabrication instructions for more information.
+WPP-compatible custom LED stars mounted with 3.5 mm surface mount LEDs of any wavelength can be fabricated using a reflow oven. Please see the fabrication and operation guide for more information.
 
 ## List of compatible commercial LED stars
 
