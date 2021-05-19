@@ -19,10 +19,10 @@ This repository is being mirrored to several version control systems in an attem
 
 ## Safety
 
-The Wisconsin Photoreactor is for use by trained chemists.
+The Wisconsin Photoreactor Platform is for use by trained chemists.
 
 WPP apparatuses utilize high-intensity light emitting diodes (LED) that can cause eye damage if proper safety precautions are not observed. 
-Light-filtering safety glasses should be worn whenever a WPP apparatus photon source is powered. 
+Light-filtering safety glasses should be worn whenever a WPP apparatus photon source is powered.
 Care must be taken to use safety glasses protective against the specific emission wavelengths of a photon source.
 
 ## Fabrication and Operation Instructions
