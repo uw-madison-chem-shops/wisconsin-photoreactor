@@ -52,15 +52,18 @@
 \usepackage[numbers]{natbib}
 
 % title
-\title{Wisconsin Photoreactor Platform\\Fabrication and Operation Guide}
+\title{%
+	\textbf{A Versatile Open-source Photoreactor Architecture\\ for Photocatalysis Across the Visible Spectrum}}
 
-\author{Philip P. Lampkin, Blaise J. Thompson and Samuel H. Gellman*}
+\author{\textbf{Philip P. Lampkin, Blaise J. Thompson and Samuel H. Gellman*} \\ \textit{University of Wisconsin-Madison, Madison, Wisconsin, 53706} \\ \\ \textit{Email: \href{mailto:gellman@chem.wisc.edu}{gellman@chem.wisc.edu}}}
 
 \date{\today}
 
 \begin{document}
 
 \maketitle
+
+\centering{\textbf{\LARGE Wisconsin Photoreactor Platform\\Fabrication and Operation Guide}}}
 
 \includegraphics[width=\textwidth]{"../coverart.png"}
 
@@ -85,7 +88,7 @@ Each component is highly versatile, and apparatus assembly is fully modular (Fig
 Through variation of each component, one can quickly produce bespoke WPP devices to meet specific research needs.
 
 The WPP is a living project.
-We encourage duplication and modification of our designs.
+We encourage duplication, modification and expansion of our designs.
 If you would like to contribute to the WPP project or notice a problem, please consider opening a pull request or issue on GitHub.
 
 \section{Fabrication}
@@ -121,7 +124,7 @@ A list of LED stars tested with the WPP platform is available in the 'photon-sou
 It is easiest to use LED stars with pre-mounted LEDs.
 Otherwise, you can fabricate custom LED stars with discrete LEDs and bare LED star circuit boards.
 Custom LED star production requires a reflow oven.
-All LED stars must be mounted that have LEDs with a maximum drive current of 1000 mA.
+All LEDs must have a maximum drive current of 1000 mA or higher.
 
 \begin{figure}[H]
 	\includegraphics[width=\textwidth]{"./fig3.png"}
@@ -150,7 +153,7 @@ The same base is shared by all WPP devices.
 
 When interacting with the design files in our repository you will see several filetypes.
 We have designed the WPP enclosure using Autodesk's Fusion 360 and included f3d design files for those who wish to extend or modify our designs.
-Interacting with f3d files requires a Fusion 360 license, which is free to students and educators.
+Interacting with f3d files requires a Fusion 360 license, which is free for students and educators.
 You will also find stl files in the repository.
 These are common 3D-model exchange files that can be viewed with 3D modeling programs or printed with 3D-printers.
 
@@ -258,12 +261,12 @@ Your reaction module is now ready for use.
 \end{figure}
 
 A WPP device can be driven using an analog driver circuit board, a digital driver circuit board or a simple electronic circuit with a commercial LED driver (Figure 10).
-All provide power to the cooling fan and constant current to the LEDs.
+All provide power to the cooling fan and current to the LEDs.
 All utilize 1000 mA LED drivers. 
 \textbf{\textit{Each provides different configurational capabilities.}}
 
 Both driver boards are built around Mean Well's LDD-1000L LED driver module.
-This module delivers constant current up to one amp.
+This module delivers current up to one amp.
 The current delivered can be controlled electronically in several different ways.
 Users wishing to understand this design should refer to Mean Well's datasheet.
 Refer to the "analog-driver-board" and "digital-driver-board" directories in the online repository for design files for each board.
@@ -302,7 +305,7 @@ You may upload these zip files to PCB manufacturers when ordering copies of our 
 	\caption{(A) WPP devices fitted with analog driver boards connected in series. (B) Multimeter and WPP apparatus fitted with analog driver board. (C) Connection of multimeter to test points. (D) WPP apparatus at ~60 percent light intensity (1.5 V test point voltage)}
 \end{figure}
 
-\textbf{\textit{Through use of the analog driver board, one can reproducibly control WPP device light intensity.}}
+\textbf{\textit{Through use of the analog driver board, one can reproducibly control WPP device light intensity via modulation of drive current.}}
 This control is achieved through adjustment of the board-mounted potentiometer.
 No firmware is required, and multiple WPP reactors can be connected in series to a single power source (Figure 11A).
 However, fan speed isn’t adjustable and is maintained at maximum.
@@ -382,7 +385,7 @@ The analog driver board is now ready for use.
   \label{FIG:digital-driver-network}
 \end{figure}
 
-\textbf{\textit{Through use of the digital driver board, one can control WPP device light intensity and fan speed.}} This control is achieved by interfacing a control unit, like an Arduino Uno, to the digital driver board using custom software. Multiple WPP devices with digital driver boards can be connected to a single control unit and power supply (Figure 15). Open-source firmware for interfacing digital driver boards with an Arduino Uno control unit is provided in the project repository. Other peripherals can be connected to digital driver boards to expand functionality, but firmware must be produced to interface with them.
+\textbf{\textit{Through use of the digital driver board, one can control WPP device light intensity and fan speed using pulse width modulation.}} This control is achieved by interfacing a control unit, like an Arduino Uno, to the digital driver board using custom firmware. Multiple WPP devices with digital driver boards can be connected to a single control unit and power supply (Figure 15). Open-source firmware for interfacing digital driver boards with an Arduino Uno control unit is provided in the project repository. Other peripherals can be connected to digital driver boards to expand functionality, but firmware must be produced to interface with them.
 
 To fabricate a digital driver board, first order digital driver PCBs from a PCB manufacturer. You will be sent bare boards of the type seen in Figure 16A.
 
