@@ -1,6 +1,6 @@
 # WPP Standardized Base
 
-![WPP base](./base.jpg)
+![WPP base](./base.jpeg)
 
 The core structure of the Wisconsin Photoreactor Platform. Each reactor shares this component. It has a 130 mm by 130 mm footprint and is compatible with typical laboratory stir plates.
 
