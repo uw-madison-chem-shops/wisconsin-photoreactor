@@ -1,6 +1,6 @@
 # Analog Driver Board
 
-A simple photoreactor driver board providing control of light intensity. This control is achieved through adjustment of the board-mounted potentiometer. No software is required, and multiple WPP reactors fitted with this board can be connected in series to a single power source. However, fan speed isn’t adjustable and is maintained at maximum.
+A simple photoreactor driver board providing control over light intensity. This control is achieved through adjustment of the board-mounted potentiometer. No software is required, and multiple WPP reactors fitted with this board can be connected in series to a single power source. However, fan speed isn’t adjustable and is maintained at maximum.
 
 Relative light intensity can be determined using the analog driver board test points and a multimeter. See operation instructions for more information.
 
@@ -31,7 +31,7 @@ PCB images generated with [tracespace](https://github.com/tracespace/tracespace)
 | TP1            | (yellow)      | Keystone     | 5014              | $0.50 | [DigiKey](https://www.digikey.com/en/products/detail/keystone-electronics/5014/255336) |
 | TP2            | (red)         | Keystone     | 5010              | $0.50 | [DigiKey](https://www.digikey.com/en/products/detail/keystone-electronics/5010/255332) |
 | TP3            | (black)       | Keystone     | 5011              | $0.50 | [DigiKey](https://www.digikey.com/en/products/detail/keystone-electronics/5011/255333) |        |
-| U2             | LED driver    | Mean Well    | LDD-1000L         | $6.00 | [DigiKey](https://www.digikey.com/en/products/detail/mean-well-usa-inc/LDD-1000L/7704722) [Allied](https://www.alliedelec.com/product/mean-well/ldd-1000l/70345765/) [Mouser](https://www.mouser.com/ProductDetail/MEAN-WELL/LDD-1000L?qs=JK6Bpmia%2FmvDNI%252Ba1vDDrA%3D%3D) [Newark](https://www.newark.com/mean-well/ldd-1000l/dc-dc-converter-analog-pwm-30w/dp/14AJ2201) [LEDSupply](https://www.ledsupply.com/led-drivers/mean-well-ldd-l-series-cc-step-down-mode)|
+| U2             | LED driver    | Mean Well    | LDD-1000L (pin)  | $6.00 | [DigiKey](https://www.digikey.com/en/products/detail/mean-well-usa-inc/LDD-1000L/7704722) [Allied](https://www.alliedelec.com/product/mean-well/ldd-1000l/70345765/) [Mouser](https://www.mouser.com/ProductDetail/MEAN-WELL/LDD-1000L?qs=JK6Bpmia%2FmvDNI%252Ba1vDDrA%3D%3D) [Newark](https://www.newark.com/mean-well/ldd-1000l/dc-dc-converter-analog-pwm-30w/dp/14AJ2201) [LEDSupply](https://www.ledsupply.com/led-drivers/mean-well-ldd-l-series-cc-step-down-mode)|
 
 All prices are extended estimates in USD.
 In general, these are overestimates, so this should be an upper-estimate on cost.
@@ -43,7 +43,7 @@ Boards themselves can be printed for approximately $5 each.
 ### Unprinted
 
 ### Changed
-- removed wisconsin crest logo
+- Removed wisconsin crest logo
 
 ### Revision B
 
