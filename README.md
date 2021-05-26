@@ -22,7 +22,7 @@ This repository is being mirrored to several version control systems in an attem
 The Wisconsin Photoreactor Platform is for use by trained chemists.
 
 WPP apparatuses utilize high-intensity light emitting diodes (LED) that can cause eye damage if proper safety precautions are not observed. 
-A Light-blocking shield should be utilized whenever operating a WPP apparatus.
+A light-blocking shield should be utilized whenever operating a WPP apparatus.
 Care must be taken to ensure the light-blocking shield employed adequately blocks light emitted by a WPP photon source from directly reaching a user.
 Use of light-filtering safety glasses alongside a light-blocking shield can provide additional protection.
 
