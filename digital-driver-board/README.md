@@ -31,7 +31,7 @@ Bill of Materials
 | R2, R5         | 470           | Yageo        | RC1206FR-07470RL     | $0.10 | [DigiKey](https://www.digikey.com/en/products/detail/yageo/RC1206FR-07470RL/728934) |
 | R3             | 10k           | Yageo        | RC1206FR-0710KL      | $0.10 | [DigiKey](https://www.digikey.com/en/products/detail/yageo/RC1206FR-0710KL/728483)  |
 | U1             | microcontrol. | Microchip    | ATTINY85-20PU        | $1.50 | [DigiKey](https://www.digikey.com/en/products/detail/microchip-technology/attiny85-20pu/735469) [Newark](https://www.newark.com/microchip/attiny85-20pu/microcontroller-mcu-8-bit-attiny/dp/68T3808) |
-| U2             | LED driver    | Mean Well    | LDD-1000L            | $6.00 | [DigiKey](https://www.digikey.com/en/products/detail/mean-well-usa-inc/LDD-1000L/7704722) [Allied](https://www.alliedelec.com/product/mean-well/ldd-1000l/70345765/) |
+| U2             | LED driver    | Mean Well    | LDD-1000L            | $6.00 | [DigiKey](https://www.digikey.com/en/products/detail/mean-well-usa-inc/LDD-1000L/7704722) [Allied](https://www.alliedelec.com/product/mean-well/ldd-1000l/70345765/) [Mouser](https://www.mouser.com/ProductDetail/MEAN-WELL/LDD-1000L?qs=JK6Bpmia%2FmvDNI%252Ba1vDDrA%3D%3D) [Newark](https://www.newark.com/mean-well/ldd-1000l/dc-dc-converter-analog-pwm-30w/dp/14AJ2201) [LEDSupply](https://www.ledsupply.com/led-drivers/mean-well-ldd-l-series-cc-step-down-mode)|
 
 ## I2C Interface
 

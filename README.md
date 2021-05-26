@@ -19,11 +19,12 @@ This repository is being mirrored to several version control systems in an attem
 
 ## Safety
 
-The Wisconsin Photoreactor is for use by trained chemists.
+The Wisconsin Photoreactor Platform is for use by trained chemists.
 
 WPP apparatuses utilize high-intensity light emitting diodes (LED) that can cause eye damage if proper safety precautions are not observed. 
-Light-filtering safety glasses should be worn whenever a WPP apparatus photon source is powered. 
-Care must be taken to use safety glasses protective against the specific emission wavelengths of a photon source.
+A light-blocking shield should be utilized whenever operating a WPP apparatus.
+Care must be taken to ensure the light-blocking shield employed adequately blocks light emitted by a WPP photon source from directly reaching a user.
+Use of light-filtering safety glasses alongside a light-blocking shield can provide additional protection.
 
 ## Fabrication and Operation Instructions
 
@@ -32,10 +33,13 @@ Please see [wpp-fabrication-operation.pdf](./fabrication-and-operation-instructi
 
 ## Enclosure
 
-The WPP is designed around a mechanically robust 3D printed enclosure.
+The WPP is designed around a mechanically robust and simple 3D printed enclosure.
+
 Every WPP device has the same base, see directory `photoreactor-base`.
 WPP reaction modules are meant to be switched based on the reaction vessel used.
 See directory `photoreactor-reaction-modules` for our growing collection of reaction modules for common vessel types.
+For safe WPP device operation, a light blocking shield is recommended. 
+See directory `photoreactor-light-shield`, for a 3D-printable light-blocking cover for WPP devices.
 
 ## Electronics
 

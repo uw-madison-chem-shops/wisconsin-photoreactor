@@ -13,11 +13,11 @@ CAD designs and 3D-printable models for modules compatible with various common r
 
 | vessel         | manufacturer       | manufacturer part number  |
 | :------------- | :----------------- | :------------------------ |
-| 1 mL Vial      | Fisher Scientific  | IN-C39CTOU2 	     	      |
-| 4 mL Vial      | Chemglass          | IN-C39CTOU5		            | 
-| 8 mL Vial      | Chemglass          | XTEARY-00-0000-000000N09  |
-| 10 mL Schlenk  | Synthware          | LXML-PE01-0080	    	    |
-| 24 mL Vial     | VWR                | XPEBGR-L1-0000-00D01      |
+| 2 mL Vial      | Fisher Scientific  | 03-338AA                  |
+| 4 mL Vial      | Chemglass          | CG-4909-04                | 
+| 8 mL Vial      | Chemglass          | CG-4909-03                |
+| 10 mL Schlenk  | Synthware          | F580010	                  |
+| 24 mL Vial     | VWR                | Vial: VWR 66012-044 Cap: Chemglass CG-4911-20 |
 
 ## Bill of Materials
 
