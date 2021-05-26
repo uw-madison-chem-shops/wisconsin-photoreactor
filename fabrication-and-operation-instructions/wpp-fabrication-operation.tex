@@ -61,8 +61,8 @@
 \begin{document}
 
 \maketitle
-\centering{\textbf{{\Large Wisconsin Photoreactor Platform\\ Fabrication and Operation Guide}}}
- 
+\textbf{{\centering \Large Wisconsin Photoreactor Platform \\ Fabrication and Operation Guide \\}}
+
 \vspace{10mm} %5mm vertical space
  
 \includegraphics[width=\textwidth]{"../coverart.png"}
@@ -314,23 +314,24 @@ A bill of materials appears within the README file of the 'analog-driver-board' 
 
 Relative light intensity can be determined using the analog driver board test points and a multimeter (Figure 11B-D).
 The measured voltage can then be converted to relative light intensity using the values in Table 1.
-These values are derived from Mean Well's datasheet for the analog board’s LDD-1000L LED driver and are not exact.
+These approximate values are derived from Mean Well's datasheet for the analog board’s LDD-1000L LED driver.
+See the meanufacturer's datasheet for exact values.
 
 \begin{table}[H]
 	\centering
 	\begin{tabular}{cc}
 		\centering
 		\textbf{Test Point Voltage} & \textbf{Approximate Relative Light Intensity} \\
-		2.5                         & 100\%                                         \\
-		2.25                        & 90\%                                          \\
-		2.00                        & 80\%                                          \\
-		1.75                        & 70\%                                          \\
-		1.5                         & 60\%                                          \\
-		1.25                        & 50\%                                          \\
-		1.00                        & 40\%                                          \\
-		0.75                        & 30\%                                          \\
-		0.5                         & 20\%                                          \\
-		0.45                        & 0\%
+		>2.45                       & 100\%                                          \\
+		2.20                        & 90\%                                             \\
+		2.95                        & 80\%                                             \\
+		1.70                         & 70\%                                             \\
+		1.45                        & 60\%                                              \\
+		1.20                        & 50\%                                              \\
+		10.95                        & 40\%                                            \\
+		0.70                        & 30\%                                              \\
+		0.45                        & 20\%                                              \\
+		<0.45                        & 0\%
 	\end{tabular}
 	\caption{Test point voltage to approximate relative LED intensity conversion.}
 	\label{tab:analog-board-conversion}
@@ -515,6 +516,7 @@ The 130 by 130 mm footprint of the WPP architecture is compatible with typical s
 A standard 12 V power supply can then be plugged into the reactor driver to turn on the device and start irradiation.
 A single 12V 2 A power supply is sufficient to drive 2 WPP devices simultaneously.
 A switch can be installed between the WPP apparatus and power supply to provide power switching.
+A light-blocking shield should be used with WPP devices to limit light exposure.
 
 Reaction and photon source cooling is provided by the fan integrated into the base.
 Additional cooling can be achieved through placement of fans above the WPP apparatus or by placing a WPP device on a stir plate within a refrigerator or cold room.
