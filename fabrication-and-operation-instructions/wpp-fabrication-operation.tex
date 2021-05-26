@@ -63,8 +63,6 @@
 
 \maketitle
 
-\centering{\textbf{\LARGE Wisconsin Photoreactor Platform\\Fabrication and Operation Guide}}}
-
 \includegraphics[width=\textwidth]{"../coverart.png"}
 
 \tableofcontents
@@ -222,7 +220,7 @@ Remember to use proper eye protection.
 
 A WPP reaction module consists of a reaction chamber and vessel holder.
 By modifying chamber height and adjusting holder geometry, one can produce modules compatible with reaction vessels of various types and sizes.
-Fusion360 designs and stl models for modules compatible with 2-, 4-, 8- and 24-mL vials are provided in the 'photoreaction-modules' subdirectory of the project repository (Figure 8A—B).
+Fusion360 designs and stl models for modules compatible with 2-, 4-, 8- and 24-mL vials are provided in the 'photoreactor-reaction-modules' subdirectory of the project repository (Figure 8A—B).
 Template reaction chamber and vessel holder Fusion360 designs are provided in the same directory.
 
 We encourage you to design your own reaction modules if those provided in the project repository do not meet your needs.
@@ -510,7 +508,7 @@ Once a WPP apparatus is configured with the desired photon source, reaction modu
   \caption{A WPP apparatus with a 450 nm photon source, 4 mL reactor module and digital driver board on a standard laboratory stir plate conducting 6 simultaneous photoreactions in the multiple reaction configuration.}
 \end{figure}
 
-To conduct a photoreaction using a WPP device, an assembled apparatus should be placed on a lab stir plate, to provide reaction mixture stirring, and reaction vessels should be inserted into the apparatus in the desired layout (Figure 8).
+To conduct a photoreaction using a WPP device, an assembled apparatus should be placed on a lab stir plate, to provide reaction mixture stirring, and reaction vessels should be inserted into the apparatus in the desired layout (Figure 23).
 The 130 by 130 mm footprint of the WPP architecture is compatible with typical stir plates.
 A standard 12 V power supply can then be plugged into the reactor driver to turn on the device and start irradiation.
 A single 12V 2 A power supply is sufficient to drive 2 WPP devices simultaneously.
@@ -592,11 +590,24 @@ This information enables reproduction WPP devices fitted with the simple LED dri
 \section{Safety}
 
 WPP reactors utilize high-intensity light emitting diodes (LED) that can cause eye damage if proper safety precautions are not observed.
-Light-filtering safety glasses should be worn whenever a WPP apparatus photon source is powered.
-Care must be taken to use safety glasses protective against the specific emission wavelengths of the photon source.
+
+A light-blocking shield should be utilized whenever operating a WPP apparatus. 
+Care must be taken to ensure the light-blocking shield employed adequately blocks light emitted by a WPP photon source from directly reaching a user.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth/2]{"./fig24.png"}
+	\caption{WPP device fitted the provided light shield cover module printed in black PLA.}
+\end{figure}
+
+A 3D printable light-blocking cover module for WPP devices is provided in the 'photoreactor-light-shield' subdirectory of the project repository.
+The WPP light shield prevents direct exposure of users to light emitted by WPP photon sources. 
+We recommend printing the WPP light shield using black filament is recommended to reduce light bounce (Figure 24).
+
+Use of light-filtering safety glasses alongside a light-blocking shield can provide additional protection from high-intensity light.
 
 \section{Acknowledgments}
 
-We thank Dr. Ilia A. Guzei for photography. We are grateful to Sebastian Thompson for help in production of custom LED stars. 
+We thank Dr. Ilia A. Guzei and Sebastian Thompson of UW-Madison for photography and help fabricating custom LED stars, respectively. 
 
 \end{document}
