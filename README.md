@@ -7,11 +7,7 @@ An open source photoreactor platform. 3D printed enclosure, commercially availab
 The WPP has been published in Organic Letters.
 Please read our article to learn more about the motivation behind the WPP and to see examples of photochemistry being driven using this reactor.
 
-```
-[Versatile Open-Source Photoreactor Architecture for Photocatalysis Across the Visible Spectrum](https://doi.org/10.1021/acs.orglett.1c01910)
-Philip P. Lampkin, Blaise J. Thompson, and Samuel H. Gellman
-Org. Lett. 2021, 23, 13, 5277–5281
-```
+>[Versatile Open-Source Photoreactor Architecture for Photocatalysis Across the Visible Spectrum](https://doi.org/10.1021/acs.orglett.1c01910); Philip P. Lampkin, Blaise J. Thompson, and Samuel H. Gellman; Org. Lett. 2021, 23, 13, 5277–5281
 
 ## Repository
 
