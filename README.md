@@ -16,11 +16,11 @@ Please see the LICENSE file for the complete license.
 
 This repository is being mirrored to several version control systems in an attempt to ensure maximum availability.
 
-| name             | url                                                             |
-| ---------------- | --------------------------------------------------------------- |
-| Chem             | https://git.chem.wisc.edu/gellman-group/wisconsin-photoreactor  |
-| GitHub (primary) | https://github.com/uw-madison-chem-shops/wisconsin-photoreactor |
-| GitLab           | https://gitlab.com/uw-madison-chem-shops/wisconsin-photoreactor |
+| name             | url                                                               |
+| ---------------- | ----------------------------------------------------------------- |
+| Codeburg         | https://codeberg.org/uw-madison-chem-shops/wisconsin-photoreactor |
+| GitHub (primary) | https://github.com/uw-madison-chem-shops/wisconsin-photoreactor   |
+| GitLab           | https://gitlab.com/uw-madison-chem-shops/wisconsin-photoreactor   |
 
 ## Safety
 
