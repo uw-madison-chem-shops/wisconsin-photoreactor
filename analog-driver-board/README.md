@@ -42,10 +42,12 @@ Boards themselves can be printed for approximately $5 each.
 
 ### Unprinted
 
-### Changed
+### Revision C
+
+#### Changed
 - Removed wisconsin crest logo
 
-### Revision B
+#### Revision B
 
 #### Fixed
 - Fixedsign of LED terminals on silkscreen
