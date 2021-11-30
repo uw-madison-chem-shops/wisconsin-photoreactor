@@ -5,8 +5,8 @@ $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "Analog Photoreactor Driver"
-Date "2021-04-24"
-Rev "B"
+Date "2021-11-19"
+Rev "C"
 Comp "University of Wisconsin-Madison"
 Comment1 "Department of Chemistry"
 Comment2 "Gellman Group"
