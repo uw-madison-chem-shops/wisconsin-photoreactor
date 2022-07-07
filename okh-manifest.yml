@@ -1,0 +1,40 @@
+title: Wisconsin Photoreactor Platform
+description: An open source photoreactor platform. 3D printed enclosure, commercially
+  available components, and a little bit of custom circuitry.
+intended-use: Research into novel photochemical reactions.
+keywords:
+  - chemistry
+project-link: https://github.com/uw-madison-chem-shops/wisconsin-photoreactor
+image: https://raw.githubusercontent.com/uw-madison-chem-shops/wisconsin-photoreactor/master/coverart.png
+made: true
+made-independently: false
+license:
+  hardware: CERN-OHL-P-2.0
+  documentation: Unlicense
+  software: Unlicense
+okh-manifest-version: 1.0.0
+date-updated: 2022-07-07
+manifest-author:
+  name: Blaise J Thompson
+  affiliation: University of Wisconsin-Madison
+  email: blaise.thompson@wisc.edu
+manifest-language: en-US
+development-stage: product
+documentation-home: https://github.com/uw-madison-chem-shops/wisconsin-photoreactor
+design-files:
+  - path: https://github.com/uw-madison-chem-shops/wisconsin-photoreactor/tree/master/analog-driver-board
+    title: Analog Driver Board
+  - path: https://github.com/uw-madison-chem-shops/wisconsin-photoreactor/tree/master/digital-controller
+    title: Digital Controller
+  - path: https://github.com/uw-madison-chem-shops/wisconsin-photoreactor/tree/master/digital-driver-board
+    title: Digital Driver Board
+  - path: https://github.com/uw-madison-chem-shops/wisconsin-photoreactor/tree/master/photoreactor-base
+    title: Photoreactor Base
+  - path: https://github.com/uw-madison-chem-shops/wisconsin-photoreactor/tree/master/photoreactor-light-shield
+    title: Photoreactor Light Shield
+  - path: https://github.com/uw-madison-chem-shops/wisconsin-photoreactor/tree/master/photoreactor-reaction-modules
+    title: Photoreactor Reaction Modules
+documentation-language: en-US
+making-instructions:
+  - path: https://raw.githubusercontent.com/uw-madison-chem-shops/wisconsin-photoreactor/master/fabrication-and-operation-instructions/wpp-fabrication-operation.pdf
+    title: Fabrication and Operation Instructions
