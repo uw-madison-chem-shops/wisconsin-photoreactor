@@ -37,6 +37,10 @@ Use of light-filtering safety glasses alongside a light-blocking shield can prov
 This repository contains detailed instructions for fabrication, operation and documentation of WPP devices.
 Please see [wpp-fabrication-operation.pdf](./fabrication-and-operation-instructions/wpp-fabrication-operation.pdf)
 
+A video guide covering part sourcing, 3D-printing, electronics manufacturing, assembly and use of Wisconsin photoreactors is available on [youtube](http://www.youtube.com/watch?v=fkLr17i4FgE)
+
+[![Wisconsin Photoreactor Platform Fabrication Video Guide](./youtubethumbnail.png)](http://www.youtube.com/watch?v=fkLr17i4FgE)
+
 ## Enclosure
 
 The WPP is designed around a mechanically robust and simple 3D printed enclosure.
